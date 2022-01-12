@@ -14,11 +14,12 @@ public class EnemyController : MonoBehaviour
     private Transform _target;
 
     public float aggroRange;     //how close player need to be for ai to chase.still havent figured out how to swicth from random checkpoints to chasing player.
+    public Rigidbody2D rigibody;
 
     // For the melee attack
     public float attackRange = 2f;      // distance to when enemy start to attack
     public int attackDamage = 3;
-    public float knowbackPower = 0.2f;
+    public float knocbackPower = 0.2f;
     public float knockbackDuration = 10f;
     public float attackRate = 2f;       // For how often enemy attacks
     float nextAttackTime = 0f;
@@ -32,14 +33,15 @@ public class EnemyController : MonoBehaviour
         _animator = GetComponentInChildren<Animator>();
         _target = FindObjectOfType<CharacterController>().transform;
 
-
         _aiPath = GetComponent<AIPath>();
+
     }
 
     void Update()
     {
         Movement();
         Animator();
+        //Aggro();
 
         // nothing of these works as intended
         //Chase();      
@@ -51,13 +53,25 @@ public class EnemyController : MonoBehaviour
         //}
 
         // expiremental aipath code for together with animator. it works as intended. will move this block to animator function tomorrow.
+        //if (Vector3.Distance(transform.position, _target.transform.position) < aggroRange)
+        //{
+        //    print("Target Within range");
+        //    gameObject.transform.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
+        //}
+
 
 
         if (Vector3.Distance(transform.position, _target.transform.position) < attackRange)
         {
+            print("attacking");
             MeleeAttack(); 
         }
     }
+
+    //private void Aggro()
+    //{
+    //    throw new NotImplementedException();
+    //}
 
     private void Animator()
     {
@@ -119,7 +133,7 @@ public class EnemyController : MonoBehaviour
         {
             _animator.SetTrigger("Attack");
             print("Hit: " + _target.name);
-            StartCoroutine(CharacterController.instance.Knockback(knockbackDuration, knowbackPower, this.transform));
+            StartCoroutine(CharacterController.instance.Knockback(knockbackDuration, knocbackPower, this.transform));
 
             _target.GetComponent<HealthSystem>().TakeDamage(attackDamage);
             nextAttackTime = Time.time + 1f / attackRate;

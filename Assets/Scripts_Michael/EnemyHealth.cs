@@ -43,6 +43,8 @@ public class EnemyHealth : MonoBehaviour
         GetComponent<AIPath>().enabled = false;
         GetComponent<EnemyController>().enabled = false;
         GetComponentInChildren<Canvas>().enabled = false;
+
+        GetComponent<EnemyRangedAttack>().enabled = false;
              
 
         // Add exp to player here? have to wait and see what the other one has written for code, I think he was making something.
