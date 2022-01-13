@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: AcidSpit
   m_EditorClassIdentifier: 
   Description: Increases Ranged attack by 10
-  Icon: {fileID: 0}
+  Icon: {fileID: 21300000, guid: 3b065a546b5935d418e81f8481a15496, type: 3}
   LevelNeeded: 1
   XPNeeded: 10
   AffectedAttributes:
-  - attributes: {fileID: 11400000, guid: 9bc6e628eb73115478b729516351d2e3, type: 2}
+  - attribute: {fileID: 11400000, guid: 9bc6e628eb73115478b729516351d2e3, type: 2}
     amount: 10

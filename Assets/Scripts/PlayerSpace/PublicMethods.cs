@@ -8,12 +8,12 @@ namespace PlayerSpace
     public class PlayerAttributes
     {
 
-        public Attributes attributes;
+        public Attributes attribute;
         public int amount;
 
-        public PlayerAttributes(Attributes attributes, int amount)
+        public PlayerAttributes(Attributes attribute, int amount)
         {
-            this.attributes = attributes;
+            this.attribute = attribute;
             this.amount = amount;
         }
     }

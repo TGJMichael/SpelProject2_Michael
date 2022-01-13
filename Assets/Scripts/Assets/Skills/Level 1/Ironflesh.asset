@@ -17,5 +17,5 @@ MonoBehaviour:
   LevelNeeded: 1
   XPNeeded: 10
   AffectedAttributes:
-  - attributes: {fileID: 11400000, guid: 664cdc1f013adc440a8fe3849e24c1ad, type: 2}
+  - attribute: {fileID: 11400000, guid: 664cdc1f013adc440a8fe3849e24c1ad, type: 2}
     amount: 10

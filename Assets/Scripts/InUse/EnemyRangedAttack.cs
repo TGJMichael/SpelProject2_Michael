@@ -16,9 +16,11 @@ public class EnemyRangedAttack : MonoBehaviour
 
     public GameObject projectilePrefab;
     public Transform firePoint;
-    public float projectileForce = 20f;
+    public float projectileSpeed = 10f;
+    private Animator _animator;
     void Start()
     {
+        _animator = GetComponentInChildren<Animator>();
 
         _target = FindObjectOfType<CharacterController>().transform;
     }
@@ -31,10 +33,12 @@ public class EnemyRangedAttack : MonoBehaviour
             print("Target Within range");
             gameObject.transform.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
             EnemyShoot();
+            _animator.SetBool("Ranged", true);
         }
         else
         {
             gameObject.transform.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
+            _animator.SetBool("Ranged", false);
         }
     }
 
@@ -42,12 +46,12 @@ public class EnemyRangedAttack : MonoBehaviour
     {
         if (Time.time >= nextAttackTime)
         {
-            //_animator.SetTrigger("RangedAttack");
+            _animator.SetTrigger("Attack");
             print("Hit: " + _target.name);
 
             GameObject projectile = Instantiate(projectilePrefab, firePoint.position, firePoint.rotation);
             Rigidbody2D rb = projectile.GetComponent<Rigidbody2D>();
-            rb.AddForce(firePoint.up * projectileForce, ForceMode2D.Impulse);
+            rb.AddForce(firePoint.up * projectileSpeed, ForceMode2D.Impulse);
 
             //StartCoroutine(CharacterController.instance.Knockback(knockbackDuration, knockbackPower, this.transform));
 
