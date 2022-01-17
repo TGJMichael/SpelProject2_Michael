@@ -132,11 +132,26 @@ public class EnemyController : MonoBehaviour
         if (Time.time >= nextAttackTime)
         {
             _animator.SetTrigger("Attack");
-            print("Hit: " + _target.name);
-            StartCoroutine(CharacterController.instance.Knockback(knockbackDuration, knocbackPower, this.transform));
-
-            _target.GetComponent<HealthSystem>().TakeDamage(attackDamage);
+            
+            
             nextAttackTime = Time.time + 1f / attackRate;
         }
+    }
+    public void MeleeAttackEvent(bool AttackHit)
+    {
+        if (AttackHit)
+        {
+            if (Vector3.Distance(transform.position, _target.transform.position) < attackRange)
+            {
+                print("Hit: " + _target.name);
+                StartCoroutine(CharacterController.instance.Knockback(knockbackDuration, knocbackPower, this.transform));
+
+                _target.GetComponent<HealthSystem>().TakeDamage(attackDamage);
+            }
+            else
+            {
+                print("Missed");
+            }
+        }        
     }
 }
