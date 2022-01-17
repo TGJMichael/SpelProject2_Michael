@@ -5,18 +5,25 @@ using UnityEngine;
 
 public class EnemyProjectile : MonoBehaviour
 {
-    public int attackDamage = 10;
+    public int normalDamage;
+    public int rootDamage;
+    public float rootDuration = 5f;
 
     public float TimeToLive = 3f;
 
     // for contact animation
     public GameObject hitEffect;
 
+    public bool rootEffect;
+
     private void Start()
     {
 
         StartCoroutine(destroyProjectile());
-        
+
+        normalDamage = FindObjectOfType<EnemyRangedAttack>().normalDamage;
+        rootDamage = FindObjectOfType<EnemyRangedAttack>().rootDamage;
+        rootEffect = FindObjectOfType<EnemyRangedAttack>().rootEffect;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -25,11 +32,25 @@ public class EnemyProjectile : MonoBehaviour
         if (targetHit.tag == "Player")
         {
             print("Hit: " + targetHit.name);
+            if (rootEffect)
+            {
+            targetHit.GetComponent<CharacterController>().Root(rootDuration);
+            targetHit.GetComponent<HealthSystem>().TakeDamage(rootDamage);
+            }
+            else
+            {
+                targetHit.GetComponent<HealthSystem>().TakeDamage(normalDamage);
+            }
 
-            targetHit.GetComponent<HealthSystem>().TakeDamage(attackDamage);
+            //StartCoroutine(CharacterController.instance.Root(rootDuration));
 
+            //targetHit.GetComponent<CharacterController>().Root(rootDuration);
 
-        }        
+            //lägga till en collider som är trigger "zone of effect" - kan användda denna vid träff av projectil med projectil
+
+            //starta movement-speed slowing coroutine.
+
+        }
         else
         {
             print("Can't hurt: " + targetHit.name);
