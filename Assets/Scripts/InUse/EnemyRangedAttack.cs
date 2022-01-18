@@ -19,8 +19,11 @@ public class EnemyRangedAttack : MonoBehaviour
     private Animator _animator;
 
     // Damage for the "EnemyProjectile" to pull from
+    [Header("Projectile")]
     public int normalDamage = 3;
     public int rootDamage = 0;
+    public float rootDuration = 5f;
+    // bool that changes the ranged attack from normal to root.
     public bool rootEffect = true;
     void Start()
     {
