@@ -25,15 +25,18 @@ public class EnemyController : MonoBehaviour
     float nextAttackTime = 0f;
 
     Vector2 move;
- 
 
-    private 
+
+    //private // why is this here?
+
     void Start()
     {
         _animator = GetComponentInChildren<Animator>();
         _target = FindObjectOfType<CharacterController>().transform;
-
+        GetComponent<AIDestinationSetter>().target = _target;   // if actively changing in game this 
         _aiPath = GetComponent<AIPath>();
+
+
 
     }
 
