@@ -10,6 +10,10 @@ public class EnemyHealth : MonoBehaviour
 
     private Animator _animator;
 
+    //NewNextScene deathCount; // does not work
+    //public DeathCounterScript m_deathCounter;
+    //public int killPoint = 1;
+    public NextStage killCount;
     private void Start()
     {
         currenthealth = maxHealth;
@@ -17,6 +21,11 @@ public class EnemyHealth : MonoBehaviour
         healthBar.SetMaxHealth(maxHealth);
 
         _animator = GetComponentInChildren<Animator>();
+
+        //deathCount = gameObject.GetComponent<NewNextScene>(); // does not work
+        //m_deathCounter = GameObject.FindObjectOfType(typeof(DeathCounterScript)) as DeathCounterScript;
+        killCount = GameObject.FindObjectOfType(typeof(NextStage)) as NextStage;
+        
     }
     public void TakeDamage(int damage)
     {
@@ -28,6 +37,7 @@ public class EnemyHealth : MonoBehaviour
 
         if (currenthealth <= 0)
         {
+
             Die();
         }
     }
@@ -43,11 +53,14 @@ public class EnemyHealth : MonoBehaviour
         GetComponent<AIPath>().enabled = false;
         GetComponent<EnemyController>().enabled = false;
         GetComponentInChildren<Canvas>().enabled = false;
+        //GetComponent<EnemyRangedAttack>().enabled = false;
+        //deathCount.CheckPlayerCanGoNextLevel();    // does not work. 
+        //_deathCounter.GetComponent<DeathCounterScript>().KillCount(killPoint);
+        //m_deathCounter.KillCount();
+        killCount.KillCount();
 
-        GetComponent<EnemyRangedAttack>().enabled = false;
-             
 
         // Add exp to player here? have to wait and see what the other one has written for code, I think he was making something.
-        
+
     }
 }
