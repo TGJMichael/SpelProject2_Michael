@@ -11,4 +11,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/StartingRoom.unity
+    guid: 111b4141009194c41b39ebe4936f05b3
+  - enabled: 1
+    path: Assets/Scenes/Lukas Room 1.unity
+    guid: a74903b20dea6c74cb9dd26579ed910a
+  - enabled: 1
+    path: Assets/Scenes/Lukas Room 2.unity
+    guid: 825814df1458d8e4dacaedc3f354b6a2
+  - enabled: 1
+    path: Assets/Scenes/Lukas Room 3.unity
+    guid: 61ae414e52ba4ae468b719d8111cc208
   m_configObjects: {}

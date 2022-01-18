@@ -1,0 +1,650 @@
+fileFormatVersion: 2
+guid: 68760913aa9534d4ab95996e0e2c2296
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Player_Fighter_PrayingMantis_Sheet_Dash_71x71 _0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 144
+        width: 71
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 012a758756c261c40b21840b64dca2e4
+      internalID: 1293529291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Fighter_PrayingMantis_Sheet_Dash_71x71 _1
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 144
+        width: 71
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 218f4152224f5464ebcbd2d195f0d153
+      internalID: -1269793081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Fighter_PrayingMantis_Sheet_Dash_71x71 _2
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 144
+        width: 71
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8404816e5275ee34ba4fe86ad8733fda
+      internalID: 1290331799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Fighter_PrayingMantis_Sheet_Dash_71x71 _3
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 144
+        width: 71
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d0e0f257c1a39f4ba6c9f6632f7aa01
+      internalID: -1027206970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Fighter_PrayingMantis_Sheet_Dash_71x71 _4
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 144
+        width: 71
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f944e3f55ad08f4683a3d5a7081bd61
+      internalID: -348748559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Fighter_PrayingMantis_Sheet_Dash_71x71 _5
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 144
+        width: 71
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a3b44d88ba63ee4b8f561045a713ea1
+      internalID: 498848372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Fighter_PrayingMantis_Sheet_Dash_71x71 _6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 96
+        width: 71
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97ab5372cffb221499d1096d3f432004
+      internalID: -1081708001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Fighter_PrayingMantis_Sheet_Dash_71x71 _7
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 96
+        width: 71
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f3a6747ae73e90408ebdb0d599a09a3
+      internalID: 1685622172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Fighter_PrayingMantis_Sheet_Dash_71x71 _8
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 96
+        width: 71
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cb6045f9b3b07242bc819f96ac234cb
+      internalID: 620410775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Fighter_PrayingMantis_Sheet_Dash_71x71 _9
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 96
+        width: 71
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c57d464123a95a84296658d625a7f35f
+      internalID: -687387178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Fighter_PrayingMantis_Sheet_Dash_71x71 _10
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 96
+        width: 71
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4611674a11c03bc42b9f234e3f87de00
+      internalID: 1051681956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Fighter_PrayingMantis_Sheet_Dash_71x71 _11
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 96
+        width: 71
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1853310ee8612154393be198ca1824b0
+      internalID: 1823560072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Fighter_PrayingMantis_Sheet_Dash_71x71 _12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 48
+        width: 71
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea2c0a74652c0c24095ec4dd5250048d
+      internalID: -372246539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Fighter_PrayingMantis_Sheet_Dash_71x71 _13
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 48
+        width: 71
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b4a3bb96a6100941a2af51f24393862
+      internalID: 415514759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Fighter_PrayingMantis_Sheet_Dash_71x71 _14
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 48
+        width: 71
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1b53cbca9870f7478a6c4c0a3ab401e
+      internalID: -57438123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Fighter_PrayingMantis_Sheet_Dash_71x71 _15
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 48
+        width: 71
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 416aea6270f40ac47b69d2fd04348a77
+      internalID: -1695972464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Fighter_PrayingMantis_Sheet_Dash_71x71 _16
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 48
+        width: 71
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52efadb76a7955f408e58b4d6a4b9505
+      internalID: 2100967289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Fighter_PrayingMantis_Sheet_Dash_71x71 _17
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 48
+        width: 71
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdb9d352db0931c498c95eaba1e81ce8
+      internalID: -1145829367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Fighter_PrayingMantis_Sheet_Dash_71x71 _18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 71
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1be8510726277b40a3b7fc38354bfbf
+      internalID: -330854132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Fighter_PrayingMantis_Sheet_Dash_71x71 _19
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 0
+        width: 71
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4964fd5c05216f49bc9d4c654296dc1
+      internalID: 1974146691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Fighter_PrayingMantis_Sheet_Dash_71x71 _20
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 0
+        width: 71
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1499d57621c69e24da862074b2c842a8
+      internalID: 58409293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Fighter_PrayingMantis_Sheet_Dash_71x71 _21
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 0
+        width: 71
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f81dcffac3086a84abd7150f614a699b
+      internalID: -739945565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Fighter_PrayingMantis_Sheet_Dash_71x71 _22
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 0
+        width: 71
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 132c9460062b7be429f041f625607874
+      internalID: 329568061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Fighter_PrayingMantis_Sheet_Dash_71x71 _23
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 0
+        width: 71
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ac8a5141861ac143a599cc47bc8e265
+      internalID: 2114397388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Player_Fighter_PrayingMantis_Sheet_Dash_71x71 _2: 1290331799
+      Player_Fighter_PrayingMantis_Sheet_Dash_71x71 _15: -1695972464
+      Player_Fighter_PrayingMantis_Sheet_Dash_71x71 _10: 1051681956
+      Player_Fighter_PrayingMantis_Sheet_Dash_71x71 _16: 2100967289
+      Player_Fighter_PrayingMantis_Sheet_Dash_71x71 _17: -1145829367
+      Player_Fighter_PrayingMantis_Sheet_Dash_71x71 _20: 58409293
+      Player_Fighter_PrayingMantis_Sheet_Dash_71x71 _4: -348748559
+      Player_Fighter_PrayingMantis_Sheet_Dash_71x71 _3: -1027206970
+      Player_Fighter_PrayingMantis_Sheet_Dash_71x71 _21: -739945565
+      Player_Fighter_PrayingMantis_Sheet_Dash_71x71 _1: -1269793081
+      Player_Fighter_PrayingMantis_Sheet_Dash_71x71 _12: -372246539
+      Player_Fighter_PrayingMantis_Sheet_Dash_71x71 _0: 1293529291
+      Player_Fighter_PrayingMantis_Sheet_Dash_71x71 _5: 498848372
+      Player_Fighter_PrayingMantis_Sheet_Dash_71x71 _11: 1823560072
+      Player_Fighter_PrayingMantis_Sheet_Dash_71x71 _6: -1081708001
+      Player_Fighter_PrayingMantis_Sheet_Dash_71x71 _22: 329568061
+      Player_Fighter_PrayingMantis_Sheet_Dash_71x71 _19: 1974146691
+      Player_Fighter_PrayingMantis_Sheet_Dash_71x71 _18: -330854132
+      Player_Fighter_PrayingMantis_Sheet_Dash_71x71 _23: 2114397388
+      Player_Fighter_PrayingMantis_Sheet_Dash_71x71 _14: -57438123
+      Player_Fighter_PrayingMantis_Sheet_Dash_71x71 _13: 415514759
+      Player_Fighter_PrayingMantis_Sheet_Dash_71x71 _9: -687387178
+      Player_Fighter_PrayingMantis_Sheet_Dash_71x71 _8: 620410775
+      Player_Fighter_PrayingMantis_Sheet_Dash_71x71 _7: 1685622172
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
