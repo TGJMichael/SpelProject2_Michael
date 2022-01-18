@@ -7,7 +7,6 @@ public class EnemyRangedAttack : MonoBehaviour
 {
     private Transform _target;
     public float range;
-    public int attackDamagage = 3;
     public float knockbackPower = 10f;
     public float knockbackDuration = 10f;
     
@@ -18,6 +17,14 @@ public class EnemyRangedAttack : MonoBehaviour
     public Transform firePoint;
     public float projectileSpeed = 10f;
     private Animator _animator;
+
+    // Damage for the "EnemyProjectile" to pull from
+    [Header("Projectile")]
+    public int normalDamage = 3;
+    public int rootDamage = 0;
+    public float rootDuration = 5f;
+    // bool that changes the ranged attack from normal to root.
+    public bool rootEffect = true;
     void Start()
     {
         _animator = GetComponentInChildren<Animator>();
@@ -28,6 +35,7 @@ public class EnemyRangedAttack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         if (Vector3.Distance(transform.position, _target.transform.position) < range)
         {
             print("Target Within range");
@@ -49,14 +57,25 @@ public class EnemyRangedAttack : MonoBehaviour
             _animator.SetTrigger("Attack");
             print("Hit: " + _target.name);
 
-            GameObject projectile = Instantiate(projectilePrefab, firePoint.position, firePoint.rotation);
-            Rigidbody2D rb = projectile.GetComponent<Rigidbody2D>();
-            rb.AddForce(firePoint.up * projectileSpeed, ForceMode2D.Impulse);
+            //GameObject projectile = Instantiate(projectilePrefab, firePoint.position, firePoint.rotation);
+            //Rigidbody2D rb = projectile.GetComponent<Rigidbody2D>();
+            //rb.AddForce(firePoint.up * projectileSpeed, ForceMode2D.Impulse);
 
-            //StartCoroutine(CharacterController.instance.Knockback(knockbackDuration, knockbackPower, this.transform));
-
-            //_target.GetComponent<HealthSystem>().TakeDamage(attackDamagage);
             nextAttackTime = Time.time + 1f / attackRate;
+        }
+    }
+    public void RangedAttackEvent(bool AttackHit)
+    {
+        if(AttackHit)
+        {
+        GameObject projectile = Instantiate(projectilePrefab, firePoint.position, firePoint.rotation);
+        Rigidbody2D rb = projectile.GetComponent<Rigidbody2D>();
+        rb.AddForce(firePoint.up * projectileSpeed, ForceMode2D.Impulse);
+
+        }
+        else
+        {
+            print("did not shoot?");
         }
     }
 }

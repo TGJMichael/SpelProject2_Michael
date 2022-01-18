@@ -25,11 +25,11 @@ AnimationClip:
       value: {fileID: 673655988, guid: ebe65d93ca53a9b4eb81b828f5d38a00, type: 3}
     - time: 0.2
       value: {fileID: 144771599, guid: ebe65d93ca53a9b4eb81b828f5d38a00, type: 3}
-    - time: 0.3
-      value: {fileID: 2103688826, guid: ebe65d93ca53a9b4eb81b828f5d38a00, type: 3}
-    - time: 0.4
-      value: {fileID: -1213250465, guid: ebe65d93ca53a9b4eb81b828f5d38a00, type: 3}
     - time: 0.5
+      value: {fileID: 2103688826, guid: ebe65d93ca53a9b4eb81b828f5d38a00, type: 3}
+    - time: 0.6
+      value: {fileID: -1213250465, guid: ebe65d93ca53a9b4eb81b828f5d38a00, type: 3}
+    - time: 0.7
       value: {fileID: 1312007542, guid: ebe65d93ca53a9b4eb81b828f5d38a00, type: 3}
     attribute: m_Sprite
     path: 
@@ -61,7 +61,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.6
+    m_StopTime: 0.8
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -81,7 +81,7 @@ AnimationClip:
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
   m_Events:
-  - time: 0.3
+  - time: 0.6
     functionName: MeleeAttackTrigger
     data: 
     objectReferenceParameter: {fileID: 0}

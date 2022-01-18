@@ -37,6 +37,14 @@ public class CharacterController : MonoBehaviour
     // test fix for aimingdirection. (this is a bad sollution but I´ll try this just to test the concept)
     [SerializeField] private int _aimObjDirection;
 
+    //recoil when shooting test
+    public float recoilForce;
+
+    //root test
+    public float rootedMovement = 0f;
+    private Coroutine rootCooldown;
+    private bool _canRoot = true;
+
     private void Awake()
     {
         instance = this;
@@ -55,7 +63,8 @@ public class CharacterController : MonoBehaviour
         _animator.SetFloat("LastVertical", -1);
         state = State.Normal;
 
-        
+        //root test
+        rootCooldown = StartCoroutine(IsRooted(0));
     }
 
     private void Update()
@@ -63,6 +72,12 @@ public class CharacterController : MonoBehaviour
         Movement();
         Animator();
         HandleAiming();
+
+
+        if (Input.GetButtonDown("Fire2"))
+        {
+        _rigidbody.AddForce(-aimDirection.normalized * recoilForce, ForceMode2D.Impulse);
+        }
 
     }
 
@@ -217,6 +232,27 @@ public class CharacterController : MonoBehaviour
             _animator.SetFloat("LastVertical", move.y);
         }
     }
+
+    public void Root(float rootDuration)
+    {
+        if (_canRoot)
+        {
+            _canRoot = false;
+            moveSpeed = 0;
+            //StopCoroutine(rootCooldown);  //dennna kommenteras bort för att invurnability duration ska funka.
+            rootCooldown = StartCoroutine(IsRooted(rootDuration));
+        }
+    }
+    private IEnumerator IsRooted(float rootDuration)
+    {
+        //moveSpeed = 0;
+        print("is rooted");
+        yield return new WaitForSeconds(rootDuration);
+        print("root ended");
+        moveSpeed = 10;
+        yield return new WaitForSeconds(1f);  // invurnability duration
+        _canRoot = true;
+    }    
 
     public IEnumerator Knockback(float knockbackDuration, float knockbackPower, Transform obj)
     {
