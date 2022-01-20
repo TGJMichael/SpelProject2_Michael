@@ -74,7 +74,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 25
   m_Sprite: {fileID: -1904380484, guid: 19bb3838c4f513141a7c213211b8ad75, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -328,6 +328,7 @@ MonoBehaviour:
   maxHealth: 30
   currenthealth: 30
   healthBar: {fileID: 5997442555625018158}
+  killCount: {fileID: 0}
 --- !u!114 &1846487924252692745
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -352,14 +353,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f56f5ada229921440a9ea2938f87f935, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 8
-  attackDamagage: 0
+  range: 5
   knockbackPower: 10
   knockbackDuration: 10
   attackRate: 1
   projectilePrefab: {fileID: 2376977390478597785, guid: ab51364c22c217b448a5b18519275ae2, type: 3}
   firePoint: {fileID: 7882964330088379281}
   projectileSpeed: 15
+  normalDamage: 3
+  rootDamage: 2
+  rootDuration: 5
+  rootEffect: 1
 --- !u!1 &7882964330088379280
 GameObject:
   m_ObjectHideFlags: 0

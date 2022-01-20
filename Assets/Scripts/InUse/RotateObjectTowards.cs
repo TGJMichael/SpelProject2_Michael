@@ -1,12 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-#if (UNITY_EDITOR)
+
 public class RotateObjectTowards : MonoBehaviour
 {
     public float speed = 5f;
     public Transform target;
 
+    private void Start()
+    {
+        target = FindObjectOfType<CharacterController>().transform;
+    }
     private void Update()
     {
         Vector2 direction = target.position - transform.position;
@@ -15,4 +19,4 @@ public class RotateObjectTowards : MonoBehaviour
         transform.rotation = Quaternion.Slerp(transform.rotation, rotation, speed * Time.deltaTime);
     }
 }
-#endif
+
