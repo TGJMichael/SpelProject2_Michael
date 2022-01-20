@@ -25,5 +25,14 @@ public class AIPathStopper : MonoBehaviour
             }
 
         }
+
+        if (Input.GetKey(KeyCode.I))
+        {
+            GetComponent<AIPath>().isStopped = true;
+        }
+        else
+        {
+            GetComponent<AIPath>().isStopped = false;
+        }
     }
 }

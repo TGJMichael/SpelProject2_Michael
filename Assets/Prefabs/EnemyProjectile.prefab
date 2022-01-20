@@ -85,7 +85,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TimeToLive: 3
-  hitEffect: {fileID: 9187958225818428515, guid: 96adc8955ae52554aa90ed5ea9b1b52d, type: 3}
+  hitEffect: {fileID: 3491274811738022366, guid: 6f1ea34f157c5fa4d979070104d88c68, type: 3}
   rootEffect: 0
 --- !u!1 &2376977391313262104
 GameObject:

@@ -11,9 +11,19 @@ public class RangedAttack : MonoBehaviour
 
     public float projectileForce = 20f;
 
+    private Animator _animator;
+
+    private void Start()
+    {
+        _animator = GetComponentInChildren<Animator>();
+    }
     void Update()
     {
-        if(Input.GetButtonDown("Fire2"))
+        //if(Input.GetButtonDown("Fire2"))
+        //{
+        //    Shoot();
+        //}        
+        if(Input.GetKeyDown(KeyCode.Mouse1))
         {
             Shoot();
         }
@@ -21,6 +31,7 @@ public class RangedAttack : MonoBehaviour
 
     void Shoot()
     {
+        _animator.SetTrigger("RangedAttack");
         GameObject projectile = Instantiate(projectilePrefab, firePoint.position, firePoint.rotation);
         Rigidbody2D rb = projectile.GetComponent<Rigidbody2D>();
         rb.AddForce(firePoint.up * projectileForce, ForceMode2D.Impulse);

@@ -45,6 +45,9 @@ public class CharacterController : MonoBehaviour
     private Coroutine rootCooldown;
     private bool _canRoot = true;
 
+
+    //web effekt test
+
     private void Awake()
     {
         instance = this;
