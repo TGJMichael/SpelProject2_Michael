@@ -46,6 +46,14 @@ public class EnemyController : MonoBehaviour
         Animator();
         //Aggro();
 
+        if (Vector3.Distance(transform.position, _target.transform.position) > aggroRange)
+        {
+            GetComponent<AIPath>().isStopped = true;
+        }
+        else
+        {
+            GetComponent<AIPath>().isStopped = false;
+        }
         // nothing of these works as intended
         //Chase();      
         //StartMoving();
