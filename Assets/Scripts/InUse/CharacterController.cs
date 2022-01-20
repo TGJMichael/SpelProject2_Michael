@@ -47,7 +47,7 @@ public class CharacterController : MonoBehaviour
 
 
     //web effekt test
-
+    public GameObject webEffect;
     private void Awake()
     {
         instance = this;
@@ -242,7 +242,11 @@ public class CharacterController : MonoBehaviour
         {
             _canRoot = false;
             moveSpeed = 0;
-            //StopCoroutine(rootCooldown);  //dennna kommenteras bort för att invurnability duration ska funka.
+            //Web effekt test - did not work
+            //GameObject effect = Instantiate(webEffect, .position, Quaternion.identity);
+            //Destroy(effect, rootDuration);
+
+            //StopCoroutine(rootCooldown);  //Commented out just for the invurnability
             rootCooldown = StartCoroutine(IsRooted(rootDuration));
         }
     }
