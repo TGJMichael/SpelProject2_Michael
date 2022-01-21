@@ -28,7 +28,7 @@ public class CharacterController : MonoBehaviour
 
     //Vectors and Quaternions
     Vector2 move;   
-    Vector2 lastMove; 
+    Vector2 lastMove; //private by default
 
     //aiming controller
     public Vector3 aimDirection;
@@ -41,13 +41,16 @@ public class CharacterController : MonoBehaviour
     public float recoilForce;
 
     //root test
-    public float rootedMovement = 0f;
+    public float rootedMovement = 1f;
     private Coroutine rootCooldown;
     private bool _canRoot = true;
 
 
     //web effekt test
-    public GameObject webEffect;
+    [SerializeField]
+    //private GameObject[] _effect;
+    private Animator _effect;
+    public Animator _effectAnimator;
     private void Awake()
     {
         instance = this;
@@ -62,6 +65,22 @@ public class CharacterController : MonoBehaviour
         _spriteRenderer = GetComponentInChildren<SpriteRenderer>();        
         _animator = GetComponentInChildren<Animator>();
         _staminaSystem = GetComponent<StaminaSystem>();
+        //_effect = GameObject.FindGameObjectsWithTag("OnPlayerEffect");
+        //foreach (GameObject gameojb in _effect)
+        //{
+        //    _effect.Animator.Player("web")
+        //}
+        Animator[] animators = GetComponentsInChildren<Animator>();
+        foreach (Animator animator in animators)
+        {
+            if (animator.tag == "OnPlayerEffect")
+            {
+                _effect = animator;
+                print(_effect);
+            }
+        }
+        //_effect = FindObjectOfType<Animator>();
+        //_effect = GameObject.FindGameObjectsWithTag("OnPlayerEffect"Animator);
 
         _animator.SetFloat("LastVertical", -1);
         state = State.Normal;
@@ -241,11 +260,13 @@ public class CharacterController : MonoBehaviour
         if (_canRoot)
         {
             _canRoot = false;
-            moveSpeed = 0;
-            //Web effekt test - did not work
-            //GameObject effect = Instantiate(webEffect, .position, Quaternion.identity);
-            //Destroy(effect, rootDuration);
+            //moveSpeed = 0;
 
+            moveSpeed = rootedMovement;
+            //Web effekt test - did not work
+            //GameObject effect = Instantiate(webEffect, transform.position, Quaternion.identity);
+            //Destroy(effect, rootDuration);
+            _animator.SetBool("IsRooted",true);
             //StopCoroutine(rootCooldown);  //Commented out just for the invurnability
             rootCooldown = StartCoroutine(IsRooted(rootDuration));
         }
@@ -256,6 +277,7 @@ public class CharacterController : MonoBehaviour
         print("is rooted");
         yield return new WaitForSeconds(rootDuration);
         print("root ended");
+        _animator.SetBool("Isrooted", false);
         moveSpeed = 10;
         yield return new WaitForSeconds(1f);  // invurnability duration
         _canRoot = true;
