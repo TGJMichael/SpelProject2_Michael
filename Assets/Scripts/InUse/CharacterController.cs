@@ -70,13 +70,12 @@ public class CharacterController : MonoBehaviour
         //{
         //    _effect.Animator.Player("web")
         //}
-        Animator[] animators = GetComponentsInChildren<Animator>();
-        foreach (Animator animator in animators)
+        Animator[] allAnimatorsInChildren = GetComponentsInChildren<Animator>();    // declare and initialize "allAnimatorsInChildren" to = all animators in the children gameObjects.
+        foreach (Animator animator in allAnimatorsInChildren)               // go through the array
         {
-            if (animator.tag == "OnPlayerEffect")
+            if (animator.tag == "OnPlayerEffect")                       // the tag "OnPlayerEffect" is found,,
             {
-                _effect = animator;
-                print(_effect);
+                _effectAnimator = animator;                                     // and assign "_effect" to the animator that is found
             }
         }
         //_effect = FindObjectOfType<Animator>();
@@ -261,12 +260,12 @@ public class CharacterController : MonoBehaviour
         {
             _canRoot = false;
             //moveSpeed = 0;
-
             moveSpeed = rootedMovement;
+            _effectAnimator.SetBool("IsRooted", true);
             //Web effekt test - did not work
             //GameObject effect = Instantiate(webEffect, transform.position, Quaternion.identity);
             //Destroy(effect, rootDuration);
-            _animator.SetBool("IsRooted",true);
+
             //StopCoroutine(rootCooldown);  //Commented out just for the invurnability
             rootCooldown = StartCoroutine(IsRooted(rootDuration));
         }
@@ -277,8 +276,8 @@ public class CharacterController : MonoBehaviour
         print("is rooted");
         yield return new WaitForSeconds(rootDuration);
         print("root ended");
-        _animator.SetBool("Isrooted", false);
         moveSpeed = 10;
+        _effectAnimator.SetBool("IsRooted", false);
         yield return new WaitForSeconds(1f);  // invurnability duration
         _canRoot = true;
     }    
