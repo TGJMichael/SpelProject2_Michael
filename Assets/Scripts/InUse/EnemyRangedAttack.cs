@@ -38,7 +38,7 @@ public class EnemyRangedAttack : MonoBehaviour
 
         if (Vector3.Distance(transform.position, _target.transform.position) < range)
         {
-            print("Target Within range");
+            //print("Target Within range");
             gameObject.transform.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
             EnemyShoot();
             _animator.SetBool("Ranged", true);
