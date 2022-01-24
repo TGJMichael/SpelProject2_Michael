@@ -52,7 +52,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -117,6 +117,7 @@ Transform:
   - {fileID: 2050789751898581899}
   - {fileID: 4160100672651669428}
   - {fileID: 1174703346554231040}
+  - {fileID: 8437221978064881905}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -156,6 +157,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1174703346554231040}
   - component: {fileID: 2548233329651137461}
+  - component: {fileID: 5509407507735257281}
   m_Layer: 0
   m_Name: SP2_Assets_Mushroom_3_45x55_0
   m_TagString: Untagged
@@ -198,7 +200,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -218,7 +220,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 25
+  m_SortingOrder: 496
   m_Sprite: {fileID: 199021960, guid: bd4df4b5827ab0b4ea37497319888772, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -230,6 +232,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &5509407507735257281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4923568898599134693}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bef4ccd22917c844a9cf0b84199a689f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Target: {fileID: 1174703346554231040}
+  TargetOffset: 0
 --- !u!1 &5228353998680549421
 GameObject:
   m_ObjectHideFlags: 0
@@ -282,7 +298,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -324,6 +340,7 @@ GameObject:
   m_Component:
   - component: {fileID: 423343497762351902}
   - component: {fileID: 2715219637184434347}
+  - component: {fileID: 2799986628890376571}
   m_Layer: 0
   m_Name: Shadow_Mushroom_3_Shadow_32x10
   m_TagString: Untagged
@@ -366,7 +383,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -386,7 +403,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 9
+  m_SortingOrder: 469
   m_Sprite: {fileID: 21300000, guid: 063735293f227d849a0ffb8abd5c530c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0.29411766}
   m_FlipX: 0
@@ -398,3 +415,103 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2799986628890376571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7686436540470157545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bef4ccd22917c844a9cf0b84199a689f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Target: {fileID: 423343497762351902}
+  TargetOffset: -100
+--- !u!1001 &4610665836571040111
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 4587146737766267542}
+    m_Modifications:
+    - target: {fileID: 5398523518577335495, guid: 8168c5b25fd58f04e9b27b176c00715a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.004
+      objectReference: {fileID: 0}
+    - target: {fileID: 5398523518577335495, guid: 8168c5b25fd58f04e9b27b176c00715a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.496
+      objectReference: {fileID: 0}
+    - target: {fileID: 5398523518830088577, guid: 8168c5b25fd58f04e9b27b176c00715a, type: 3}
+      propertyPath: m_Name
+      value: Trio_Light
+      objectReference: {fileID: 0}
+    - target: {fileID: 5398523518830088606, guid: 8168c5b25fd58f04e9b27b176c00715a, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5398523518830088606, guid: 8168c5b25fd58f04e9b27b176c00715a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5398523518830088606, guid: 8168c5b25fd58f04e9b27b176c00715a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5398523518830088606, guid: 8168c5b25fd58f04e9b27b176c00715a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5398523518830088606, guid: 8168c5b25fd58f04e9b27b176c00715a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5398523518830088606, guid: 8168c5b25fd58f04e9b27b176c00715a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5398523518830088606, guid: 8168c5b25fd58f04e9b27b176c00715a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5398523518830088606, guid: 8168c5b25fd58f04e9b27b176c00715a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5398523518830088606, guid: 8168c5b25fd58f04e9b27b176c00715a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5398523518830088606, guid: 8168c5b25fd58f04e9b27b176c00715a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5398523518830088606, guid: 8168c5b25fd58f04e9b27b176c00715a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5398523518924550305, guid: 8168c5b25fd58f04e9b27b176c00715a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.505
+      objectReference: {fileID: 0}
+    - target: {fileID: 5398523518924550305, guid: 8168c5b25fd58f04e9b27b176c00715a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.578
+      objectReference: {fileID: 0}
+    - target: {fileID: 5398523519250770306, guid: 8168c5b25fd58f04e9b27b176c00715a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.502
+      objectReference: {fileID: 0}
+    - target: {fileID: 5398523519250770306, guid: 8168c5b25fd58f04e9b27b176c00715a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.548
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8168c5b25fd58f04e9b27b176c00715a, type: 3}
+--- !u!4 &8437221978064881905 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5398523518830088606, guid: 8168c5b25fd58f04e9b27b176c00715a, type: 3}
+  m_PrefabInstance: {fileID: 4610665836571040111}
+  m_PrefabAsset: {fileID: 0}

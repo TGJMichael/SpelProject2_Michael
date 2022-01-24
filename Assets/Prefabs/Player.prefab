@@ -247,6 +247,7 @@ GameObject:
   - component: {fileID: 2584951228423753590}
   - component: {fileID: 2584951228423753588}
   - component: {fileID: 2584951228423753591}
+  - component: {fileID: 8159723580688955559}
   m_Layer: 8
   m_Name: PlayerSprite
   m_TagString: Untagged
@@ -290,7 +291,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -310,7 +311,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 25
+  m_SortingOrder: 721
   m_Sprite: {fileID: 433304145, guid: 4463408561a93b941a4a379b150dcaf2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -342,6 +343,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &8159723580688955559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2584951228423753585}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bef4ccd22917c844a9cf0b84199a689f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Target: {fileID: 2584951228423753590}
+  TargetOffset: 0
 --- !u!1 &2584951228598379823
 GameObject:
   m_ObjectHideFlags: 0
@@ -383,6 +398,7 @@ GameObject:
   m_Component:
   - component: {fileID: 805859127735897775}
   - component: {fileID: 9151133029839344657}
+  - component: {fileID: 3356560887908497583}
   m_Layer: 8
   m_Name: shadow
   m_TagString: Untagged
@@ -457,6 +473,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &3356560887908497583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5749639956292797850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bef4ccd22917c844a9cf0b84199a689f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Target: {fileID: 805859127735897775}
+  TargetOffset: -100
 --- !u!1 &8087122733306787969
 GameObject:
   m_ObjectHideFlags: 0
