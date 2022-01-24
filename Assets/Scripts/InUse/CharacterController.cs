@@ -63,7 +63,7 @@ public class CharacterController : MonoBehaviour
     {      
         _rigidbody = GetComponent<Rigidbody2D>();        
         _spriteRenderer = GetComponentInChildren<SpriteRenderer>();        
-        _animator = GetComponentInChildren<Animator>();
+        //_animator = GetComponentInChildren<Animator>();
         _staminaSystem = GetComponent<StaminaSystem>();
         //_effect = GameObject.FindGameObjectsWithTag("OnPlayerEffect");
         //foreach (GameObject gameojb in _effect)
@@ -71,11 +71,15 @@ public class CharacterController : MonoBehaviour
         //    _effect.Animator.Player("web")
         //}
         Animator[] allAnimatorsInChildren = GetComponentsInChildren<Animator>();    // declare and initialize "allAnimatorsInChildren" to = all animators in the children gameObjects.
-        foreach (Animator animator in allAnimatorsInChildren)               // go through the array
+        foreach (Animator animator in allAnimatorsInChildren)                       // go through the array
         {
-            if (animator.tag == "OnPlayerEffect")                       // the tag "OnPlayerEffect" is found,,
+            if (animator.tag == "OnPlayerEffect")                                   // the tag "OnPlayerEffect" is found,,
             {
-                _effectAnimator = animator;                                     // and assign "_effect" to the animator that is found
+                _effectAnimator = animator;                                          // and assign "_effect" to the animator that is found
+            }
+            if (animator.tag == "PlayerSprite")
+            {
+                _animator = GetComponentInChildren<Animator>();
             }
         }
         //_effect = FindObjectOfType<Animator>();
