@@ -26,8 +26,11 @@ public class EnemyController : MonoBehaviour
 
     Vector2 move;
 
-
-    //private // why is this here?
+    //testing new animator parameters
+    [SerializeField]
+    private int _rightLeftValue;
+    [SerializeField]
+    private int _upDownValue;
 
     void Start()
     {
@@ -42,6 +45,11 @@ public class EnemyController : MonoBehaviour
 
     void Update()
     {
+        //if (Input.GetKeyDown(KeyCode.L))
+        //{
+        //    CalculateDirection();
+        //}
+        CalculateDirection();
         Movement();
         Animator();
         //Aggro();
@@ -86,8 +94,12 @@ public class EnemyController : MonoBehaviour
 
     private void Animator()
     {
-        _animator.SetFloat("Horizontal", move.x);
-        _animator.SetFloat("Vertical", move.y);
+        //_animator.SetFloat("Horizontal", move.x);
+        //_animator.SetFloat("Vertical", move.y);
+
+        _animator.SetFloat("Horizontal", _rightLeftValue);
+        _animator.SetFloat("Vertical", _upDownValue);
+
 
         if (move.sqrMagnitude > 1)
         {
@@ -100,8 +112,10 @@ public class EnemyController : MonoBehaviour
 
         if (move.x != 0 || move.y != 0)
         {
-            _animator.SetFloat("LastHorizontal", move.x);
-            _animator.SetFloat("LastVertical", move.y);
+            //_animator.SetFloat("LastHorizontal", move.x);
+            //_animator.SetFloat("LastVertical", move.y);
+            _animator.SetFloat("LastHorizontal", _rightLeftValue);
+            _animator.SetFloat("LastVertical", _upDownValue);
         }
     }
 
@@ -110,33 +124,67 @@ public class EnemyController : MonoBehaviour
         move.x = _aiPath.desiredVelocity.x;
         move.y = _aiPath.desiredVelocity.y;
 
+        // moved to own method.
+        //// compare absolute value between x and y to see if the player is above/below or left/right of this enemy.
+        //if (Mathf.Abs(move.x) > Mathf.Abs(move.y))  // if the horizontal(left/right) absolute value is the biggest
+        //{
+        //    print("facing right or left");
+        //    if (move.x > 0)                         // if facing right                     
+        //    {
+        //        print("facing right");
+        //    }
+        //    else                                    // if facing left
+        //    {
+        //        print("facing left");
+        //    }
+        //}
+        //else                                        // if vertical(up/down) absolute value is the biggest
+        //{
+        //    print("facing up or down");
+        //    if (move.y > 0)                         // if facing up        
+        //    {
+        //        print("facing up");
+        //    }
+        //    else                                    // if facing down
+        //    {
+        //        print("facing down");
+        //    }
+        //}
+
     }
-
-    //does not work as intended. no matter what i try, the pathfinding will turn off permanently. the aipathstopper script works atleast.
-    //private void Chase()
-    //{
-    //    if (Vector3.Distance(transform.position, _target.transform.position) > aggroRange)
-    //    {
-    //        _aiPath.enabled = false;
-    //        //_aiPath.enabled = true;
-    //        //if (_aiPath.enabled == false)
-    //        //{
-    //        //}
-    //    }
-    //    else
-    //    {
-    //        _aiPath.enabled = true;
-    //    }
-    //}
-
-    //public void StopMoving()
-    //{
-    //    _aipath.enabled = !_aipath.enabled;
-    //}
-    //public void StartMoving()
-    //{
-    //    myAnim.SetBool("Ismoving", true);
-    //}
+    public void CalculateDirection()
+    {
+        if (Mathf.Abs(move.x) > Mathf.Abs(move.y))  // if the horizontal(left/right) absolute value is the biggest
+        {
+            _upDownValue = 0;
+            print("facing right or left");
+            if (move.x > 0)                         // if facing right                     
+            {
+                print("facing right");
+                _rightLeftValue = 1;
+            }
+            else                                    // if facing left
+            {
+                print("facing left");
+                _rightLeftValue = -1;
+            }
+        }
+        else                                        // if vertical(up/down) absolute value is the biggest
+        {
+            _rightLeftValue = 0;
+            print("facing up or down");
+            if (move.y > 0)                         // if facing up        
+            {
+                print("facing up");
+                _upDownValue = 1;
+            }
+            else                                    // if facing down
+            {
+                _upDownValue = -1;
+                print("facing down");
+            }
+        }
+    }
 
     public void MeleeAttack ()
     { 
