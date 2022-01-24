@@ -28,7 +28,7 @@ public class CharacterController : MonoBehaviour
 
     //Vectors and Quaternions
     Vector2 move;   
-    Vector2 lastMove; 
+    Vector2 lastMove; //private by default
 
     //aiming controller
     public Vector3 aimDirection;
@@ -41,13 +41,16 @@ public class CharacterController : MonoBehaviour
     public float recoilForce;
 
     //root test
-    public float rootedMovement = 0f;
+    public float rootedMovement = 1f;
     private Coroutine rootCooldown;
     private bool _canRoot = true;
 
 
     //web effekt test
-    public GameObject webEffect;
+    [SerializeField]
+    //private GameObject[] _effect;
+    private Animator _effect;
+    public Animator _effectAnimator;
     private void Awake()
     {
         instance = this;
@@ -60,8 +63,27 @@ public class CharacterController : MonoBehaviour
     {      
         _rigidbody = GetComponent<Rigidbody2D>();        
         _spriteRenderer = GetComponentInChildren<SpriteRenderer>();        
-        _animator = GetComponentInChildren<Animator>();
+        //_animator = GetComponentInChildren<Animator>();
         _staminaSystem = GetComponent<StaminaSystem>();
+        //_effect = GameObject.FindGameObjectsWithTag("OnPlayerEffect");
+        //foreach (GameObject gameojb in _effect)
+        //{
+        //    _effect.Animator.Player("web")
+        //}
+        Animator[] allAnimatorsInChildren = GetComponentsInChildren<Animator>();    // declare and initialize "allAnimatorsInChildren" to = all animators in the children gameObjects.
+        foreach (Animator animator in allAnimatorsInChildren)                       // go through the array
+        {
+            if (animator.tag == "OnPlayerEffect")                                   // the tag "OnPlayerEffect" is found,,
+            {
+                _effectAnimator = animator;                                          // and assign "_effect" to the animator that is found
+            }
+            if (animator.tag == "PlayerSprite")
+            {
+                _animator = GetComponentInChildren<Animator>();
+            }
+        }
+        //_effect = FindObjectOfType<Animator>();
+        //_effect = GameObject.FindGameObjectsWithTag("OnPlayerEffect"Animator);
 
         _animator.SetFloat("LastVertical", -1);
         state = State.Normal;
@@ -241,9 +263,11 @@ public class CharacterController : MonoBehaviour
         if (_canRoot)
         {
             _canRoot = false;
-            moveSpeed = 0;
+            //moveSpeed = 0;
+            moveSpeed = rootedMovement;
+            _effectAnimator.SetBool("IsRooted", true);
             //Web effekt test - did not work
-            //GameObject effect = Instantiate(webEffect, .position, Quaternion.identity);
+            //GameObject effect = Instantiate(webEffect, transform.position, Quaternion.identity);
             //Destroy(effect, rootDuration);
 
             //StopCoroutine(rootCooldown);  //Commented out just for the invurnability
@@ -257,6 +281,7 @@ public class CharacterController : MonoBehaviour
         yield return new WaitForSeconds(rootDuration);
         print("root ended");
         moveSpeed = 10;
+        _effectAnimator.SetBool("IsRooted", false);
         yield return new WaitForSeconds(1f);  // invurnability duration
         _canRoot = true;
     }    
