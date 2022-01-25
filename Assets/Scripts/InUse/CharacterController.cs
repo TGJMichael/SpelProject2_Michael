@@ -130,45 +130,8 @@ public class CharacterController : MonoBehaviour
 
         aimDirection = (mousePosition - transform.position).normalized;
         float angle = MathF.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg;
-        aimTransform.eulerAngles = new Vector3(0, 0, angle);   // mby in () i can change so firepoint move when character moves?
-        //print(angle);
-        //print(aimDirection);
-        //print(GetDirectionFromAngle(angle));   // jonte
-
-        ////testing for the aiming direction objects
-        //if (angle > -135 && angle < -45) //down
-        //    {
-        //        _aimObjDirection = 1;
-        //        aimTransform.localPosition = new Vector3(0, -0.6f, 0);
-        //        //aimTransform.localRotation = Quaternion.AngleAxis()
-        //    }
-        //    else if (angle > 135 || angle < -135) // left
-        //    {
-        //        _aimObjDirection = 2;
-        //        aimTransform.localPosition = new Vector3(-0.6f, 0, 0);
-        //    }
-        //    else if (angle < 135 && angle > 45) // up
-        //    {
-        //        _aimObjDirection = 4;
-        //        aimTransform.localPosition = new Vector3(0, 0.6f, 0);
-        //    }
-        //    else   // right
-        //    {
-        //        _aimObjDirection = 3;
-        //        aimTransform.localPosition = new Vector3(0.6f, 0, 0);
-        //    }
+        aimTransform.eulerAngles = new Vector3(0, 0, angle);
     }
-
-    //private Vector2 GetDirectionFromAngle(float angleInDegrees)  // Jonte
-    //{
-    //    var angle = angleInDegrees;
-    //    angle += aimTransform.eulerAngles.z;
-
-    //    var AngleInRadians = angle * Mathf.Deg2Rad;
-    //    var x = Mathf.Cos(AngleInRadians);
-    //    var y = Mathf.Sin(AngleInRadians);
-    //    return new Vector2(x, y);
-    //}
 
     private static Vector3 GetMouseWorldPosition()
     {
@@ -185,7 +148,7 @@ public class CharacterController : MonoBehaviour
         Vector3 worldPosition = worldCamera.ScreenToWorldPoint(screenPosition);
         return worldPosition;
     }
-    // End of new aiming block
+    // End of aiming block
 
     private void Movement()
     {
