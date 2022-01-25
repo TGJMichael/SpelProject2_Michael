@@ -17,7 +17,7 @@ public class RangedAttack : MonoBehaviour
     public float attackRate = 5f;
     float nextAttackTime = 0f;
 
-    //// recharge and spit(ammo)
+    // recharge and spit(ammo)
     public float maxSpit = 5;       // each spit costs (1)
     public float currentSpit;
     public float spitRegSpeed = 3;
@@ -29,13 +29,6 @@ public class RangedAttack : MonoBehaviour
     private bool spitRegOn;
     private Coroutine spitCooldown;
 
-    // brackeys video
-    //public int maxAmmo = 10;
-    //private int currentAmmo;
-    //public float reloadTime = 1f;
-
-    //private bool _isReloading = false;
-
     private void Start()
     {
         spitbar = FindObjectOfType<SpitBar>();
@@ -46,9 +39,6 @@ public class RangedAttack : MonoBehaviour
         spitbar.SetMaxSpit(maxSpit);
 
         spitCooldown = StartCoroutine(spitRegCooldown());
-
-        // brackeys video
-        //currentAmmo = maxAmmo;
     }
     private void Update()
     {
@@ -58,14 +48,6 @@ public class RangedAttack : MonoBehaviour
             currentSpit += spitRegSpeed * Time.deltaTime;
             spitbar.SetSpit(currentSpit);
         }
-        //brackeys video
-        //if (_isReloading)    // if _isreloading is true, dont do anything below in Update.
-        //    return;
-        //if (currentAmmo <= 0)
-        //{
-        //    StartCoroutine(Reload());
-        //    return;
-        //}
 
         //if (Input.GetKeyDown(KeyCode.Mouse1) && Time.time >= nextAttackTime)  // just by attack-rate
         if (Input.GetKeyDown(KeyCode.Mouse1) && (currentSpit > 1))    // by same system as stamina.
@@ -92,24 +74,12 @@ public class RangedAttack : MonoBehaviour
 
         spitRegOn = true;
     }
-    //brackeys video
-    //IEnumerator Reload()
-    //{
-    //    _isReloading = true;
-    //    Debug.Log("Reloading...");
-
-    //    yield return new WaitForSeconds(reloadTime);
-
-    //    currentAmmo = maxAmmo;
-    //    _isReloading = false;
-    //}
+ 
 
     void Shoot()
     {
         //recharge and spit(ammo)
         SpendSpit(1);
-        // brackeys video
-        //currentAmmo--;
 
         _animator.SetTrigger("RangedAttack");
         GameObject projectile = Instantiate(projectilePrefab, firePoint.position, firePoint.rotation);

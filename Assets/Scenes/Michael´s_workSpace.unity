@@ -532,17 +532,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1569890432 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7698630698971380382, guid: ed6c359e9315c664cafe8103907a29b2, type: 3}
-  m_PrefabInstance: {fileID: 7698630698223639070}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ed73c84073e3c1418bea5497c4d02f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1966747767
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1299,7 +1288,7 @@ PrefabInstance:
     - target: {fileID: 9144251258530223888, guid: 4f9d559b63678ae40aa1c81439f8597f, type: 3}
       propertyPath: spitbar
       value: 
-      objectReference: {fileID: 1569890432}
+      objectReference: {fileID: 0}
     - target: {fileID: 9144251258530223888, guid: 4f9d559b63678ae40aa1c81439f8597f, type: 3}
       propertyPath: firePoint
       value: 
