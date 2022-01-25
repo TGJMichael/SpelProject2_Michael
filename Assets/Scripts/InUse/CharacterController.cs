@@ -21,8 +21,8 @@ public class CharacterController : MonoBehaviour
     private StaminaSystem _staminaSystem;
 
     // Movement
-    public float moveSpeed = 5f;
-    private float dashSpeed;    // will probably make a separate "Dash" ability.
+    public float moveSpeed = 8f;
+    private float dashSpeed;
     public float dashLenght = 75f;
 
     //Vectors and Quaternions
@@ -36,13 +36,15 @@ public class CharacterController : MonoBehaviour
     //recoil when shooting test
     public float recoilForce;
 
-    //root test
+    // Root
     public float rootedMovement = 1f;
     private Coroutine rootCooldown;
-    private bool _canRoot = true;
-    
+    private bool _rooted = false;    // changed from _canRoot, and changed all true to false and vice versa. Just to make it more readable.
     // Root effect
     public Animator _effectAnimator;
+    // Rooted Dash
+    public float rootedDashLength = 30f;
+    public bool rootBreakDash = false;
     private void Awake()
     {
         instance = this;
@@ -75,7 +77,8 @@ public class CharacterController : MonoBehaviour
         state = State.Normal;
 
         //root test
-        rootCooldown = StartCoroutine(IsRooted(0));
+        //rootedDashLength = dashLenght * 0.5f;   // if we want the lenght of dash when rooted to be half the original dash.
+        
     }
 
     private void Update()
@@ -83,7 +86,6 @@ public class CharacterController : MonoBehaviour
         Movement();
         Animator();
         HandleAiming();
-
 
         if (Input.GetButtonDown("Fire2"))
         {
@@ -159,10 +161,40 @@ public class CharacterController : MonoBehaviour
 
                 if (Input.GetKeyDown(KeyCode.Space) && (staminaSystem.currentStamina) > 9)
                 {
-                    dashSpeed = dashLenght;
-                    state = State.Dash;
-                    _animator.SetTrigger("Dash");
-                    GetComponent<StaminaSystem>().SpendStamina(10);
+                    // original dash.
+                    //dashSpeed = dashLenght; 
+                    //state = State.Dash;
+                    //_animator.SetTrigger("Dash");
+                    //GetComponent<StaminaSystem>().SpendStamina(10);
+                    
+                    //new dash with rooted bool.
+                    if (_rooted == false)   // if not rooted
+                    {
+                        dashSpeed = dashLenght;
+                        state = State.Dash;
+                        _animator.SetTrigger("Dash");
+                        GetComponent<StaminaSystem>().SpendStamina(10);
+                    }
+                    else                    // if rooted
+                    {
+                        if (rootBreakDash)      // if dash can break root
+                        {
+                            dashSpeed = rootedDashLength;
+                            state = State.Dash;
+                            _animator.SetTrigger("Dash");
+                            GetComponent<StaminaSystem>().SpendStamina(20);
+                            print("root ended normaly with dash");
+                            moveSpeed = 10;
+                            _effectAnimator.SetBool("IsRooted", false);
+                        }
+                        else
+                        {
+                        dashSpeed = rootedDashLength;
+                        state = State.Dash;
+                        _animator.SetTrigger("Dash");
+                        GetComponent<StaminaSystem>().SpendStamina(10);
+                        }
+                    }
                 }
                 break;
             case State.Dash:
@@ -209,14 +241,14 @@ public class CharacterController : MonoBehaviour
 
     public void Root(float rootDuration)
     {
-        if (_canRoot)
+        if (_rooted == false)
         {
-            _canRoot = false;
+            _rooted = true;
             //moveSpeed = 0;   // movespeed is now connected to rootedMovement
             moveSpeed = rootedMovement;
             _effectAnimator.SetBool("IsRooted", true);
 
-            //StopCoroutine(rootCooldown);  //Commented out just for the invurnability
+            //StopCoroutine(rootCooldown);  //Commented out just for the invurnability, if this line is active the cooldown will reset each hit(I believe)
             rootCooldown = StartCoroutine(IsRooted(rootDuration));
         }
     }
@@ -225,11 +257,11 @@ public class CharacterController : MonoBehaviour
         //moveSpeed = 0;
         print("is rooted");
         yield return new WaitForSeconds(rootDuration);
-        print("root ended");
+        print("root ended normaly");
         moveSpeed = 10;
         _effectAnimator.SetBool("IsRooted", false);
         yield return new WaitForSeconds(1f);  // invurnability duration
-        _canRoot = true;
+        _rooted = false;
     }    
 
     public IEnumerator Knockback(float knockbackDuration, float knockbackPower, Transform obj)

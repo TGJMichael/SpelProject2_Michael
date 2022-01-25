@@ -95,7 +95,13 @@ public class EnemyController : MonoBehaviour
     }
     public void CalculateDirection()
     {
+        //float _absoluteMoveX = Mathf.Abs(move.x);     //(1)  // these are just for testing purposes trying out what works, all works but is it nessecary? prob not.
+        //float _absoluteMoveY = Math.Abs(move.y);      //(1)  
+        //if (_absoluteMoveX >_absoluteMoveY)           //(1)
+        //float _maxXY = Mathf.Max(_absoluteMoveX, _absoluteMoveY); // (1,2)
+        //if (_maxXY == _absoluteMoveX )  // (1,2)
         if (Mathf.Abs(move.x) > Mathf.Abs(move.y))  // if the horizontal(left/right) absolute value is the biggest
+
         {
             _upDownValue = 0;
             print("facing right or left");
