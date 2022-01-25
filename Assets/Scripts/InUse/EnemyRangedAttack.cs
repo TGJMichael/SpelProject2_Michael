@@ -62,7 +62,7 @@ public class EnemyRangedAttack : MonoBehaviour
         if (Time.time >= nextAttackTime)
         {
             _animator.SetTrigger("Attack");
-            print("Hit: " + _target.name);
+            //print("Shooting towards " + _target.name);
 
             //GameObject projectile = Instantiate(projectilePrefab, firePoint.position, firePoint.rotation);
             //Rigidbody2D rb = projectile.GetComponent<Rigidbody2D>();

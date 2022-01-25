@@ -104,31 +104,31 @@ public class EnemyController : MonoBehaviour
 
         {
             _upDownValue = 0;
-            print("facing right or left");
+            //print("facing right or left");
             if (move.x > 0)                         // if facing right                     
             {
-                print("facing right");
+                //print("facing right");
                 _rightLeftValue = 1;
             }
             else                                    // if facing left
             {
-                print("facing left");
+                //print("facing left");
                 _rightLeftValue = -1;
             }
         }
         else                                        // if vertical(up/down) absolute value is the biggest
         {
             _rightLeftValue = 0;
-            print("facing up or down");
+            //print("facing up or down");
             if (move.y > 0)                         // if facing up        
             {
-                print("facing up");
+                //print("facing up");
                 _upDownValue = 1;
             }
             else                                    // if facing down
             {
+                //print("facing down");
                 _upDownValue = -1;
-                print("facing down");
             }
         }
     }

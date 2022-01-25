@@ -24,7 +24,7 @@ public class Projectile : MonoBehaviour
         GameObject targetHit = collision.gameObject;
         if (targetHit.tag == "Enemy")
         {
-            print("Hit: " + targetHit.name);
+            //print("Hit: " + targetHit.name);
 
             targetHit.GetComponent<EnemyHealth>().TakeDamage(attackDamage);
 
@@ -32,7 +32,7 @@ public class Projectile : MonoBehaviour
         }        
         else
         {
-            print("Can't hurt: " + targetHit.name);
+            //print("Can't hurt: " + targetHit.name);
         }
         GameObject effect = Instantiate(hitEffect, transform.position, Quaternion.identity);    // create explosion animation on contact position
         Destroy(effect, 5f);   // destroy animation after set time (5f) 
