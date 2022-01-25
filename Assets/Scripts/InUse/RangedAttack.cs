@@ -19,7 +19,7 @@ public class RangedAttack : MonoBehaviour
     }
     void Update()
     {
-        //if(Input.GetButtonDown("Fire2"))
+        //if(Input.GetButtonDown("Fire2"))   // "Fire2" is for both right mouse button and left alt
         //{
         //    Shoot();
         //}        

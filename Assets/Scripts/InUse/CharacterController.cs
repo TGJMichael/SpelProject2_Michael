@@ -23,8 +23,7 @@ public class CharacterController : MonoBehaviour
     // Movement
     public float moveSpeed = 5f;
     private float dashSpeed;    // will probably make a separate "Dash" ability.
-    public float dashInput = 75f;
-
+    public float dashLenght = 75f;
 
     //Vectors and Quaternions
     Vector2 move;   
@@ -34,9 +33,6 @@ public class CharacterController : MonoBehaviour
     public Vector3 aimDirection;
     private Transform aimTransform;
 
-    // test fix for aimingdirection. (this is a bad sollution but I´ll try this just to test the concept)
-    [SerializeField] private int _aimObjDirection;
-
     //recoil when shooting test
     public float recoilForce;
 
@@ -44,12 +40,8 @@ public class CharacterController : MonoBehaviour
     public float rootedMovement = 1f;
     private Coroutine rootCooldown;
     private bool _canRoot = true;
-
-
-    //web effekt test
-    [SerializeField]
-    //private GameObject[] _effect;
-    private Animator _effect;
+    
+    // Root effect
     public Animator _effectAnimator;
     private void Awake()
     {
@@ -167,7 +159,7 @@ public class CharacterController : MonoBehaviour
 
                 if (Input.GetKeyDown(KeyCode.Space) && (staminaSystem.currentStamina) > 9)
                 {
-                    dashSpeed = dashInput;
+                    dashSpeed = dashLenght;
                     state = State.Dash;
                     _animator.SetTrigger("Dash");
                     GetComponent<StaminaSystem>().SpendStamina(10);
