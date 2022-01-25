@@ -65,11 +65,7 @@ public class CharacterController : MonoBehaviour
         _spriteRenderer = GetComponentInChildren<SpriteRenderer>();        
         //_animator = GetComponentInChildren<Animator>();
         _staminaSystem = GetComponent<StaminaSystem>();
-        //_effect = GameObject.FindGameObjectsWithTag("OnPlayerEffect");
-        //foreach (GameObject gameojb in _effect)
-        //{
-        //    _effect.Animator.Player("web")
-        //}
+
         Animator[] allAnimatorsInChildren = GetComponentsInChildren<Animator>();    // declare and initialize "allAnimatorsInChildren" to = all animators in the children gameObjects.
         foreach (Animator animator in allAnimatorsInChildren)                       // go through the array
         {
@@ -79,11 +75,9 @@ public class CharacterController : MonoBehaviour
             }
             if (animator.tag == "PlayerSprite")
             {
-                _animator = GetComponentInChildren<Animator>();
+                _animator = animator;
             }
         }
-        //_effect = FindObjectOfType<Animator>();
-        //_effect = GameObject.FindGameObjectsWithTag("OnPlayerEffect"Animator);
 
         _animator.SetFloat("LastVertical", -1);
         state = State.Normal;
@@ -226,12 +220,9 @@ public class CharacterController : MonoBehaviour
         if (_canRoot)
         {
             _canRoot = false;
-            //moveSpeed = 0;
+            //moveSpeed = 0;   // movespeed is now connected to rootedMovement
             moveSpeed = rootedMovement;
             _effectAnimator.SetBool("IsRooted", true);
-            //Web effekt test - did not work
-            //GameObject effect = Instantiate(webEffect, transform.position, Quaternion.identity);
-            //Destroy(effect, rootDuration);
 
             //StopCoroutine(rootCooldown);  //Commented out just for the invurnability
             rootCooldown = StartCoroutine(IsRooted(rootDuration));
