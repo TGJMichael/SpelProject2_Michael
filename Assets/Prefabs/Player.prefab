@@ -608,7 +608,7 @@ MonoBehaviour:
   dashLenght: 75
   aimDirection: {x: 0, y: 0, z: 0}
   recoilForce: 0
-  rootedMovement: 0
+  rootedMovement: 1
   _effectAnimator: {fileID: 0}
   rootedDashLength: 30
   rootBreakDash: 0
