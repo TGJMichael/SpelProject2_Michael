@@ -9,15 +9,45 @@ EditorBuildSettings:
     path: Assets/Scenes/StartMenu.unity
     guid: f4dbc438186376740a2762fcb3fa66b1
   - enabled: 1
-    path: Assets/Scenes/StartingRoom.unity
-    guid: 111b4141009194c41b39ebe4936f05b3
+    path: Assets/Scenes/010_Level_StartingRoom.unity
+    guid: fcd21b461a5939844a4752824b1b1aa5
   - enabled: 1
-    path: Assets/Scenes/FirstLevel.unity
-    guid: adaeef270862bfa4a95d4aad8883f1c5
+    path: Assets/Scenes/020_Level_DoorIntro_MeleeIntro.unity
+    guid: d8e70359cc48e544eb86c2f1dc23ab8b
   - enabled: 1
-    path: Assets/Scenes/SecondLevel.unity
-    guid: b401cc9408e3eb040851d6f4c9621093
+    path: Assets/Scenes/030_Level.unity
+    guid: e46b86f25cc6a164fa6ab26f5316f4ad
   - enabled: 1
+    path: Assets/Scenes/040_Level_RangeIntro.unity
+    guid: 09ffabcabce50a74c8ed620f7fd80b0b
+  - enabled: 1
+    path: Assets/Scenes/050_Level_MixedFightIntro.unity
+    guid: 58632b7747f75654cb93d9c20eee350c
+  - enabled: 1
+    path: Assets/Scenes/060_Level.unity
+    guid: 1f6148453a86fe94486cf598b28b56a5
+  - enabled: 1
+    path: Assets/Scenes/070_Level.unity
+    guid: 0e444f0a162f8ac478e06d9319892a3c
+  - enabled: 1
+    path: Assets/Scenes/080_Level_TwoRooms.unity
+    guid: 157fef405011df746bff0e7275e43a13
+  - enabled: 1
+    path: Assets/Scenes/090_Level.unity
+    guid: c2078c8535f377841937bfd037c1ab6d
+  - enabled: 1
+    path: Assets/Scenes/100_Level_Boss.unity
+    guid: c04866fcaa019de4f8e3475caeb26550
+  - enabled: 0
     path: Assets/Scenes/ThirdLevel.unity
     guid: 4763584f2b3497e42bb8bb0711e389ee
+  - enabled: 0
+    path: Assets/Scenes/SecondLevel.unity
+    guid: b401cc9408e3eb040851d6f4c9621093
+  - enabled: 0
+    path: Assets/Scenes/FirstLevel.unity
+    guid: adaeef270862bfa4a95d4aad8883f1c5
+  - enabled: 0
+    path: Assets/Scenes/StartingRoom.unity
+    guid: 111b4141009194c41b39ebe4936f05b3
   m_configObjects: {}
