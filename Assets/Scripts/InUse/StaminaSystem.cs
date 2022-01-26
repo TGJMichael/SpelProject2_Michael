@@ -10,13 +10,16 @@ public class StaminaSystem : MonoBehaviour
     public float staminaRegSpeed = 3;
     public float staminaRegCooldownTime = 1.5f;
 
+    public int StamReg = 10;
+    public GameObject staminaPrefab;
+    public GameObject stamina;
     public StaminaBar staminaBar;
 
     [SerializeField]
-    private bool staminaRegOn;
-    private Coroutine staminaCooldown;
+    public bool staminaRegOn;
+    public Coroutine staminaCooldown;
 
-    void Start()
+    public void Start()
     {
         currentStamina = maxStamina;
         staminaBar.SetMaxStamina(maxStamina);
@@ -24,7 +27,21 @@ public class StaminaSystem : MonoBehaviour
         staminaCooldown = StartCoroutine(staminaRegCooldown());
     }
 
-    private void Update()
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+            GetComponent<StaminaSystem>();
+        {
+            Destroy(stamina);
+            currentStamina += StamReg;
+            staminaBar.SetStamina(currentStamina);
+        }
+    }
+
+
+
+
+    public void Update()
     {
         if (staminaRegOn && currentStamina < maxStamina)
         {
@@ -33,6 +50,7 @@ public class StaminaSystem : MonoBehaviour
 
         }
     }
+    
 
     public void SpendStamina (int spent)
     {
