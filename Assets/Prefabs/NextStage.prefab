@@ -76,7 +76,6 @@ MonoBehaviour:
   killsNeeded: 3
   currentKills: 0
   objectiveComplete: 0
-  Door: {fileID: 0}
   lastScene: 0
 --- !u!1 &2894974415987571692
 GameObject:

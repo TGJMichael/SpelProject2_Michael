@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class RangedAttack : MonoBehaviour
 {
@@ -17,69 +18,75 @@ public class RangedAttack : MonoBehaviour
     public float attackRate = 5f;
     float nextAttackTime = 0f;
 
-    // recharge and spit(ammo)
-    public float maxSpit = 5;       // each spit costs (1)
-    public float currentSpit;
-    public float spitRegSpeed = 3;
-    public float spitRegCooldownTime = 1.5f;
+    // ammo count instead of bar.
+    public int currentAmmo;
+    public int numOfProjectiles;
 
-    public SpitBar spitbar;
+    public Image[] projectiles;
+    public Sprite projectile;
+    public Sprite emptyProjectile;
 
-    [SerializeField]
-    private bool spitRegOn;
-    private Coroutine spitCooldown;
-
+    // ammoregen timer
+    private float _coolDownTimer;
     private void Start()
     {
-        spitbar = FindObjectOfType<SpitBar>();
         _animator = GetComponentInChildren<Animator>();
 
-        // recharge and "ammo"
-        currentSpit = maxSpit;
-        spitbar.SetMaxSpit(maxSpit);
-
-        spitCooldown = StartCoroutine(spitRegCooldown());
+        currentAmmo = numOfProjectiles;
     }
     private void Update()
     {
-        // recharge and spit(ammo)
-        if (spitRegOn && currentSpit < maxSpit)
+        // ammo count sprites for ui
+        if (currentAmmo > numOfProjectiles)   // this makes sure that currentAmmo count dont go over total ammo alowed.
         {
-            currentSpit += spitRegSpeed * Time.deltaTime;
-            spitbar.SetSpit(currentSpit);
+            currentAmmo = numOfProjectiles;
+        }
+        for (int i = 0; i < projectiles.Length; i++)
+        {
+            if (i < currentAmmo)
+            {
+                projectiles[i].sprite = projectile;
+            }
+            else
+            {
+                projectiles[i].sprite = emptyProjectile;
+            }
+            if (i < numOfProjectiles)
+            {
+                projectiles[i].enabled = true;
+            }
+            else
+            {
+                projectiles[i].enabled = false;
+            }
         }
 
-        //if (Input.GetKeyDown(KeyCode.Mouse1) && Time.time >= nextAttackTime)  // just by attack-rate
-        if (Input.GetKeyDown(KeyCode.Mouse1) && (currentSpit > 1))    // by same system as stamina.
+        // ammo regen
+        if (currentAmmo < numOfProjectiles && _coolDownTimer < 1.5)
+        {
+            _coolDownTimer += 1 * Time.deltaTime;
+            //print(_coolDownTimer);
+            if (_coolDownTimer >= 1.5)
+            {
+                currentAmmo++;
+                _coolDownTimer = 0;
+            }
+        }
+
+        if (Input.GetKeyDown(KeyCode.Mouse1) && (currentAmmo > 0))    // ammo-count instead of bar.
         {
             Shoot();
         }
     }
 
-    // recharge and spit(ammo)
-    public void SpendSpit (int spent)
+    public void AmmoRegenOnKill()
     {
-        currentSpit -= spent;
-        spitbar.SetSpit(currentSpit);
-
-        StopCoroutine(spitCooldown);
-        spitCooldown = StartCoroutine(spitRegCooldown());
+        currentAmmo = numOfProjectiles;
     }
-
-    private IEnumerator spitRegCooldown()
-    {
-        spitRegOn = false;
-
-        yield return new WaitForSeconds(spitRegCooldownTime);
-
-        spitRegOn = true;
-    }
- 
 
     void Shoot()
     {
-        //recharge and spit(ammo)
-        SpendSpit(1);
+        currentAmmo -= 1;
 
         _animator.SetTrigger("RangedAttack");
         GameObject projectile = Instantiate(projectilePrefab, firePoint.position, firePoint.rotation);
@@ -87,6 +94,5 @@ public class RangedAttack : MonoBehaviour
         rb.AddForce(firePoint.up * projectileForce, ForceMode2D.Impulse);
 
         nextAttackTime = Time.time + 1f / attackRate;
-        
     }
 }
