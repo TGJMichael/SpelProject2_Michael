@@ -48,7 +48,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.010644197, y: -0.041487586}
+  m_Offset: {x: -0.010644197, y: 1.4666562}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -59,7 +59,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.2574709, y: 0.15693876}
+  m_Size: {x: 0.9429828, y: 0.23758793}
   m_EdgeRadius: 0
 --- !u!114 &2894974416448191651
 MonoBehaviour:
@@ -76,7 +76,6 @@ MonoBehaviour:
   killsNeeded: 3
   currentKills: 0
   objectiveComplete: 0
-  Door: {fileID: 0}
   lastScene: 0
 --- !u!1 &2894974415987571692
 GameObject:
