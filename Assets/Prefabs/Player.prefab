@@ -605,13 +605,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 7.5
-  dashInput: 50
+  dashLenght: 75
   aimDirection: {x: 0, y: 0, z: 0}
-  _aimObjDirection: 0
   recoilForce: 0
   rootedMovement: 0
-  _effect: {fileID: 0}
   _effectAnimator: {fileID: 0}
+  rootedDashLength: 30
+  rootBreakDash: 0
 --- !u!114 &2584951227491024170
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -660,6 +660,12 @@ MonoBehaviour:
   firePoint: {fileID: 2584951227379738574}
   projectilePrefab: {fileID: 2376977390478597785, guid: c59afef51ef3c9046a14a74ca0c109a1, type: 3}
   projectileForce: 20
+  attackRate: 5
+  currentAmmo: 6
+  numOfProjectiles: 6
+  projectiles: []
+  projectile: {fileID: 0}
+  emptyProjectile: {fileID: 0}
 --- !u!114 &2584951229131878256
 MonoBehaviour:
   m_ObjectHideFlags: 0
