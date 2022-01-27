@@ -501,6 +501,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Red_Light
       objectReference: {fileID: 0}
+    - target: {fileID: 2308063978712570541, guid: b54ee07bc1c63d0449b5750253d3bc8c, type: 3}
+      propertyPath: m_PointLightInnerAngle
+      value: 360
+      objectReference: {fileID: 0}
+    - target: {fileID: 2308063978712570541, guid: b54ee07bc1c63d0449b5750253d3bc8c, type: 3}
+      propertyPath: m_PointLightOuterAngle
+      value: 360
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b54ee07bc1c63d0449b5750253d3bc8c, type: 3}
 --- !u!4 &2281846787354625367 stripped

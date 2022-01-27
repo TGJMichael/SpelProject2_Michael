@@ -436,6 +436,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4587146737766267542}
     m_Modifications:
+    - target: {fileID: 5398523518577335492, guid: 8168c5b25fd58f04e9b27b176c00715a, type: 3}
+      propertyPath: m_PointLightInnerAngle
+      value: 360
+      objectReference: {fileID: 0}
+    - target: {fileID: 5398523518577335492, guid: 8168c5b25fd58f04e9b27b176c00715a, type: 3}
+      propertyPath: m_PointLightOuterAngle
+      value: 360
+      objectReference: {fileID: 0}
     - target: {fileID: 5398523518577335495, guid: 8168c5b25fd58f04e9b27b176c00715a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.004
@@ -500,6 +508,14 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0.578
       objectReference: {fileID: 0}
+    - target: {fileID: 5398523518924550334, guid: 8168c5b25fd58f04e9b27b176c00715a, type: 3}
+      propertyPath: m_PointLightInnerAngle
+      value: 360
+      objectReference: {fileID: 0}
+    - target: {fileID: 5398523518924550334, guid: 8168c5b25fd58f04e9b27b176c00715a, type: 3}
+      propertyPath: m_PointLightOuterAngle
+      value: 360
+      objectReference: {fileID: 0}
     - target: {fileID: 5398523519250770306, guid: 8168c5b25fd58f04e9b27b176c00715a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.502
@@ -507,6 +523,14 @@ PrefabInstance:
     - target: {fileID: 5398523519250770306, guid: 8168c5b25fd58f04e9b27b176c00715a, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.548
+      objectReference: {fileID: 0}
+    - target: {fileID: 5398523519250770307, guid: 8168c5b25fd58f04e9b27b176c00715a, type: 3}
+      propertyPath: m_PointLightInnerAngle
+      value: 360
+      objectReference: {fileID: 0}
+    - target: {fileID: 5398523519250770307, guid: 8168c5b25fd58f04e9b27b176c00715a, type: 3}
+      propertyPath: m_PointLightOuterAngle
+      value: 360
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8168c5b25fd58f04e9b27b176c00715a, type: 3}
