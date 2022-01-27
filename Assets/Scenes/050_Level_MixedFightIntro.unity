@@ -37832,10 +37832,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1279882174}
     m_Modifications:
-    - target: {fileID: 1170616234894834310, guid: 9ac6622ff738b9048b45f73e04118c90, type: 3}
-      propertyPath: m_SortingOrder
-      value: -477
-      objectReference: {fileID: 0}
     - target: {fileID: 1846487923038884503, guid: 9ac6622ff738b9048b45f73e04118c90, type: 3}
       propertyPath: m_SortingOrder
       value: -417
@@ -55225,10 +55221,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1279882174}
     m_Modifications:
-    - target: {fileID: 1170616234894834310, guid: 9ac6622ff738b9048b45f73e04118c90, type: 3}
-      propertyPath: m_SortingOrder
-      value: -473
-      objectReference: {fileID: 0}
     - target: {fileID: 1846487923038884503, guid: 9ac6622ff738b9048b45f73e04118c90, type: 3}
       propertyPath: m_SortingOrder
       value: -412
@@ -56371,10 +56363,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 9151133029839344657, guid: 4959164da2bd8e54e84e039e55af468e, type: 3}
-      propertyPath: m_SortingOrder
-      value: 638
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4959164da2bd8e54e84e039e55af468e, type: 3}
 --- !u!1001 &920539631
@@ -56968,10 +56956,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1279882174}
     m_Modifications:
-    - target: {fileID: 1170616234894834310, guid: 9ac6622ff738b9048b45f73e04118c90, type: 3}
-      propertyPath: m_SortingOrder
-      value: -282
-      objectReference: {fileID: 0}
     - target: {fileID: 1846487923038884503, guid: 9ac6622ff738b9048b45f73e04118c90, type: 3}
       propertyPath: m_SortingOrder
       value: -222
@@ -61242,10 +61226,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1279882174}
     m_Modifications:
-    - target: {fileID: 1170616234894834310, guid: 9ac6622ff738b9048b45f73e04118c90, type: 3}
-      propertyPath: m_SortingOrder
-      value: 336
-      objectReference: {fileID: 0}
     - target: {fileID: 1846487923038884503, guid: 9ac6622ff738b9048b45f73e04118c90, type: 3}
       propertyPath: m_SortingOrder
       value: 396

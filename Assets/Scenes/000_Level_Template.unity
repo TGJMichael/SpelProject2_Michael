@@ -69917,10 +69917,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 9151133029839344657, guid: 4959164da2bd8e54e84e039e55af468e, type: 3}
-      propertyPath: m_SortingOrder
-      value: -43
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4959164da2bd8e54e84e039e55af468e, type: 3}
 --- !u!1 &731694120 stripped
@@ -71728,6 +71724,10 @@ PrefabInstance:
     - target: {fileID: 1552520910920463260, guid: 533f362c0e4e7ed43865352c1334bbad, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -5.9399414
+      objectReference: {fileID: 0}
+    - target: {fileID: 2930529132453183481, guid: 533f362c0e4e7ed43865352c1334bbad, type: 3}
+      propertyPath: m_RootOrder
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8704325508271557681, guid: 533f362c0e4e7ed43865352c1334bbad, type: 3}
       propertyPath: m_AnchorMax.y
