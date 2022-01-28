@@ -51,7 +51,7 @@ public class EnemyProjectile : MonoBehaviour
         }
         else
         {
-            //print("Can't hurt: " + targetHit.name);
+            print("Can't hurt: " + targetHit.name);
         }
         ExplodeAndDestroy();
         //GameObject effect = Instantiate(hitEffect, transform.position, Quaternion.identity);    // create explosion animation on contact position

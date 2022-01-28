@@ -108,7 +108,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 120
+        y: 40
         width: 40
         height: 40
       alignment: 0
@@ -129,7 +129,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 40
-        y: 120
+        y: 40
         width: 40
         height: 40
       alignment: 0
@@ -150,7 +150,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 80
-        y: 120
+        y: 40
         width: 40
         height: 40
       alignment: 0
@@ -171,7 +171,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 120
-        y: 120
+        y: 40
         width: 40
         height: 40
       alignment: 0
@@ -192,7 +192,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 160
-        y: 120
+        y: 40
         width: 40
         height: 40
       alignment: 0
@@ -213,7 +213,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 200
-        y: 120
+        y: 40
         width: 40
         height: 40
       alignment: 0
@@ -234,7 +234,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 80
+        y: 0
         width: 40
         height: 40
       alignment: 0
@@ -255,7 +255,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 40
-        y: 80
+        y: 0
         width: 40
         height: 40
       alignment: 0
@@ -276,7 +276,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 80
-        y: 80
+        y: 0
         width: 40
         height: 40
       alignment: 0
@@ -297,7 +297,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 120
-        y: 80
+        y: 0
         width: 40
         height: 40
       alignment: 0
@@ -318,7 +318,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 160
-        y: 80
+        y: 0
         width: 40
         height: 40
       alignment: 0
@@ -339,7 +339,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 200
-        y: 80
+        y: 0
         width: 40
         height: 40
       alignment: 0
@@ -355,258 +355,6 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: Enemy_Range_Silkworm_Attack_40x40_12
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 40
-        width: 40
-        height: 40
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a98ebde3e80769b42a1e6daaab2e9b71
-      internalID: -596243444
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Enemy_Range_Silkworm_Attack_40x40_13
-      rect:
-        serializedVersion: 2
-        x: 40
-        y: 40
-        width: 40
-        height: 40
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3752c9e400d16ff42828c23308d7c4bc
-      internalID: 1181037909
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Enemy_Range_Silkworm_Attack_40x40_14
-      rect:
-        serializedVersion: 2
-        x: 80
-        y: 40
-        width: 40
-        height: 40
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 27257d40fb699e748b756ecdcb8cd049
-      internalID: 494832905
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Enemy_Range_Silkworm_Attack_40x40_15
-      rect:
-        serializedVersion: 2
-        x: 120
-        y: 40
-        width: 40
-        height: 40
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 82f2e53070c730648a3a222ff2c447fe
-      internalID: -1807478976
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Enemy_Range_Silkworm_Attack_40x40_16
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 40
-        width: 40
-        height: 40
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e9f501bdc73a80e4b91d03fd9afe1fef
-      internalID: -1979731780
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Enemy_Range_Silkworm_Attack_40x40_17
-      rect:
-        serializedVersion: 2
-        x: 200
-        y: 40
-        width: 40
-        height: 40
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1a865ebc367b2dc4b9320cb5508fe1ab
-      internalID: -2033480308
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Enemy_Range_Silkworm_Attack_40x40_18
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 40
-        height: 40
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bfb2e3f1953e8d941bb3c5cd39fcf506
-      internalID: -975352064
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Enemy_Range_Silkworm_Attack_40x40_19
-      rect:
-        serializedVersion: 2
-        x: 40
-        y: 0
-        width: 40
-        height: 40
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 91f6395b57f862b4396770bbc00aac78
-      internalID: 10568075
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Enemy_Range_Silkworm_Attack_40x40_20
-      rect:
-        serializedVersion: 2
-        x: 80
-        y: 0
-        width: 40
-        height: 40
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 103bd99056678094294eda7a2ca190f0
-      internalID: -1048589744
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Enemy_Range_Silkworm_Attack_40x40_21
-      rect:
-        serializedVersion: 2
-        x: 120
-        y: 0
-        width: 40
-        height: 40
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6a3de4686e77dd84b8fe6f2020f72827
-      internalID: -578325371
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Enemy_Range_Silkworm_Attack_40x40_22
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 0
-        width: 40
-        height: 40
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f9e4663cb953e1b42ae365bf93612368
-      internalID: -1515877765
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Enemy_Range_Silkworm_Attack_40x40_23
-      rect:
-        serializedVersion: 2
-        x: 200
-        y: 0
-        width: 40
-        height: 40
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e4ba0a782ae3cb84b8a59dc143c69f01
-      internalID: -795421129
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -618,22 +366,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Enemy_Range_Silkworm_Attack_40x40_17: -2033480308
-      Enemy_Range_Silkworm_Attack_40x40_22: -1515877765
-      Enemy_Range_Silkworm_Attack_40x40_15: -1807478976
       Enemy_Range_Silkworm_Attack_40x40_9: -1450963080
       Enemy_Range_Silkworm_Attack_40x40_7: -1532008651
       Enemy_Range_Silkworm_Attack_40x40_2: -1513641309
-      Enemy_Range_Silkworm_Attack_40x40_16: -1979731780
-      Enemy_Range_Silkworm_Attack_40x40_14: 494832905
       Enemy_Range_Silkworm_Attack_40x40_11: 119925565
-      Enemy_Range_Silkworm_Attack_40x40_12: -596243444
-      Enemy_Range_Silkworm_Attack_40x40_13: 1181037909
-      Enemy_Range_Silkworm_Attack_40x40_18: -975352064
-      Enemy_Range_Silkworm_Attack_40x40_20: -1048589744
-      Enemy_Range_Silkworm_Attack_40x40_21: -578325371
-      Enemy_Range_Silkworm_Attack_40x40_19: 10568075
-      Enemy_Range_Silkworm_Attack_40x40_23: -795421129
       Enemy_Range_Silkworm_Attack_40x40_0: -588241388
       Enemy_Range_Silkworm_Attack_40x40_10: 1176467016
       Enemy_Range_Silkworm_Attack_40x40_3: -33737207
