@@ -3,7 +3,9 @@ guid: 6c06244320bfb45449d713935ea60d60
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - HeartPrefab: {fileID: 6994521561279859548, guid: 45503b909df8a2a40bc7d67f107dbf5e, type: 3}
+  - healthBar: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

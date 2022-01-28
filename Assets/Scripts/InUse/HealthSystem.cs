@@ -9,8 +9,11 @@ public class HealthSystem : MonoBehaviour
 
     public int maxHealth = 30;
     public int currentHealth;
-
+    public int HealAmount = 10;
+    public GameObject HeartPrefab;
+    public GameObject Heart;
     public HealthBar healthBar;
+    
 
     // regeneration
     //public float healtRegSpeed = 3;
@@ -44,7 +47,30 @@ public class HealthSystem : MonoBehaviour
     //    decimalhealth += 1 * Time.deltaTime;
     //    currentHealth += Mathf.RoundToInt(decimalhealth);
     //}
-    public void TakeDamage(int damage)
+
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+            GetComponent<HealthSystem>();
+        {
+            if (HeartPrefab && currentHealth + HealAmount < maxHealth)
+            {
+                Destroy(Heart);
+                currentHealth += HealAmount;
+                healthBar.SetHealth(currentHealth);
+                
+            }
+
+        }
+        if (HeartPrefab && currentHealth + HealAmount > maxHealth)
+        {
+            Destroy(Heart);
+            currentHealth = maxHealth;
+            healthBar.SetHealth(currentHealth);
+            
+        }
+    }
+public void TakeDamage(int damage)
     {
         currentHealth -= damage;
 
