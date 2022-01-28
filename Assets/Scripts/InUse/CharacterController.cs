@@ -21,7 +21,7 @@ public class CharacterController : MonoBehaviour
     private StaminaSystem _staminaSystem;
 
     // Movement
-    public float moveSpeed = 8f;
+    public float moveSpeed = 7.5f;
     private float dashSpeed;
     public float dashLenght = 75f;
 
@@ -184,7 +184,7 @@ public class CharacterController : MonoBehaviour
                             _animator.SetTrigger("Dash");
                             GetComponent<StaminaSystem>().SpendStamina(20);
                             print("root ended normaly with dash");
-                            moveSpeed = 10;
+                            moveSpeed = 7.5f;
                             _effectAnimator.SetBool("IsRooted", false);
                         }
                         else
@@ -241,6 +241,7 @@ public class CharacterController : MonoBehaviour
 
     public void Root(float rootDuration)
     {
+        _animator.SetTrigger("Hurt");
         if (_rooted == false)
         {
             _rooted = true;
@@ -258,7 +259,7 @@ public class CharacterController : MonoBehaviour
         print("is rooted");
         yield return new WaitForSeconds(rootDuration);
         print("root ended normaly");
-        moveSpeed = 10;
+        moveSpeed = 7.5f;
         _effectAnimator.SetBool("IsRooted", false);
         yield return new WaitForSeconds(1f);  // invurnability duration
         _rooted = false;
