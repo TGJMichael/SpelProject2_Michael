@@ -322,7 +322,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf2713a5d7fcda84f91ce17b713a8432, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  aggroRange: 11
+  aggroRange: 10
   rigibody: {fileID: 1846487924252692749}
   attackRange: 2
   attackDamage: 0
@@ -369,7 +369,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f56f5ada229921440a9ea2938f87f935, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 5
+  range: 6
   knockbackPower: 10
   knockbackDuration: 10
   attackRate: 1
@@ -390,7 +390,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5930321067303811791}
   - component: {fileID: 1170616234894834310}
-  - component: {fileID: 5105330696006781187}
   m_Layer: 0
   m_Name: Shadow_Enemy_1_Shadow_28x8
   m_TagString: Untagged
@@ -451,9 +450,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: -297
+  m_SortingLayerID: -1638372591
+  m_SortingLayer: -1
+  m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: 67cfe169f23b06945ba141e0a6ce2d9f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0.29411766}
   m_FlipX: 0
@@ -465,20 +464,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &5105330696006781187
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6821898803001162830}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bef4ccd22917c844a9cf0b84199a689f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Target: {fileID: 5930321067303811791}
-  TargetOffset: -100
 --- !u!1 &7882964330088379280
 GameObject:
   m_ObjectHideFlags: 0

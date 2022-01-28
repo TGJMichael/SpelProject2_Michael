@@ -398,7 +398,6 @@ GameObject:
   m_Component:
   - component: {fileID: 805859127735897775}
   - component: {fileID: 9151133029839344657}
-  - component: {fileID: 3356560887908497583}
   m_Layer: 8
   m_Name: shadow
   m_TagString: Untagged
@@ -459,9 +458,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: -85
+  m_SortingLayerID: -1638372591
+  m_SortingLayer: -1
+  m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: b5f6034f181131b448e2ae770f8dfd2b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0.3019608}
   m_FlipX: 0
@@ -473,20 +472,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &3356560887908497583
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5749639956292797850}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bef4ccd22917c844a9cf0b84199a689f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Target: {fileID: 805859127735897775}
-  TargetOffset: -100
 --- !u!1 &8087122733306787969
 GameObject:
   m_ObjectHideFlags: 0
@@ -605,13 +590,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 7.5
-  dashInput: 50
+  dashLenght: 75
   aimDirection: {x: 0, y: 0, z: 0}
-  _aimObjDirection: 0
   recoilForce: 0
-  rootedMovement: 0
-  _effect: {fileID: 0}
+  rootedMovement: 1
   _effectAnimator: {fileID: 0}
+  rootedDashLength: 30
+  rootBreakDash: 0
 --- !u!114 &2584951227491024170
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -660,6 +645,12 @@ MonoBehaviour:
   firePoint: {fileID: 2584951227379738574}
   projectilePrefab: {fileID: 2376977390478597785, guid: c59afef51ef3c9046a14a74ca0c109a1, type: 3}
   projectileForce: 20
+  attackRate: 5
+  currentAmmo: 6
+  numOfProjectiles: 6
+  projectiles: []
+  projectile: {fileID: 0}
+  emptyProjectile: {fileID: 0}
 --- !u!114 &2584951229131878256
 MonoBehaviour:
   m_ObjectHideFlags: 0

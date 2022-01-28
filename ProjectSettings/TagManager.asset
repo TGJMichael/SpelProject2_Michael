@@ -9,6 +9,7 @@ TagManager:
   - Door
   - OnPlayerEffect
   - PlayerSprite
+  - SpitBar
   layers:
   - Default
   - TransparentFX
