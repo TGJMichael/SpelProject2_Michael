@@ -21,10 +21,9 @@ public class CharacterController : MonoBehaviour
     private StaminaSystem _staminaSystem;
 
     // Movement
-    public float moveSpeed = 5f;
-    private float dashSpeed;    // will probably make a separate "Dash" ability.
-    public float dashInput = 75f;
-
+    public float moveSpeed = 7.5f;
+    private float dashSpeed;
+    public float dashLenght = 75f;
 
     //Vectors and Quaternions
     Vector2 move;   
@@ -34,23 +33,18 @@ public class CharacterController : MonoBehaviour
     public Vector3 aimDirection;
     private Transform aimTransform;
 
-    // test fix for aimingdirection. (this is a bad sollution but I´ll try this just to test the concept)
-    [SerializeField] private int _aimObjDirection;
-
     //recoil when shooting test
     public float recoilForce;
 
-    //root test
+    // Root
     public float rootedMovement = 1f;
     private Coroutine rootCooldown;
-    private bool _canRoot = true;
-
-
-    //web effekt test
-    [SerializeField]
-    //private GameObject[] _effect;
-    private Animator _effect;
+    private bool _rooted = false;    // changed from _canRoot, and changed all true to false and vice versa. Just to make it more readable.
+    // Root effect
     public Animator _effectAnimator;
+    // Rooted Dash
+    public float rootedDashLength = 30f;
+    public bool rootBreakDash = false;
     private void Awake()
     {
         instance = this;
@@ -63,29 +57,28 @@ public class CharacterController : MonoBehaviour
     {      
         _rigidbody = GetComponent<Rigidbody2D>();        
         _spriteRenderer = GetComponentInChildren<SpriteRenderer>();        
-        _animator = GetComponentInChildren<Animator>();
+        //_animator = GetComponentInChildren<Animator>();
         _staminaSystem = GetComponent<StaminaSystem>();
-        //_effect = GameObject.FindGameObjectsWithTag("OnPlayerEffect");
-        //foreach (GameObject gameojb in _effect)
-        //{
-        //    _effect.Animator.Player("web")
-        //}
+
         Animator[] allAnimatorsInChildren = GetComponentsInChildren<Animator>();    // declare and initialize "allAnimatorsInChildren" to = all animators in the children gameObjects.
-        foreach (Animator animator in allAnimatorsInChildren)               // go through the array
+        foreach (Animator animator in allAnimatorsInChildren)                       // go through the array
         {
-            if (animator.tag == "OnPlayerEffect")                       // the tag "OnPlayerEffect" is found,,
+            if (animator.tag == "OnPlayerEffect")                                   // the tag "OnPlayerEffect" is found,,
             {
-                _effectAnimator = animator;                                     // and assign "_effect" to the animator that is found
+                _effectAnimator = animator;                                          // and assign "_effect" to the animator that is found
+            }
+            if (animator.tag == "PlayerSprite")
+            {
+                _animator = animator;
             }
         }
-        //_effect = FindObjectOfType<Animator>();
-        //_effect = GameObject.FindGameObjectsWithTag("OnPlayerEffect"Animator);
 
         _animator.SetFloat("LastVertical", -1);
         state = State.Normal;
 
         //root test
-        rootCooldown = StartCoroutine(IsRooted(0));
+        //rootedDashLength = dashLenght * 0.5f;   // if we want the lenght of dash when rooted to be half the original dash.
+        
     }
 
     private void Update()
@@ -93,7 +86,6 @@ public class CharacterController : MonoBehaviour
         Movement();
         Animator();
         HandleAiming();
-
 
         if (Input.GetButtonDown("Fire2"))
         {
@@ -126,45 +118,8 @@ public class CharacterController : MonoBehaviour
 
         aimDirection = (mousePosition - transform.position).normalized;
         float angle = MathF.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg;
-        aimTransform.eulerAngles = new Vector3(0, 0, angle);   // mby in () i can change so firepoint move when character moves?
-        //print(angle);
-        //print(aimDirection);
-        //print(GetDirectionFromAngle(angle));   // jonte
-
-        ////testing for the aiming direction objects
-        //if (angle > -135 && angle < -45) //down
-        //    {
-        //        _aimObjDirection = 1;
-        //        aimTransform.localPosition = new Vector3(0, -0.6f, 0);
-        //        //aimTransform.localRotation = Quaternion.AngleAxis()
-        //    }
-        //    else if (angle > 135 || angle < -135) // left
-        //    {
-        //        _aimObjDirection = 2;
-        //        aimTransform.localPosition = new Vector3(-0.6f, 0, 0);
-        //    }
-        //    else if (angle < 135 && angle > 45) // up
-        //    {
-        //        _aimObjDirection = 4;
-        //        aimTransform.localPosition = new Vector3(0, 0.6f, 0);
-        //    }
-        //    else   // right
-        //    {
-        //        _aimObjDirection = 3;
-        //        aimTransform.localPosition = new Vector3(0.6f, 0, 0);
-        //    }
+        aimTransform.eulerAngles = new Vector3(0, 0, angle);
     }
-
-    //private Vector2 GetDirectionFromAngle(float angleInDegrees)  // Jonte
-    //{
-    //    var angle = angleInDegrees;
-    //    angle += aimTransform.eulerAngles.z;
-
-    //    var AngleInRadians = angle * Mathf.Deg2Rad;
-    //    var x = Mathf.Cos(AngleInRadians);
-    //    var y = Mathf.Sin(AngleInRadians);
-    //    return new Vector2(x, y);
-    //}
 
     private static Vector3 GetMouseWorldPosition()
     {
@@ -181,7 +136,7 @@ public class CharacterController : MonoBehaviour
         Vector3 worldPosition = worldCamera.ScreenToWorldPoint(screenPosition);
         return worldPosition;
     }
-    // End of new aiming block
+    // End of aiming block
 
     private void Movement()
     {
@@ -206,10 +161,40 @@ public class CharacterController : MonoBehaviour
 
                 if (Input.GetKeyDown(KeyCode.Space) && (staminaSystem.currentStamina) > 9)
                 {
-                    dashSpeed = dashInput;
-                    state = State.Dash;
-                    _animator.SetTrigger("Dash");
-                    GetComponent<StaminaSystem>().SpendStamina(10);
+                    // original dash.
+                    //dashSpeed = dashLenght; 
+                    //state = State.Dash;
+                    //_animator.SetTrigger("Dash");
+                    //GetComponent<StaminaSystem>().SpendStamina(10);
+                    
+                    //new dash with rooted bool.
+                    if (_rooted == false)   // if not rooted
+                    {
+                        dashSpeed = dashLenght;
+                        state = State.Dash;
+                        _animator.SetTrigger("Dash");
+                        GetComponent<StaminaSystem>().SpendStamina(10);
+                    }
+                    else                    // if rooted
+                    {
+                        if (rootBreakDash)      // if dash can break root
+                        {
+                            dashSpeed = rootedDashLength;
+                            state = State.Dash;
+                            _animator.SetTrigger("Dash");
+                            GetComponent<StaminaSystem>().SpendStamina(20);
+                            print("root ended normaly with dash");
+                            moveSpeed = 7.5f;
+                            _effectAnimator.SetBool("IsRooted", false);
+                        }
+                        else
+                        {
+                        dashSpeed = rootedDashLength;
+                        state = State.Dash;
+                        _animator.SetTrigger("Dash");
+                        GetComponent<StaminaSystem>().SpendStamina(10);
+                        }
+                    }
                 }
                 break;
             case State.Dash:
@@ -256,17 +241,15 @@ public class CharacterController : MonoBehaviour
 
     public void Root(float rootDuration)
     {
-        if (_canRoot)
+        _animator.SetTrigger("Hurt");
+        if (_rooted == false)
         {
-            _canRoot = false;
-            //moveSpeed = 0;
+            _rooted = true;
+            //moveSpeed = 0;   // movespeed is now connected to rootedMovement
             moveSpeed = rootedMovement;
             _effectAnimator.SetBool("IsRooted", true);
-            //Web effekt test - did not work
-            //GameObject effect = Instantiate(webEffect, transform.position, Quaternion.identity);
-            //Destroy(effect, rootDuration);
 
-            //StopCoroutine(rootCooldown);  //Commented out just for the invurnability
+            //StopCoroutine(rootCooldown);  //Commented out just for the invurnability, if this line is active the cooldown will reset each hit(I believe)
             rootCooldown = StartCoroutine(IsRooted(rootDuration));
         }
     }
@@ -275,11 +258,11 @@ public class CharacterController : MonoBehaviour
         //moveSpeed = 0;
         print("is rooted");
         yield return new WaitForSeconds(rootDuration);
-        print("root ended");
-        moveSpeed = 10;
+        print("root ended normaly");
+        moveSpeed = 7.5f;
         _effectAnimator.SetBool("IsRooted", false);
         yield return new WaitForSeconds(1f);  // invurnability duration
-        _canRoot = true;
+        _rooted = false;
     }    
 
     public IEnumerator Knockback(float knockbackDuration, float knockbackPower, Transform obj)
