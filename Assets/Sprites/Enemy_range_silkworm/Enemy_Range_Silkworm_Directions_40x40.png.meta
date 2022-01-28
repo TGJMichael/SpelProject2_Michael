@@ -112,7 +112,7 @@ TextureImporter:
         width: 40
         height: 40
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -133,7 +133,7 @@ TextureImporter:
         width: 40
         height: 40
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -141,48 +141,6 @@ TextureImporter:
       bones: []
       spriteID: 26b63e587f2bb4a45a73a74222aaad5d
       internalID: 222836286
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Enemy_Range_Silkworm_Directions_40x40_2
-      rect:
-        serializedVersion: 2
-        x: 80
-        y: 0
-        width: 40
-        height: 40
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 257f7b38a5bc8664294c2c38a8941c7e
-      internalID: 1411289904
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Enemy_Range_Silkworm_Directions_40x40_3
-      rect:
-        serializedVersion: 2
-        x: 120
-        y: 0
-        width: 40
-        height: 40
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 81c72fb311b138547aee6c7d69eaa25a
-      internalID: 1734835740
       vertices: []
       indices: 
       edges: []
@@ -200,8 +158,6 @@ TextureImporter:
     nameFileIdTable:
       Enemy_Range_Silkworm_Directions_40x40_1: 222836286
       Enemy_Range_Silkworm_Directions_40x40_0: -1904380484
-      Enemy_Range_Silkworm_Directions_40x40_3: 1734835740
-      Enemy_Range_Silkworm_Directions_40x40_2: 1411289904
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

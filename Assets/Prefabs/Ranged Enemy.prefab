@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 1846487923038884503}
   - component: {fileID: 1846487923038884500}
   - component: {fileID: 7882964328940132394}
-  - component: {fileID: 4422878066432609207}
   m_Layer: 7
   m_Name: EnemyGrafics
   m_TagString: Untagged
@@ -56,7 +55,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -76,7 +75,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -236
+  m_SortingOrder: 25
   m_Sprite: {fileID: -1904380484, guid: 19bb3838c4f513141a7c213211b8ad75, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -122,20 +121,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyRangedAttack: {fileID: 0}
   enemyController: {fileID: 0}
---- !u!114 &4422878066432609207
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1846487923038884505}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bef4ccd22917c844a9cf0b84199a689f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Target: {fileID: 1846487923038884502}
-  TargetOffset: 0
 --- !u!1 &1846487924252692754
 GameObject:
   m_ObjectHideFlags: 0
@@ -322,7 +307,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf2713a5d7fcda84f91ce17b713a8432, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  aggroRange: 10
+  aggroRange: 11
   rigibody: {fileID: 1846487924252692749}
   attackRange: 2
   attackDamage: 0
@@ -369,7 +354,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f56f5ada229921440a9ea2938f87f935, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 6
+  range: 5
   knockbackPower: 10
   knockbackDuration: 10
   attackRate: 1
@@ -405,7 +390,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6821898803001162830}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.396, z: 0}
+  m_LocalPosition: {x: 0, y: -0.45, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -450,9 +435,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1638372591
-  m_SortingLayer: -1
-  m_SortingOrder: 4
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 9
   m_Sprite: {fileID: 21300000, guid: 67cfe169f23b06945ba141e0a6ce2d9f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0.29411766}
   m_FlipX: 0

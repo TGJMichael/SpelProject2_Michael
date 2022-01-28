@@ -14,9 +14,6 @@ public class EnemyHealth : MonoBehaviour
     //public DeathCounterScript m_deathCounter;
     //public int killPoint = 1;
     public NextStage killCount;
-
-    // Player regen ammo when this unity is killed.         // works but will activate on ranged kill aswell. dont want that
-    //public RangedAttack ammoRegenOnKill;
     private void Start()
     {
         currenthealth = maxHealth;
@@ -28,10 +25,7 @@ public class EnemyHealth : MonoBehaviour
         //deathCount = gameObject.GetComponent<NewNextScene>(); // does not work
         //m_deathCounter = GameObject.FindObjectOfType(typeof(DeathCounterScript)) as DeathCounterScript;
         killCount = GameObject.FindObjectOfType(typeof(NextStage)) as NextStage;
-
-
-        // Player regen ammo when this unity is killed          // works but will activate on ranged kill aswell. dont want that
-        //ammoRegenOnKill = GameObject.FindObjectOfType(typeof(RangedAttack)) as RangedAttack;
+        
     }
     public void TakeDamage(int damage)
     {
@@ -50,9 +44,9 @@ public class EnemyHealth : MonoBehaviour
 
     void Die()
     {
-        //Debug.Log("Enemy died");
+        Debug.Log("Enemy died");
         _animator.SetBool("IsDead", true);
-        //print("Killed: " + gameObject.name);
+        print("Killed: " + gameObject.name);
         Destroy(gameObject, 5f);
 
         GetComponent<Collider2D>().enabled = false;
@@ -66,8 +60,7 @@ public class EnemyHealth : MonoBehaviour
         killCount.KillCount();
 
 
-        // Player regen ammo when this unity is killed  // works but will activate on ranged kill aswell. dont want that
-        //ammoRegenOnKill.AmmoRegenOnKill();
+        // Add exp to player here? have to wait and see what the other one has written for code, I think he was making something.
 
     }
 }

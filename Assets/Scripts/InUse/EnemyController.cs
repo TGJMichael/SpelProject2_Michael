@@ -1,32 +1,33 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Pathfinding;
+using Pathfinding;  // from "EnemyGFX"
 using System;
 
 public class EnemyController : MonoBehaviour
 {
+    //private Pathfinding aidPath; // from "EnemyGFX"
     private AIPath _aiPath;
+    //public AIPath canMove { get => canMove; set => canMove = value; }
 
     private Animator _animator;
     private Transform _target;
 
-    public float aggroRange = 5;     //how close player need to be for ai to chase
+    public float aggroRange;     //how close player need to be for ai to chase.still havent figured out how to swicth from random checkpoints to chasing player.
     public Rigidbody2D rigibody;
 
     // For the melee attack
-    public float attackRange = 3f;      // distance to when enemy start to attack
-    public int attackDamage = 2;
+    public float attackRange = 2f;      // distance to when enemy start to attack
+    public int attackDamage = 3;
     public float knocbackPower = 0.2f;
     public float knockbackDuration = 10f;
-    public float attackRate = 3f;       // For how often enemy attacks
+    public float attackRate = 2f;       // For how often enemy attacks
     float nextAttackTime = 0f;
 
     Vector2 move;
 
-    // CalculateDirection
-    private int _rightLeftValue;
-    private int _upDownValue;
+
+    //private // why is this here?
 
     void Start()
     {
@@ -35,14 +36,15 @@ public class EnemyController : MonoBehaviour
         GetComponent<AIDestinationSetter>().target = _target;   // if actively changing in game this 
         _aiPath = GetComponent<AIPath>();
 
+
+
     }
 
     void Update()
     {
-
-        CalculateDirection();
         Movement();
         Animator();
+        //Aggro();
 
         if (Vector3.Distance(transform.position, _target.transform.position) > aggroRange)
         {
@@ -52,6 +54,23 @@ public class EnemyController : MonoBehaviour
         {
             GetComponent<AIPath>().isStopped = false;
         }
+        // nothing of these works as intended
+        //Chase();      
+        //StartMoving();
+
+        //if (Input.GetKeyUp(KeyCode.P))
+        //{
+        //    StopMoving();
+        //}
+
+        // expiremental aipath code for together with animator. it works as intended. will move this block to animator function tomorrow.
+        //if (Vector3.Distance(transform.position, _target.transform.position) < aggroRange)
+        //{
+        //    print("Target Within range");
+        //    gameObject.transform.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
+        //}
+
+
 
         if (Vector3.Distance(transform.position, _target.transform.position) < attackRange)
         {
@@ -60,14 +79,15 @@ public class EnemyController : MonoBehaviour
         }
     }
 
+    //private void Aggro()
+    //{
+    //    throw new NotImplementedException();
+    //}
+
     private void Animator()
     {
-        //_animator.SetFloat("Horizontal", move.x);     // made more precise calculations for the animator, new output below these two
-        //_animator.SetFloat("Vertical", move.y);       // same as above
-
-        _animator.SetFloat("Horizontal", _rightLeftValue);
-        _animator.SetFloat("Vertical", _upDownValue);
-
+        _animator.SetFloat("Horizontal", move.x);
+        _animator.SetFloat("Vertical", move.y);
 
         if (move.sqrMagnitude > 1)
         {
@@ -80,10 +100,8 @@ public class EnemyController : MonoBehaviour
 
         if (move.x != 0 || move.y != 0)
         {
-            //_animator.SetFloat("LastHorizontal", move.x);
-            //_animator.SetFloat("LastVertical", move.y);
-            _animator.SetFloat("LastHorizontal", _rightLeftValue);
-            _animator.SetFloat("LastVertical", _upDownValue);
+            _animator.SetFloat("LastHorizontal", move.x);
+            _animator.SetFloat("LastVertical", move.y);
         }
     }
 
@@ -93,45 +111,32 @@ public class EnemyController : MonoBehaviour
         move.y = _aiPath.desiredVelocity.y;
 
     }
-    public void CalculateDirection()
-    {
-        //float _absoluteMoveX = Mathf.Abs(move.x);     //(1)  // these are just for testing purposes trying out what works, all works but is it nessecary? prob not.
-        //float _absoluteMoveY = Math.Abs(move.y);      //(1)  
-        //if (_absoluteMoveX >_absoluteMoveY)           //(1)
-        //float _maxXY = Mathf.Max(_absoluteMoveX, _absoluteMoveY); // (1,2)
-        //if (_maxXY == _absoluteMoveX )  // (1,2)
-        if (Mathf.Abs(move.x) > Mathf.Abs(move.y))  // if the horizontal(left/right) absolute value is the biggest
 
-        {
-            _upDownValue = 0;
-            //print("facing right or left");
-            if (move.x > 0)                         // if facing right                     
-            {
-                //print("facing right");
-                _rightLeftValue = 1;
-            }
-            else                                    // if facing left
-            {
-                //print("facing left");
-                _rightLeftValue = -1;
-            }
-        }
-        else                                        // if vertical(up/down) absolute value is the biggest
-        {
-            _rightLeftValue = 0;
-            //print("facing up or down");
-            if (move.y > 0)                         // if facing up        
-            {
-                //print("facing up");
-                _upDownValue = 1;
-            }
-            else                                    // if facing down
-            {
-                //print("facing down");
-                _upDownValue = -1;
-            }
-        }
-    }
+    //does not work as intended. no matter what i try, the pathfinding will turn off permanently. the aipathstopper script works atleast.
+    //private void Chase()
+    //{
+    //    if (Vector3.Distance(transform.position, _target.transform.position) > aggroRange)
+    //    {
+    //        _aiPath.enabled = false;
+    //        //_aiPath.enabled = true;
+    //        //if (_aiPath.enabled == false)
+    //        //{
+    //        //}
+    //    }
+    //    else
+    //    {
+    //        _aiPath.enabled = true;
+    //    }
+    //}
+
+    //public void StopMoving()
+    //{
+    //    _aipath.enabled = !_aipath.enabled;
+    //}
+    //public void StartMoving()
+    //{
+    //    myAnim.SetBool("Ismoving", true);
+    //}
 
     public void MeleeAttack ()
     { 

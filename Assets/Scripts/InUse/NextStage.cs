@@ -16,8 +16,7 @@ public class NextStage : MonoBehaviour
     public bool objectiveComplete = false;
 
     // Stuff to deactivate when objectiveComplete
-    private Transform Door;
-    private Transform Light;
+    public Transform Door;
 
     //last scene fix
     public bool lastScene = false;
@@ -25,8 +24,6 @@ public class NextStage : MonoBehaviour
     private void Start()
     {
         Door = this.gameObject.transform.GetChild(0);
-        Light = this.gameObject.transform.GetChild(1);
-        Light.gameObject.SetActive(false);
 
         NextScene = SceneManager.GetActiveScene().buildIndex + 1;
         //NextScene = SceneManager.GetActiveScene().buildIndex - 1;   // this is just for testing since i dont have more that 2 scenes and the one i am working on is the second on the index.
@@ -45,9 +42,8 @@ public class NextStage : MonoBehaviour
     public void OpenDoor()
     {
         objectiveComplete = true;
-        Door.gameObject.SetActive(false);
-        Light.gameObject.SetActive(true);
-        
+        Door.gameObject.SetActive(false);   // 
+
     }
 
     public void OnTriggerEnter2D(Collider2D collision)

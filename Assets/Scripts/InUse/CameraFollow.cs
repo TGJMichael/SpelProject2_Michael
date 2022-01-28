@@ -13,7 +13,7 @@ public class CameraFollow : MonoBehaviour
     void Update()
     {
         Vector3 playerPosition = new Vector3(player.transform.position.x, player.transform.position.y, -10);
-        //playerPosition.x = Mathf.Clamp(player.transform.position.x, minX, maxX);  // these two rowes make so that the camera can´t move past a certain point.
+        //playerPosition.x = Mathf.Clamp(player.transform.position.x, minX, maxX);
         //playerPosition.y = Mathf.Clamp(player.transform.position.y, minY, maxY);
         transform.position = playerPosition;
     }

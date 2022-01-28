@@ -108,7 +108,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 120
+        y: 40
         width: 40
         height: 40
       alignment: 0
@@ -129,7 +129,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 40
-        y: 120
+        y: 40
         width: 40
         height: 40
       alignment: 0
@@ -150,7 +150,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 80
-        y: 120
+        y: 40
         width: 40
         height: 40
       alignment: 0
@@ -171,7 +171,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 120
-        y: 120
+        y: 40
         width: 40
         height: 40
       alignment: 0
@@ -192,7 +192,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 160
-        y: 120
+        y: 40
         width: 40
         height: 40
       alignment: 0
@@ -213,7 +213,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 80
+        y: 0
         width: 40
         height: 40
       alignment: 0
@@ -234,7 +234,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 40
-        y: 80
+        y: 0
         width: 40
         height: 40
       alignment: 0
@@ -255,7 +255,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 80
-        y: 80
+        y: 0
         width: 40
         height: 40
       alignment: 0
@@ -276,7 +276,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 120
-        y: 80
+        y: 0
         width: 40
         height: 40
       alignment: 0
@@ -297,7 +297,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 160
-        y: 80
+        y: 0
         width: 40
         height: 40
       alignment: 0
@@ -313,216 +313,6 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: Enemy_Range_Silkworm_Hurt_40x40_10
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 40
-        width: 40
-        height: 40
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3921860b412762249b17e5932e26fab3
-      internalID: 1756873284
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Enemy_Range_Silkworm_Hurt_40x40_11
-      rect:
-        serializedVersion: 2
-        x: 40
-        y: 40
-        width: 40
-        height: 40
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1f2f5ef3731b31045b7379344349e025
-      internalID: 719884031
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Enemy_Range_Silkworm_Hurt_40x40_12
-      rect:
-        serializedVersion: 2
-        x: 80
-        y: 40
-        width: 40
-        height: 40
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a1ec3b04441280942845eb57572c0fff
-      internalID: -127746919
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Enemy_Range_Silkworm_Hurt_40x40_13
-      rect:
-        serializedVersion: 2
-        x: 120
-        y: 40
-        width: 40
-        height: 40
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bd593806b0a94274a9fd298cfb33b7cc
-      internalID: 70582585
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Enemy_Range_Silkworm_Hurt_40x40_14
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 40
-        width: 40
-        height: 40
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e8358f44bbe7b0940a7d501091a427d7
-      internalID: 1628994540
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Enemy_Range_Silkworm_Hurt_40x40_15
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 40
-        height: 40
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bee9d187dde347c4f974b821ea331180
-      internalID: -1779203649
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Enemy_Range_Silkworm_Hurt_40x40_16
-      rect:
-        serializedVersion: 2
-        x: 40
-        y: 0
-        width: 40
-        height: 40
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d4b41d50961ca324892c24e9d0190634
-      internalID: 1938170293
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Enemy_Range_Silkworm_Hurt_40x40_17
-      rect:
-        serializedVersion: 2
-        x: 80
-        y: 0
-        width: 40
-        height: 40
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9eb88e9ab20e2724d92ae7d0b221cc64
-      internalID: 1120180244
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Enemy_Range_Silkworm_Hurt_40x40_18
-      rect:
-        serializedVersion: 2
-        x: 120
-        y: 0
-        width: 40
-        height: 40
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4d2cae3bf5cf21c45a3ac6604d59e9fe
-      internalID: -765132442
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Enemy_Range_Silkworm_Hurt_40x40_19
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 0
-        width: 40
-        height: 40
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c991f40322c7d9c4986bcfb4a6be7046
-      internalID: 452738329
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -534,25 +324,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Enemy_Range_Silkworm_Hurt_40x40_10: 1756873284
       Enemy_Range_Silkworm_Hurt_40x40_2: 1030116800
       Enemy_Range_Silkworm_Hurt_40x40_6: -686219755
-      Enemy_Range_Silkworm_Hurt_40x40_14: 1628994540
-      Enemy_Range_Silkworm_Hurt_40x40_15: -1779203649
       Enemy_Range_Silkworm_Hurt_40x40_0: 2140059181
       Enemy_Range_Silkworm_Hurt_40x40_3: -777309861
       Enemy_Range_Silkworm_Hurt_40x40_7: 1806949202
-      Enemy_Range_Silkworm_Hurt_40x40_11: 719884031
-      Enemy_Range_Silkworm_Hurt_40x40_16: 1938170293
       Enemy_Range_Silkworm_Hurt_40x40_9: -414937118
       Enemy_Range_Silkworm_Hurt_40x40_4: 2124650955
       Enemy_Range_Silkworm_Hurt_40x40_1: 1751669666
-      Enemy_Range_Silkworm_Hurt_40x40_13: 70582585
       Enemy_Range_Silkworm_Hurt_40x40_8: -2083652825
-      Enemy_Range_Silkworm_Hurt_40x40_18: -765132442
-      Enemy_Range_Silkworm_Hurt_40x40_19: 452738329
-      Enemy_Range_Silkworm_Hurt_40x40_17: 1120180244
-      Enemy_Range_Silkworm_Hurt_40x40_12: -127746919
       Enemy_Range_Silkworm_Hurt_40x40_5: -1002314001
   spritePackingTag: 
   pSDRemoveMatte: 0
