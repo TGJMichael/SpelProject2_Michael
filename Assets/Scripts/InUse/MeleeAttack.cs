@@ -68,6 +68,15 @@ public class MeleeAttack : MonoBehaviour
             foreach (Collider2D enemy in hitEnemies)
             {
                 print("Hit: " + enemy.name);
+
+                if (enemy.tag == "Enemy")
+                {
+                    enemy.GetComponent<EnemyHealth>().TakeDamage(attackDamage);
+                }
+                if (enemy.tag == "Boss")
+                {
+                    enemy.GetComponent<BossHealth>().TakeDamage(attackDamage);
+
                 if (enemy.gameObject.tag == "Destroyable")
                 {
                     destroyableObject = enemy.gameObject.GetComponent<DestroyableObject>();
@@ -76,6 +85,7 @@ public class MeleeAttack : MonoBehaviour
                 else
                 {
                     enemy.GetComponent<EnemyHealth>().TakeDamage(attackDamage);
+
                 }
             }
         }

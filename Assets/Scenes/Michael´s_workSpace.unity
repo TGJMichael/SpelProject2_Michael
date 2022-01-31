@@ -772,13 +772,21 @@ PrefabInstance:
       propertyPath: attackRange
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 181362606287078118, guid: ad0608469c9cb3248a67abfbd44447b4, type: 3}
+      propertyPath: HearthPrefab
+      value: 
+      objectReference: {fileID: 6994521561279859548, guid: 45503b909df8a2a40bc7d67f107dbf5e, type: 3}
+    - target: {fileID: 181362606287078118, guid: ad0608469c9cb3248a67abfbd44447b4, type: 3}
+      propertyPath: staminaPrefab
+      value: 
+      objectReference: {fileID: 2680426077047402700, guid: 7e0907860ee81304faf12bdf1e3e1ec8, type: 3}
     - target: {fileID: 181362606287078140, guid: ad0608469c9cb3248a67abfbd44447b4, type: 3}
       propertyPath: m_Name
       value: Melee Ant
       objectReference: {fileID: 0}
     - target: {fileID: 181362606287078140, guid: ad0608469c9cb3248a67abfbd44447b4, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5196991882820666118, guid: ad0608469c9cb3248a67abfbd44447b4, type: 3}
       propertyPath: m_AnchorMax.x
@@ -807,7 +815,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6434875324248281365, guid: 59283f8b95f44154dae5d53d4766a468, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6434875324248281365, guid: 59283f8b95f44154dae5d53d4766a468, type: 3}
       propertyPath: m_AnchorMax.x
@@ -920,15 +928,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2333736519147481668, guid: 3d94c5780f35b9e45852509b5c68956f, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2333736519147481668, guid: 3d94c5780f35b9e45852509b5c68956f, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7707946215597337504, guid: 3d94c5780f35b9e45852509b5c68956f, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7707946215597337504, guid: 3d94c5780f35b9e45852509b5c68956f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -970,6 +978,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7707946215597337508, guid: 3d94c5780f35b9e45852509b5c68956f, type: 3}
+      propertyPath: HearthPrefab
+      value: 
+      objectReference: {fileID: 6994521561279859548, guid: 45503b909df8a2a40bc7d67f107dbf5e, type: 3}
+    - target: {fileID: 7707946215597337508, guid: 3d94c5780f35b9e45852509b5c68956f, type: 3}
+      propertyPath: staminaPrefab
+      value: 
+      objectReference: {fileID: 2680426077047402700, guid: 7e0907860ee81304faf12bdf1e3e1ec8, type: 3}
     - target: {fileID: 7707946215597337511, guid: 3d94c5780f35b9e45852509b5c68956f, type: 3}
       propertyPath: rigibody
       value: 
@@ -992,7 +1008,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7707946215597337534, guid: 3d94c5780f35b9e45852509b5c68956f, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3d94c5780f35b9e45852509b5c68956f, type: 3}
@@ -1089,7 +1105,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6864083337560743543, guid: 9ad7d23d0673dc64d8e287db62f6e355, type: 3}
       propertyPath: killsNeeded
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7826584586430117702, guid: 9ad7d23d0673dc64d8e287db62f6e355, type: 3}
       propertyPath: m_RootOrder
@@ -1215,7 +1231,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3674539347939140609, guid: b07f73ab4a2f3234f9f3c6d4ac7679f6, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3674539347939140609, guid: b07f73ab4a2f3234f9f3c6d4ac7679f6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1256,6 +1272,10 @@ PrefabInstance:
     - target: {fileID: 3674539347939140609, guid: b07f73ab4a2f3234f9f3c6d4ac7679f6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3674539347939140610, guid: b07f73ab4a2f3234f9f3c6d4ac7679f6, type: 3}
+      propertyPath: rootBreakDash
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6996968900331729899, guid: b07f73ab4a2f3234f9f3c6d4ac7679f6, type: 3}
       propertyPath: projectiles.Array.data[0]
@@ -1304,7 +1324,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7492656756142067259, guid: 2accd1ff9df07444b8309f80550215d1, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7492656756142067259, guid: 2accd1ff9df07444b8309f80550215d1, type: 3}
       propertyPath: m_LocalPosition.x
