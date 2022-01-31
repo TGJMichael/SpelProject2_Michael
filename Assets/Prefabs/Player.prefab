@@ -649,8 +649,8 @@ MonoBehaviour:
   currentAmmo: 6
   numOfProjectiles: 6
   projectiles: []
-  projectile: {fileID: 0}
-  emptyProjectile: {fileID: 0}
+  projectile: {fileID: 2039699899, guid: 7c374371143cec84597c43613efb4079, type: 3}
+  emptyProjectile: {fileID: -118872146, guid: 7c374371143cec84597c43613efb4079, type: 3}
 --- !u!114 &2584951229131878256
 MonoBehaviour:
   m_ObjectHideFlags: 0

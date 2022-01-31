@@ -58,8 +58,6 @@ public class EnemyHealth : MonoBehaviour
         GetComponent<AIPath>().enabled = false;
         GetComponent<EnemyController>().enabled = false;
         GetComponentInChildren<Canvas>().enabled = false;
-        killCount.KillCount();
-
 
         // Item drop
         if (randomNumber < 30 && randomNumber > 15)
@@ -73,5 +71,6 @@ public class EnemyHealth : MonoBehaviour
             Instantiate(HearthPrefab, position, Quaternion.identity);
         }
 
+        killCount.KillCount();
     }
 }
