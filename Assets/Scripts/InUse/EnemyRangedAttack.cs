@@ -10,7 +10,7 @@ public class EnemyRangedAttack : MonoBehaviour
     public float range;
     public float knockbackPower = 10f;
     public float knockbackDuration = 10f;
-    
+
     public float attackRate = 1f;
     float nextAttackTime = 0f;
 
@@ -18,6 +18,9 @@ public class EnemyRangedAttack : MonoBehaviour
     public Transform firePoint;
     public float projectileSpeed = 10f;
     private Animator _animator;
+
+    //SFX
+    [SerializeField] AudioClip[] spitSounds;
 
     // Damage for the "EnemyProjectile" prefab to pull from
     [Header("Projectile")]
@@ -78,6 +81,9 @@ public class EnemyRangedAttack : MonoBehaviour
         GameObject projectile = Instantiate(projectilePrefab, firePoint.position, firePoint.rotation);
         Rigidbody2D rb = projectile.GetComponent<Rigidbody2D>();
         rb.AddForce(firePoint.up * projectileSpeed, ForceMode2D.Impulse);
+
+            AudioClip clip = spitSounds[UnityEngine.Random.Range(0, spitSounds.Length)];
+            GetComponent<AudioSource>().PlayOneShot(clip);
 
         }
         else
