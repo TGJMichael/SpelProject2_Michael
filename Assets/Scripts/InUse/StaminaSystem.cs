@@ -16,6 +16,11 @@ public class StaminaSystem : MonoBehaviour
     private bool staminaRegOn;
     private Coroutine staminaCooldown;
 
+    // Item drop  // not needed.
+    //public int StamReg = 10;
+    //public GameObject staminaPrefab;
+    //public GameObject stamina;
+
     void Start()
     {
         currentStamina = maxStamina;
@@ -23,6 +28,7 @@ public class StaminaSystem : MonoBehaviour
 
         staminaCooldown = StartCoroutine(staminaRegCooldown());
     }
+
 
     private void Update()
     {
@@ -33,7 +39,28 @@ public class StaminaSystem : MonoBehaviour
 
         }
     }
+    // Item drop  // not needed
+    //public void OnTriggerEnter2D(Collider2D collision)
+    //{
+    //    if (collision.gameObject.CompareTag("Player"))
+    //        GetComponent<StaminaSystem>();
+    //    {
+    //        Destroy(stamina);
+    //        currentStamina += StamReg;
+    //        staminaBar.SetStamina(currentStamina);
+    //    }
+    //}
 
+    // new Item drop
+    public void RegainStamina(int StamReg)
+    {
+        currentStamina += StamReg;
+
+        if (currentStamina >= maxStamina)
+        {
+            currentStamina = maxStamina;
+        }
+    }
     public void SpendStamina (int spent)
     {
         currentStamina -= spent;

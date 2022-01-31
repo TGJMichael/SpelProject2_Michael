@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using Pathfinding;
+using System.Collections.Generic;
 
 public class EnemyHealth : MonoBehaviour
 {
@@ -17,6 +18,20 @@ public class EnemyHealth : MonoBehaviour
 
     // Player regen ammo when this unity is killed.         // works but will activate on ranged kill aswell. dont want that
     //public RangedAttack ammoRegenOnKill;
+
+    // Item drop.
+    //public Transform ItemDrop;   // dont think this is needed.
+    public GameObject HearthPrefab;
+    public GameObject staminaPrefab;
+    //public List<GameObject> Items;
+    //public int[] table =
+    //{
+    //    70,  // No drop
+    //    15, // Health
+    //    15 // Stamina
+    //};
+    //public int total;
+    public int randomNumber;
     private void Start()
     {
         currenthealth = maxHealth;
@@ -32,6 +47,16 @@ public class EnemyHealth : MonoBehaviour
 
         // Player regen ammo when this unity is killed          // works but will activate on ranged kill aswell. dont want that
         //ammoRegenOnKill = GameObject.FindObjectOfType(typeof(RangedAttack)) as RangedAttack;
+
+        // random number generator.
+        randomNumber = Random.Range(0, 100);
+
+        //foreach (var item in table)   // moved to start() since random int is generated just once.
+        //{
+        //    total += item;
+        //}
+        //randomNumber = Random.Range(0, total);
+
     }
     public void TakeDamage(int damage)
     {
@@ -63,7 +88,29 @@ public class EnemyHealth : MonoBehaviour
         //deathCount.CheckPlayerCanGoNextLevel();    // does not work. 
         //_deathCounter.GetComponent<DeathCounterScript>().KillCount(killPoint);
         //m_deathCounter.KillCount();
+
+        // Item drop
+
+
+        //Instantiate(staminaPrefab, transform.position, Quaternion.identity);
+        //Instantiate(HearthPrefab, transform.position, Quaternion.identity);
         killCount.KillCount();
+        ////{
+        //    if (randomNumber < 30)
+        //    {
+
+        //    }
+            if (randomNumber < 30 && randomNumber > 15)
+            {
+                Vector3 position = transform.position;
+                Instantiate(staminaPrefab, position, Quaternion.identity);
+            }
+            if (randomNumber < 15)
+            {
+                Vector3 position = transform.position;
+                Instantiate(HearthPrefab, position, Quaternion.identity);
+            }
+        //}
 
 
         // Player regen ammo when this unity is killed  // works but will activate on ranged kill aswell. dont want that

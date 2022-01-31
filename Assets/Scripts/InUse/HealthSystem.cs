@@ -22,6 +22,12 @@ public class HealthSystem : MonoBehaviour
     //float fix
     private float decimalhealth;
 
+    // Item drop                // seing as I don't think this is needed i will comment it out. Will leave if here for now,
+    //public int HealAmount = 10;
+    //public GameObject HeartPrefab;
+    //public GameObject Heart;
+
+
     void Start()
     {        
         currentHealth = maxHealth;
@@ -44,6 +50,38 @@ public class HealthSystem : MonoBehaviour
     //    decimalhealth += 1 * Time.deltaTime;
     //    currentHealth += Mathf.RoundToInt(decimalhealth);
     //}
+
+    //public void OnTriggerEnter2D(Collider2D collision)
+    //{
+    //    if (collision.gameObject.CompareTag("Player"))   // this should not work at all since the collision we are looking for are "Item" not "Player" thats what this code is on.
+    //                                                     //GetComponent<HealthSystem>();  // we already are inside HealthSystem.
+    //    {
+    //        if (HeartPrefab && currentHealth + HealAmount < maxHealth)
+    //        {
+    //            Destroy(Heart);
+    //            currentHealth += HealAmount;
+    //            healthBar.SetHealth(currentHealth);
+    //        }
+    //    }
+    //    if (HeartPrefab && currentHealth + HealAmount > maxHealth)
+    //    {
+    //        Destroy(Heart);
+    //        currentHealth = maxHealth;
+    //        healthBar.SetHealth(currentHealth);
+    //    }
+    //}
+    // Item drop heal
+    public void HealDamage(int heal)
+    {
+        currentHealth += heal;
+
+        healthBar.SetHealth(currentHealth);  // is it really neccesary for this to be set everytime health changes?
+
+        if (currentHealth >= maxHealth)  // try later to se if "maxHealth - heal" works
+        {
+            currentHealth = maxHealth;
+        }
+    }
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;

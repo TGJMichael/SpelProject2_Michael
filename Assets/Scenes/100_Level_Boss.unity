@@ -70905,6 +70905,10 @@ PrefabInstance:
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 3625610110478692419}
+    - target: {fileID: 2584951227491024170, guid: 4959164da2bd8e54e84e039e55af468e, type: 3}
+      propertyPath: HeartPrefab
+      value: 
+      objectReference: {fileID: 6994521561279859548, guid: 45503b909df8a2a40bc7d67f107dbf5e, type: 3}
     - target: {fileID: 2584951228423753588, guid: 4959164da2bd8e54e84e039e55af468e, type: 3}
       propertyPath: m_SortingOrder
       value: 655
