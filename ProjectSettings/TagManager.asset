@@ -10,6 +10,9 @@ TagManager:
   - OnPlayerEffect
   - PlayerSprite
   - SpitBar
+  - Undefined
+  - Projectile
+  - Destroyable
   layers:
   - Default
   - TransparentFX

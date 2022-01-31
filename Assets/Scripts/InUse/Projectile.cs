@@ -34,6 +34,7 @@ public class Projectile : MonoBehaviour
         {
             //print("Can't hurt: " + targetHit.name);
         }
+
         GameObject effect = Instantiate(hitEffect, transform.position, Quaternion.identity);    // create explosion animation on contact position
         Destroy(effect, 5f);   // destroy animation after set time (5f) 
         Destroy(gameObject);   // destroy projectile
