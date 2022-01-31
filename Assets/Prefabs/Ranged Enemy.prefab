@@ -345,6 +345,9 @@ MonoBehaviour:
   currenthealth: 30
   healthBar: {fileID: 5997442555625018158}
   killCount: {fileID: 0}
+  HearthPrefab: {fileID: 6994521561279859548, guid: 45503b909df8a2a40bc7d67f107dbf5e, type: 3}
+  staminaPrefab: {fileID: 2680426077047402700, guid: 7e0907860ee81304faf12bdf1e3e1ec8, type: 3}
+  randomNumber: 0
 --- !u!114 &1846487924252692745
 MonoBehaviour:
   m_ObjectHideFlags: 0
