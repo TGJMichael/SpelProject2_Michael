@@ -82,6 +82,7 @@ public class EnemyRangedAttack : MonoBehaviour
         Rigidbody2D rb = projectile.GetComponent<Rigidbody2D>();
         rb.AddForce(firePoint.up * projectileSpeed, ForceMode2D.Impulse);
 
+            //SFX
             AudioClip clip = spitSounds[UnityEngine.Random.Range(0, spitSounds.Length)];
             GetComponent<AudioSource>().PlayOneShot(clip);
 
