@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d0c455caee81fb94ab64767366f21da0
+guid: 02186e395c3021a4391ecfca8b428a30
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -42,7 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -102,7 +102,112 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Info_ground_StartingRoom_640x320_0
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 0
+        width: 100
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d415c0fff33fa764bb77f807ede04ab8
+      internalID: -1384767233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Info_ground_StartingRoom_640x320_1
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 0
+        width: 100
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aef292e4b674cb142b16d520dd9da367
+      internalID: 1520608838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Info_ground_StartingRoom_640x320_2
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 0
+        width: 100
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38a68f1c0a10fb64c8ed059f149fa6d3
+      internalID: -1168016086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Info_ground_StartingRoom_640x320_3
+      rect:
+        serializedVersion: 2
+        x: 381
+        y: 0
+        width: 100
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06567f10b85ab204ea778cf236ccc356
+      internalID: -33344850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Info_ground_StartingRoom_640x320_4
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 0
+        width: 100
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b4061fdec141114a89190e587c0ca11
+      internalID: 1409171643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -113,7 +218,12 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Info_ground_StartingRoom_640x320_4: 1409171643
+      Info_ground_StartingRoom_640x320_0: -1384767233
+      Info_ground_StartingRoom_640x320_3: -33344850
+      Info_ground_StartingRoom_640x320_1: 1520608838
+      Info_ground_StartingRoom_640x320_2: -1168016086
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
