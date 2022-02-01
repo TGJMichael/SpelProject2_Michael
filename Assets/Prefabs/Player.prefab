@@ -650,11 +650,13 @@ MonoBehaviour:
   currentAmmo: 6
   numOfProjectiles: 6
   projectiles: []
+
   projectile: {fileID: 0}
   emptyProjectile: {fileID: 0}
   rangeSounds:
   - {fileID: 8300000, guid: 1ac023427a76a6444aa5dc8844baae2d, type: 3}
   - {fileID: 8300000, guid: f441df7a8124fc1408273dbb0cba0094, type: 3}
+
 --- !u!114 &2584951229131878256
 MonoBehaviour:
   m_ObjectHideFlags: 0
