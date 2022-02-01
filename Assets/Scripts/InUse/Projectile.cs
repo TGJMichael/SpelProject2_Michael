@@ -27,18 +27,14 @@ public class Projectile : MonoBehaviour
             //print("Hit: " + targetHit.name);
 
             targetHit.GetComponent<EnemyHealth>().TakeDamage(attackDamage);
-            
 
 
-        }   
-        if (targetHit.tag == "Boss")
-        {
-            targetHit.GetComponent<BossHealth>().TakeDamage(attackDamage);
-        }
+        }        
         else
         {
             //print("Can't hurt: " + targetHit.name);
         }
+
         GameObject effect = Instantiate(hitEffect, transform.position, Quaternion.identity);    // create explosion animation on contact position
         Destroy(effect, 5f);   // destroy animation after set time (5f) 
         Destroy(gameObject);   // destroy projectile

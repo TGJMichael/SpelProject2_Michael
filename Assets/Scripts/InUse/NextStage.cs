@@ -22,6 +22,10 @@ public class NextStage : MonoBehaviour
     //last scene fix
     public bool lastScene = false;
     private int _firstScene;
+
+    //SFX
+    [SerializeField] AudioClip[] doorSounds;
+
     private void Start()
     {
         Door = this.gameObject.transform.GetChild(0);
@@ -39,6 +43,9 @@ public class NextStage : MonoBehaviour
         if (currentKills == killsNeeded)
         {
             OpenDoor();
+            //SFX
+            AudioClip clip = doorSounds[UnityEngine.Random.Range(0, doorSounds.Length)];
+            GetComponent<AudioSource>().PlayOneShot(clip);
         }
     }
 

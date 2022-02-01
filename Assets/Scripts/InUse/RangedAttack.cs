@@ -18,7 +18,7 @@ public class RangedAttack : MonoBehaviour
     public float attackRate = 5f;
     float nextAttackTime = 0f;
 
-    // ammo count 
+    // ammo count instead of bar.
     public int currentAmmo;
     public int numOfProjectiles;
 
@@ -28,6 +28,10 @@ public class RangedAttack : MonoBehaviour
 
     // ammoregen timer
     private float _coolDownTimer;
+
+    //SFX
+    [SerializeField] AudioClip[] rangeSounds;
+
     private void Start()
     {
         _animator = GetComponentInChildren<Animator>();
@@ -89,6 +93,11 @@ public class RangedAttack : MonoBehaviour
         currentAmmo -= 1;
 
         _animator.SetTrigger("RangedAttack");
+
+        //SFX
+        AudioClip clip = rangeSounds[UnityEngine.Random.Range(0, rangeSounds.Length)];
+        GetComponent<AudioSource>().PlayOneShot(clip);
+
         GameObject projectile = Instantiate(projectilePrefab, firePoint.position, firePoint.rotation);
         Rigidbody2D rb = projectile.GetComponent<Rigidbody2D>();
         rb.AddForce(firePoint.up * projectileForce, ForceMode2D.Impulse);
