@@ -72,22 +72,14 @@ public class MeleeAttack : MonoBehaviour
                 {
                     enemy.GetComponent<EnemyHealth>().TakeDamage(attackDamage);
                 }
-                if (enemy.tag == "Boss")
+                else if (enemy.tag == "Boss")
                 {
                     enemy.GetComponent<BossHealth>().TakeDamage(attackDamage);
                 }
-            }
-        }
-    }
-}
-                if (enemy.gameObject.tag == "Destroyable")
+                else if (enemy.gameObject.tag == "Destroyable")
                 {
                     destroyableObject = enemy.gameObject.GetComponent<DestroyableObject>();
                     destroyableObject.MeleeHit(true);
-                }
-                else
-                {
-                    enemy.GetComponent<EnemyHealth>().TakeDamage(attackDamage);
                 }
             }
         }
