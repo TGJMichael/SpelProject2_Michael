@@ -10,6 +10,9 @@ TagManager:
   - OnPlayerEffect
   - PlayerSprite
   - SpitBar
+  - Item
+  - Boss
+  - BossHealthBar
   - Undefined
   - Projectile
   - Destroyable
