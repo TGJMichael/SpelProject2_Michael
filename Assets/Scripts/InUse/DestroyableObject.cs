@@ -5,16 +5,15 @@ using UnityEngine;
 
 public class DestroyableObject : MonoBehaviour
 {
-
     // config params
     [SerializeField] Sprite[] hitSprites;
-
-    // cached reference
     
     // state variables
-    [SerializeField] int timesHit;  // TODO only serialized for debug purposes
+    [SerializeField] int timesHit;
 
-    
+    //SFX
+    [SerializeField] AudioClip[] breakSounds;
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         
@@ -23,9 +22,13 @@ public class DestroyableObject : MonoBehaviour
         {
             HandleHit();
         }
-        else 
-        { 
-            print ("nope");
+    }
+    public void MeleeHit(bool AttackHit)
+    {
+        if (AttackHit)
+        {
+            HandleHit();
+            AttackHit = false;
         }
     }
 
@@ -41,6 +44,10 @@ public class DestroyableObject : MonoBehaviour
         else
         {
             ShowNextHitSprite();
+
+            //SFX
+            AudioClip clip = breakSounds[UnityEngine.Random.Range(0, breakSounds.Length)];
+            GetComponent<AudioSource>().PlayOneShot(clip);   
         }
     }
 
@@ -56,36 +63,5 @@ public class DestroyableObject : MonoBehaviour
             Debug.LogError("Block sprite is missing from array" + gameObject.name);
         }
     }
-
-    public void MeleeHit(bool AttackHit)
-    {
-        if (AttackHit)
-        {
-            HandleHit();
-            AttackHit = false;
-        }
-    }
-
-
-    /*
-    private void DestroyBlock()
-    {
-        PlayBlockDestroySFX();
-        Destroy(gameObject);
-        level.BlockDestroyed();
-        TriggerSparklesVFX();
-    }
-
-    private void PlayBlockDestroySFX()
-    {
-        FindObjectOfType<GameSession>().AddToScore();
-        AudioSource.PlayClipAtPoint(breakSound, Camera.main.transform.position);
-    }
-
-    private void TriggerSparklesVFX()
-    {
-        GameObject sparkles = Instantiate(blockSparklesVFX, transform.position, transform.rotation);
-        Destroy(sparkles, 1f);
-    }
-    */
+   
 }

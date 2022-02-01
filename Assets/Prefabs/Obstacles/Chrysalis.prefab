@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1674324654}
   - component: {fileID: 1674324653}
   - component: {fileID: 1674324655}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: Chrysalis
   m_TagString: Destroyable
   m_Icon: {fileID: 0}
@@ -159,6 +159,11 @@ MonoBehaviour:
   - {fileID: 1692043272, guid: a14095183726f7945b2b0ad0c1aa0746, type: 3}
   - {fileID: 1356880357, guid: a14095183726f7945b2b0ad0c1aa0746, type: 3}
   timesHit: 0
+  breakSounds:
+  - {fileID: 8300000, guid: 78c45e4e8a76a34468105dba84c1cbd4, type: 3}
+  - {fileID: 8300000, guid: 54ccbde573266d84382084cf4a327d41, type: 3}
+  - {fileID: 8300000, guid: 6adf0995eab4cd94d9befe83bdda6b3a, type: 3}
+  - {fileID: 8300000, guid: f6602635fd009dc458f490b7554cf4d9, type: 3}
 --- !u!1 &863663747787191567
 GameObject:
   m_ObjectHideFlags: 0
@@ -170,7 +175,7 @@ GameObject:
   - component: {fileID: 6708727087452693538}
   - component: {fileID: 3994981923399014792}
   - component: {fileID: 1163523524191028713}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: Sprite_Damaged
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -269,7 +274,7 @@ GameObject:
   - component: {fileID: 7307976706248470417}
   - component: {fileID: 1291271990939385393}
   - component: {fileID: 8412120214370519973}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: Sprite_Destoryed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -367,7 +372,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5566381836429673960}
   - component: {fileID: 8123355738972640289}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: Shadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -452,7 +457,7 @@ GameObject:
   - component: {fileID: 697824160041444715}
   - component: {fileID: 4616429804685699776}
   - component: {fileID: 4527784836483107101}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: Sprite_Whole
   m_TagString: Untagged
   m_Icon: {fileID: 0}

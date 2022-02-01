@@ -13,6 +13,7 @@ public class MeleeAttack : MonoBehaviour
 
     private Transform _attackPoint;  // testing if lukas formulation works first.
 
+    private ExplosionSmoke explosionSmoke;
     private DestroyableObject destroyableObject;
 
     // testing to se if I can find attackpoint.
@@ -62,7 +63,7 @@ public class MeleeAttack : MonoBehaviour
             GetComponent<AudioSource>().PlayOneShot(clip);
 
             // Detect enemies in range of attack
-            Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(_attackPoint.position, attackRange, enemyLayer);
+            Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(_attackPoint.position, attackRange);
 
             // Damage all enemies hit
             foreach (Collider2D enemy in hitEnemies)
@@ -79,8 +80,16 @@ public class MeleeAttack : MonoBehaviour
                 }
                 else if (enemy.gameObject.tag == "Destroyable")
                 {
-                    destroyableObject = enemy.gameObject.GetComponent<DestroyableObject>();
-                    destroyableObject.MeleeHit(true);
+                    if (enemy.gameObject.GetComponent<DestroyableObject>() != null)
+                    {
+                        destroyableObject = enemy.gameObject.GetComponent<DestroyableObject>();
+                        destroyableObject.MeleeHit(true);
+                    }
+                    else if (enemy.gameObject.GetComponent<ExplosionSmoke>() != null)
+                    {
+                        explosionSmoke = enemy.gameObject.GetComponent<ExplosionSmoke>();
+                        explosionSmoke.MeleeHit(true);
+                    }                    
                 }
             }
         }

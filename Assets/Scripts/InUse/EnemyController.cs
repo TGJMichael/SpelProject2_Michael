@@ -17,7 +17,7 @@ public class EnemyController : MonoBehaviour
     // For the melee attack
     public float attackRange = 3f;      // distance to when enemy start to attack
     public int attackDamage = 2;
-    public float knocbackPower = 0.2f;
+    public float knockbackPower = 0.2f;
     public float knockbackDuration = 10f;
     public float attackRate = 3f;       // For how often enemy attacks
     float nextAttackTime = 0f;
@@ -156,7 +156,7 @@ public class EnemyController : MonoBehaviour
             if (Vector3.Distance(transform.position, _target.transform.position) < attackRange)
             {
                 print("Hit: " + _target.name);
-                StartCoroutine(CharacterController.instance.Knockback(knockbackDuration, knocbackPower, this.transform));
+                StartCoroutine(CharacterController.instance.Knockback(knockbackDuration, knockbackPower, this.transform));
 
                 _target.GetComponent<HealthSystem>().TakeDamage(attackDamage);
 
