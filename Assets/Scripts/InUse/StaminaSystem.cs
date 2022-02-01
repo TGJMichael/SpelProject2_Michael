@@ -24,7 +24,6 @@ public class StaminaSystem : MonoBehaviour
         staminaCooldown = StartCoroutine(staminaRegCooldown());
     }
 
-
     private void Update()
     {
         if (staminaRegOn && currentStamina < maxStamina)
@@ -32,17 +31,6 @@ public class StaminaSystem : MonoBehaviour
             currentStamina += staminaRegSpeed * Time.deltaTime;
             staminaBar.SetStamina(currentStamina);
 
-        }
-    }
-
-    // new Item drop
-    public void RegainStamina(int StamReg)
-    {
-        currentStamina += StamReg;
-
-        if (currentStamina >= maxStamina)
-        {
-            currentStamina = maxStamina;
         }
     }
 

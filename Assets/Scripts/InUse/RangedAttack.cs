@@ -18,7 +18,7 @@ public class RangedAttack : MonoBehaviour
     public float attackRate = 5f;
     float nextAttackTime = 0f;
 
-    // ammo count 
+    // ammo count instead of bar.
     public int currentAmmo;
     public int numOfProjectiles;
 

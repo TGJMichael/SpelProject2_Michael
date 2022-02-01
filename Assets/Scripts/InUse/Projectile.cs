@@ -27,14 +27,9 @@ public class Projectile : MonoBehaviour
             //print("Hit: " + targetHit.name);
 
             targetHit.GetComponent<EnemyHealth>().TakeDamage(attackDamage);
-            
 
 
-        }   
-        if (targetHit.tag == "Boss")
-        {
-            targetHit.GetComponent<BossHealth>().TakeDamage(attackDamage);
-        }
+        }        
         else
         {
             //print("Can't hurt: " + targetHit.name);
