@@ -1,7 +1,6 @@
 using UnityEngine;
 using System.Collections;
 using Pathfinding;
-using System.Collections.Generic;
 
 public class EnemyHealth : MonoBehaviour
 {
@@ -11,13 +10,13 @@ public class EnemyHealth : MonoBehaviour
 
     private Animator _animator;
 
+    //NewNextScene deathCount; // does not work
+    //public DeathCounterScript m_deathCounter;
+    //public int killPoint = 1;
     public NextStage killCount;
 
-    // Item drop
-    public GameObject HearthPrefab;
-    public GameObject staminaPrefab;
-    // Random generator for item drop
-    public int randomNumber;
+    // Player regen ammo when this unity is killed.         // works but will activate on ranged kill aswell. dont want that
+    //public RangedAttack ammoRegenOnKill;
     private void Start()
     {
         currenthealth = maxHealth;
@@ -25,12 +24,14 @@ public class EnemyHealth : MonoBehaviour
         healthBar.SetMaxHealth(maxHealth);
 
         _animator = GetComponentInChildren<Animator>();
-;
+
+        //deathCount = gameObject.GetComponent<NewNextScene>(); // does not work
+        //m_deathCounter = GameObject.FindObjectOfType(typeof(DeathCounterScript)) as DeathCounterScript;
         killCount = GameObject.FindObjectOfType(typeof(NextStage)) as NextStage;
 
 
-        randomNumber = Random.Range(0, 100);
-
+        // Player regen ammo when this unity is killed          // works but will activate on ranged kill aswell. dont want that
+        //ammoRegenOnKill = GameObject.FindObjectOfType(typeof(RangedAttack)) as RangedAttack;
     }
     public void TakeDamage(int damage)
     {
@@ -58,19 +59,15 @@ public class EnemyHealth : MonoBehaviour
         GetComponent<AIPath>().enabled = false;
         GetComponent<EnemyController>().enabled = false;
         GetComponentInChildren<Canvas>().enabled = false;
-
-        // Item drop
-        if (randomNumber < 30 && randomNumber > 15)
-        {
-            Vector3 position = transform.position;
-            Instantiate(staminaPrefab, position, Quaternion.identity);
-        }
-        if (randomNumber < 15)
-        {
-            Vector3 position = transform.position;
-            Instantiate(HearthPrefab, position, Quaternion.identity);
-        }
-
+        //GetComponent<EnemyRangedAttack>().enabled = false;
+        //deathCount.CheckPlayerCanGoNextLevel();    // does not work. 
+        //_deathCounter.GetComponent<DeathCounterScript>().KillCount(killPoint);
+        //m_deathCounter.KillCount();
         killCount.KillCount();
+
+
+        // Player regen ammo when this unity is killed  // works but will activate on ranged kill aswell. dont want that
+        //ammoRegenOnKill.AmmoRegenOnKill();
+
     }
 }

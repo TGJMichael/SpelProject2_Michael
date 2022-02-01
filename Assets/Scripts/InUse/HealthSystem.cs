@@ -12,25 +12,38 @@ public class HealthSystem : MonoBehaviour
 
     public HealthBar healthBar;
 
+    // regeneration
+    //public float healtRegSpeed = 3;
+    //public int healthRegCooldownTime = 1;
+    //[SerializeField]
+    //private bool healthRegOn;
+    //private Coroutine healthCooldown;
+
+    //float fix
+    private float decimalhealth;
+
     void Start()
     {        
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
 
+        //regen
+        //healthCooldown = StartCoroutine(healthRegCooldown());
     }
 
-    // Item drop heal
-    public void HealDamage(int heal)
-    {
-        currentHealth += heal;
-
-        healthBar.SetHealth(currentHealth);
-
-        if (currentHealth >= maxHealth)  // if currentHealth would exceed maxHealth when healed,ks
-        {
-            currentHealth = maxHealth;
-        }
-    }
+    //private void Update()
+    //{
+    //    //regen
+    //    //if (healthRegOn && currentHealth < maxHealth)
+    //    //{
+    //    //    decimalhealth += 1 * Time.deltaTime;
+    //    //    currentHealth = Mathf.RoundToInt(decimalhealth);
+    //    //    //currentHealth += healtRegSpeed * Time.deltaTime;
+    //    //    healthBar.SetHealth(currentHealth);
+    //    //}
+    //    decimalhealth += 1 * Time.deltaTime;
+    //    currentHealth += Mathf.RoundToInt(decimalhealth);
+    //}
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
@@ -42,8 +55,18 @@ public class HealthSystem : MonoBehaviour
             Die();
         }
 
+        //StopCoroutine(healthCooldown);
+        //healthCooldown = StartCoroutine(healthRegCooldown());
     }
     
+    //private IEnumerator healthRegCooldown()
+    //{
+    //    healthRegOn = false;
+
+    //    yield return new WaitForSeconds(healthRegCooldownTime);
+
+    //    healthRegOn = true;
+    //}
     void Die()
     {
         print("You died");
