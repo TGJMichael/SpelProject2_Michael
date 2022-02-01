@@ -10,9 +10,9 @@ TagManager:
   - OnPlayerEffect
   - PlayerSprite
   - SpitBar
-  - Undefined
-  - Projectile
-  - Destroyable
+  - Item
+  - Boss
+  - BossHealthBar
   layers:
   - Default
   - TransparentFX
