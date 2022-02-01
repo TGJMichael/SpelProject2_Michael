@@ -13,6 +13,9 @@ TagManager:
   - Item
   - Boss
   - BossHealthBar
+  - Undefined
+  - Projectile
+  - Destroyable
   layers:
   - Default
   - TransparentFX

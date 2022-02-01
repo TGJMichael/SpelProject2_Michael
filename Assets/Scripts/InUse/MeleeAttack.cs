@@ -13,8 +13,13 @@ public class MeleeAttack : MonoBehaviour
 
     private Transform _attackPoint;  // testing if lukas formulation works first.
 
+    private DestroyableObject destroyableObject;
+
     // testing to se if I can find attackpoint.
     [SerializeField] private Transform _aimTransform;
+
+    //SFX
+    [SerializeField] AudioClip[] meleeSounds;
 
     void Start()
     {
@@ -52,6 +57,10 @@ public class MeleeAttack : MonoBehaviour
             // Play an attack animation
             _animator.SetTrigger("Attack");
 
+            //SFX
+            AudioClip clip = meleeSounds[UnityEngine.Random.Range(0, meleeSounds.Length)];
+            GetComponent<AudioSource>().PlayOneShot(clip);
+
             // Detect enemies in range of attack
             Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(_attackPoint.position, attackRange, enemyLayer);
 
@@ -63,11 +72,18 @@ public class MeleeAttack : MonoBehaviour
                 {
                     enemy.GetComponent<EnemyHealth>().TakeDamage(attackDamage);
                 }
-                if (enemy.tag == "Boss")
+                else if (enemy.tag == "Boss")
                 {
                     enemy.GetComponent<BossHealth>().TakeDamage(attackDamage);
+
+                }
+                else if (enemy.gameObject.tag == "Destroyable")
+                {
+                    destroyableObject = enemy.gameObject.GetComponent<DestroyableObject>();
+                    destroyableObject.MeleeHit(true);
                 }
             }
         }
     }
 }
+

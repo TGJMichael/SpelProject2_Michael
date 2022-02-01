@@ -28,6 +28,9 @@ public class EnemyController : MonoBehaviour
     private int _rightLeftValue;
     private int _upDownValue;
 
+    //SFX
+    [SerializeField] AudioClip[] biteSounds;
+
     void Start()
     {
         _animator = GetComponentInChildren<Animator>();
@@ -138,8 +141,9 @@ public class EnemyController : MonoBehaviour
         if (Time.time >= nextAttackTime)
         {
             _animator.SetTrigger("Attack");
-            
-            
+
+
+
             nextAttackTime = Time.time + 1f / attackRate;
         }
     }
@@ -147,16 +151,26 @@ public class EnemyController : MonoBehaviour
     {
         if (AttackHit)
         {
+            
+
             if (Vector3.Distance(transform.position, _target.transform.position) < attackRange)
             {
                 print("Hit: " + _target.name);
                 StartCoroutine(CharacterController.instance.Knockback(knockbackDuration, knocbackPower, this.transform));
 
                 _target.GetComponent<HealthSystem>().TakeDamage(attackDamage);
+
+                //SFX
+                AudioClip clip = biteSounds[UnityEngine.Random.Range(0, biteSounds.Length)];
+                GetComponent<AudioSource>().PlayOneShot(clip);
             }
             else
             {
                 print("Missed");
+
+                //SFX
+                AudioClip clip = biteSounds[UnityEngine.Random.Range(0, biteSounds.Length)];
+                GetComponent<AudioSource>().PlayOneShot(clip);
             }
         }        
     }
