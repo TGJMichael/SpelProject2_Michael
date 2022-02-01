@@ -1,0 +1,650 @@
+fileFormatVersion: 2
+guid: c4d29286ad9e2354a858836f41a3a85e
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Player_Fighter_PrayingMantis_Sheet_Dead_55x55_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 165
+        width: 55
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4797052031b10bc4a8bd2e1b152c9021
+      internalID: 488186716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Fighter_PrayingMantis_Sheet_Dead_55x55_1
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 165
+        width: 55
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fcc64930e246584181f2634b8dbcd9c
+      internalID: -1938297143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Fighter_PrayingMantis_Sheet_Dead_55x55_2
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 165
+        width: 55
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df9df43b985532e49a940bfb93ce9f72
+      internalID: 163431260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Fighter_PrayingMantis_Sheet_Dead_55x55_3
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 165
+        width: 55
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db5e457e3eaadae499189260d829a92c
+      internalID: 433437218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Fighter_PrayingMantis_Sheet_Dead_55x55_4
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 165
+        width: 55
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cdab14488ddd174bac1823a0c1774b3
+      internalID: 775925066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Fighter_PrayingMantis_Sheet_Dead_55x55_5
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 165
+        width: 55
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abcefec0851a49341944f25573b675f9
+      internalID: 1611460768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Fighter_PrayingMantis_Sheet_Dead_55x55_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 110
+        width: 55
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd20e087f0336984299a284cd1604226
+      internalID: -1060385081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Fighter_PrayingMantis_Sheet_Dead_55x55_7
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 110
+        width: 55
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfbf2b51fcd046542a81803717e58446
+      internalID: -67963472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Fighter_PrayingMantis_Sheet_Dead_55x55_8
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 110
+        width: 55
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b181d68b1adc1d6488c0468964e1d6e5
+      internalID: -2107058608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Fighter_PrayingMantis_Sheet_Dead_55x55_9
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 110
+        width: 55
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86f64bde74f5c354ab0a1ff237e84f3a
+      internalID: -307040682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Fighter_PrayingMantis_Sheet_Dead_55x55_10
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 110
+        width: 55
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6db0d028c7b2f124fa027d3167239c3c
+      internalID: 940846439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Fighter_PrayingMantis_Sheet_Dead_55x55_11
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 110
+        width: 55
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff78d12d5de446e4ab89d66797024e84
+      internalID: 104367549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Fighter_PrayingMantis_Sheet_Dead_55x55_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 55
+        width: 55
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02bdddbf3c0181b45b314ac3c9c24390
+      internalID: -1891556586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Fighter_PrayingMantis_Sheet_Dead_55x55_13
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 55
+        width: 55
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f3b4973e4ae1d44fb8167f055994cdc
+      internalID: -1812514585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Fighter_PrayingMantis_Sheet_Dead_55x55_14
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 55
+        width: 55
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f9b74609caf5534a989b33679c33825
+      internalID: 75269280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Fighter_PrayingMantis_Sheet_Dead_55x55_15
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 55
+        width: 55
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ae5792ce3f8945488e1f5eb93c06d99
+      internalID: -1488110644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Fighter_PrayingMantis_Sheet_Dead_55x55_16
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 55
+        width: 55
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea60390da65433d4da1508b61b675304
+      internalID: -1630487140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Fighter_PrayingMantis_Sheet_Dead_55x55_17
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 55
+        width: 55
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c67a530f41d7d7469a1f8a72add4e05
+      internalID: -319976853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Fighter_PrayingMantis_Sheet_Dead_55x55_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 55
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98a9d63cd4f084941816234bfa15d0fa
+      internalID: -989241942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Fighter_PrayingMantis_Sheet_Dead_55x55_19
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 0
+        width: 55
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7dbceadcda2c6f845b800291c442125d
+      internalID: 1488485043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Fighter_PrayingMantis_Sheet_Dead_55x55_20
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 0
+        width: 55
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c52a71c3b44d72e498948d271e0175ad
+      internalID: -745970709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Fighter_PrayingMantis_Sheet_Dead_55x55_21
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 0
+        width: 55
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3e577bf4344fee4a99c4160992ee29e
+      internalID: 1029940765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Fighter_PrayingMantis_Sheet_Dead_55x55_22
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 0
+        width: 55
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc96eb5109c2b61438f6c48f5b2029ac
+      internalID: -2034535845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player_Fighter_PrayingMantis_Sheet_Dead_55x55_23
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 0
+        width: 55
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4b5d992e77e34044a7d32b45e4d336a
+      internalID: 2143937251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Player_Fighter_PrayingMantis_Sheet_Dead_55x55_5: 1611460768
+      Player_Fighter_PrayingMantis_Sheet_Dead_55x55_11: 104367549
+      Player_Fighter_PrayingMantis_Sheet_Dead_55x55_3: 433437218
+      Player_Fighter_PrayingMantis_Sheet_Dead_55x55_6: -1060385081
+      Player_Fighter_PrayingMantis_Sheet_Dead_55x55_17: -319976853
+      Player_Fighter_PrayingMantis_Sheet_Dead_55x55_2: 163431260
+      Player_Fighter_PrayingMantis_Sheet_Dead_55x55_14: 75269280
+      Player_Fighter_PrayingMantis_Sheet_Dead_55x55_23: 2143937251
+      Player_Fighter_PrayingMantis_Sheet_Dead_55x55_7: -67963472
+      Player_Fighter_PrayingMantis_Sheet_Dead_55x55_18: -989241942
+      Player_Fighter_PrayingMantis_Sheet_Dead_55x55_10: 940846439
+      Player_Fighter_PrayingMantis_Sheet_Dead_55x55_13: -1812514585
+      Player_Fighter_PrayingMantis_Sheet_Dead_55x55_20: -745970709
+      Player_Fighter_PrayingMantis_Sheet_Dead_55x55_19: 1488485043
+      Player_Fighter_PrayingMantis_Sheet_Dead_55x55_12: -1891556586
+      Player_Fighter_PrayingMantis_Sheet_Dead_55x55_15: -1488110644
+      Player_Fighter_PrayingMantis_Sheet_Dead_55x55_8: -2107058608
+      Player_Fighter_PrayingMantis_Sheet_Dead_55x55_22: -2034535845
+      Player_Fighter_PrayingMantis_Sheet_Dead_55x55_21: 1029940765
+      Player_Fighter_PrayingMantis_Sheet_Dead_55x55_0: 488186716
+      Player_Fighter_PrayingMantis_Sheet_Dead_55x55_4: 775925066
+      Player_Fighter_PrayingMantis_Sheet_Dead_55x55_16: -1630487140
+      Player_Fighter_PrayingMantis_Sheet_Dead_55x55_9: -307040682
+      Player_Fighter_PrayingMantis_Sheet_Dead_55x55_1: -1938297143
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
