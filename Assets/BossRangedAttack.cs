@@ -43,6 +43,9 @@ public class BossRangedAttack : MonoBehaviour
     public bool Moving;
 
     private SimpleBossController _move;
+
+    // shooting timer
+    private float _coolDownTimer;
     void Start()
     {
         _animator = GetComponentInChildren<Animator>();
@@ -76,11 +79,26 @@ public class BossRangedAttack : MonoBehaviour
         //    //_animator.SetBool("Ranged", false);  
         //}
 
+        // shoot on timer.
+        if (_coolDownTimer < 2)
+        {
+            _coolDownTimer += 1 * Time.deltaTime;
+            //_move.Move();
+            print(_coolDownTimer);
+            if(_coolDownTimer >=2 && _coolDownTimer < 10)
+            {
+                rootEffect = true;
+                EnemyShoot();
+                _coolDownTimer = 0;
+            }
+        }
+
         if (Input.GetKeyDown(KeyCode.L))
         {
             //EnemyShoot();
             SalvoLeadUp();
             _salvoShotsTaken = 0;
+            _coolDownTimer = 10;
         }
     }
 
@@ -92,9 +110,10 @@ public class BossRangedAttack : MonoBehaviour
         //    _move.StopMove();
         //    _animator.SetTrigger("LeadUp");
         //}
+        rootEffect = false;
         _move.StopMove();
-
         _animator.SetTrigger("LeadUp");
+
     }
     public void SalvoEvent(bool Salvo)
     {
@@ -123,12 +142,22 @@ public class BossRangedAttack : MonoBehaviour
             if (_salvoShotsTaken >= TotalSalvoShots)
             {
                 _animator.SetBool("Salvo", false);
+                //_move.Move();
+                //_coolDownTimer = 0;
             }
+        }
+    }
+    public void SalvoReset(bool SalvoReset)
+    {
+        if (SalvoReset)
+        {
+            _move.Move();
+            _coolDownTimer = 0;
         }
     }
     public void EnemyShoot()
     {
-        if (Time.time >= nextAttackTime)        // change logic to shoot 3 times then w8 for long time. mby i should have a long timer and break up the animation, loop same exakt frames when spitting while shooting intead of one per animation.
+        if (Time.time >= nextAttackTime) 
         {
             _move.StopMove();
             _animator.SetTrigger("Spit");
@@ -158,6 +187,8 @@ public class BossRangedAttack : MonoBehaviour
             //SFX
             AudioClip clip = spitSounds[UnityEngine.Random.Range(0, spitSounds.Length)];
             GetComponent<AudioSource>().PlayOneShot(clip);          // something is missing for this to work.
+
+            _move.Move();
 
         }
         else

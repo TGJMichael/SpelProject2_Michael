@@ -46,4 +46,8 @@ public class AttackEvent : MonoBehaviour
     {
         bossRangedAttack.SalvoShoot(true);
     }
+    public void SalvoResetTrigger()
+    {
+        bossRangedAttack.SalvoReset(true);
+    }
 }
