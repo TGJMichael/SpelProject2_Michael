@@ -31,10 +31,15 @@ public class SimpleBossController : MonoBehaviour
         if (moveRight)
         {
             transform.position = new Vector2(transform.position.x + moveSpeed * Time.deltaTime, transform.position.y);  // moving right on x position, left position stays constant
+            _animator.SetBool("Moving", true);
         }
         else
         {
             transform.position = new Vector2(transform.position.x - moveSpeed * Time.deltaTime, transform.position.y);  // moving left "-   -   -   -   -   -   -   -   -   -   -"
+            _animator.SetBool("Moving", true);
         }
+
+        // animator
+
     }
 }

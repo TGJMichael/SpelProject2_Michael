@@ -22,6 +22,10 @@ public class MeleeAttack : MonoBehaviour
     //SFX
     [SerializeField] AudioClip[] meleeSounds;
 
+    //Attack-rate
+    public float attackRate = 3f;       // For how often enemy attacks
+    float nextAttackTime = 0f;
+
     void Start()
     {
         _animator = GetComponentInChildren<Animator>();
@@ -51,9 +55,9 @@ public class MeleeAttack : MonoBehaviour
 
 
     }
-    private void Attack()
+private void Attack()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        if (Input.GetKeyDown(KeyCode.Mouse0) && Time.time >= nextAttackTime)
         {
             // Play an attack animation
             _animator.SetTrigger("Attack");
@@ -92,6 +96,7 @@ public class MeleeAttack : MonoBehaviour
                     }                    
                 }
             }
+            nextAttackTime = Time.time + 1f / attackRate;
         }
     }
 }
