@@ -598,6 +598,11 @@ MonoBehaviour:
   _effectAnimator: {fileID: 0}
   rootedDashLength: 30
   rootBreakDash: 0
+  dashSounds:
+  - {fileID: 8300000, guid: c968d127bae9eed4da2bd71465437ac6, type: 3}
+  hurtSounds:
+  - {fileID: 8300000, guid: 0457f70311fd571498c1ae2fe3bd81f6, type: 3}
+  - {fileID: 8300000, guid: a76cc7da47d5db24ba1facbdeeac1218, type: 3}
 --- !u!114 &2584951227491024170
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -683,6 +688,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: cd659c8e37364ff40a12d2f2fa960b4d, type: 3}
   - {fileID: 8300000, guid: 402f16c384cd19d43bbe8bf602e03c9d, type: 3}
   - {fileID: 8300000, guid: c9196ea83defc1a469576b6792d48178, type: 3}
+  attackRate: 3
 --- !u!82 &8191887785281930242
 AudioSource:
   m_ObjectHideFlags: 0

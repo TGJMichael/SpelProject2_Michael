@@ -6,6 +6,7 @@ public class AttackEvent : MonoBehaviour
 {
     public EnemyRangedAttack enemyRangedAttack;
     public EnemyController enemyController;
+    public SimpleBossController simpleBossController;
 
     //public bool AttackEvent;
 
@@ -13,6 +14,7 @@ public class AttackEvent : MonoBehaviour
     {
         enemyRangedAttack = GetComponentInParent<EnemyRangedAttack>();
         enemyController = GetComponentInParent<EnemyController>();
+        simpleBossController = GetComponentInParent<SimpleBossController>();
     }
     public void RangedAttackTrigger()
     {
@@ -21,5 +23,9 @@ public class AttackEvent : MonoBehaviour
     public void MeleeAttackTrigger()
     {
         enemyController.MeleeAttackEvent(true);
+    }
+    public void BossMeleeAttackTrigger()
+    {
+        simpleBossController.MeleeAttackEvent(true);
     }
 }

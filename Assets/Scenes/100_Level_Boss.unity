@@ -70855,6 +70855,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 479988500547970612, guid: 4959164da2bd8e54e84e039e55af468e, type: 3}
+      propertyPath: m_SortingOrder
+      value: 755
+      objectReference: {fileID: 0}
     - target: {fileID: 2584951227491024170, guid: 4959164da2bd8e54e84e039e55af468e, type: 3}
       propertyPath: healthBar
       value: 
@@ -73764,6 +73768,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7f812234d013a446bbc1d59664304ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1888981888 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2104127267825148962, guid: b0d3e2d53e91ad24eb819a17356ac6a8, type: 3}
+  m_PrefabInstance: {fileID: 2104127269452455508}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1888981892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1888981888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65b14f1825a52e0478eff750c2d37d6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyRangedAttack: {fileID: 0}
+  enemyController: {fileID: 0}
+  simpleBossController: {fileID: 0}
 --- !u!1 &2117962329
 GameObject:
   m_ObjectHideFlags: 0
@@ -73853,6 +73877,10 @@ PrefabInstance:
     - target: {fileID: 2104127269389323654, guid: b0d3e2d53e91ad24eb819a17356ac6a8, type: 3}
       propertyPath: m_Name
       value: Boss
+      objectReference: {fileID: 0}
+    - target: {fileID: 2104127269389323655, guid: b0d3e2d53e91ad24eb819a17356ac6a8, type: 3}
+      propertyPath: knockbackPower
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b0d3e2d53e91ad24eb819a17356ac6a8, type: 3}
