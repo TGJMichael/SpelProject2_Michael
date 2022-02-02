@@ -70848,6 +70848,84 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &452075226
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 452075227}
+  m_Layer: 7
+  m_Name: FirePoint
+  m_TagString: Untagged
+  m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &452075227
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 452075226}
+  m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: 0.69, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 487874760}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
+--- !u!1 &487874759
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 487874760}
+  - component: {fileID: 487874761}
+  m_Layer: 7
+  m_Name: EnemyAiming
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &487874760
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 487874759}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.75, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 452075227}
+  m_Father: {fileID: 1850798678}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &487874761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 487874759}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05989dff1b97e2847ab3d62b03362356, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  target: {fileID: 0}
 --- !u!1001 &731694119
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -73768,6 +73846,42 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7f812234d013a446bbc1d59664304ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1850798673 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2104127269389323654, guid: b0d3e2d53e91ad24eb819a17356ac6a8, type: 3}
+  m_PrefabInstance: {fileID: 2104127269452455508}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1850798674
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1850798673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83920cb3614ca5a4b8995f4d95d3ae19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  range: 0
+  knockbackPower: 0.2
+  knockbackDuration: 10
+  attackRate: 1
+  projectilePrefab: {fileID: 2376977390478597785, guid: bf633d1f64ec1834ca045f244959c426, type: 3}
+  firePoint: {fileID: 452075227}
+  projectileSpeed: 10
+  spitSounds:
+  - {fileID: 8300000, guid: f441df7a8124fc1408273dbb0cba0094, type: 3}
+  - {fileID: 8300000, guid: 1ac023427a76a6444aa5dc8844baae2d, type: 3}
+  normalDamage: 3
+  rootDamage: 0
+  rootDuration: 5
+  rootEffect: 1
+--- !u!4 &1850798678 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2104127269389323648, guid: b0d3e2d53e91ad24eb819a17356ac6a8, type: 3}
+  m_PrefabInstance: {fileID: 2104127269452455508}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1888981888 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2104127267825148962, guid: b0d3e2d53e91ad24eb819a17356ac6a8, type: 3}
