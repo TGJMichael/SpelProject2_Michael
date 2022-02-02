@@ -71110,6 +71110,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 8087122733306787971, guid: 4959164da2bd8e54e84e039e55af468e, type: 3}
+      propertyPath: rootBreakDash
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9151133029839344657, guid: 4959164da2bd8e54e84e039e55af468e, type: 3}
       propertyPath: m_SortingOrder
       value: 613
