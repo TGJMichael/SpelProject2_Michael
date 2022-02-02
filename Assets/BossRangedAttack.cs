@@ -9,10 +9,19 @@ public class BossRangedAttack : MonoBehaviour
     public float knockbackPower = 0.2f;
     public float knockbackDuration = 10f;
 
-    public float attackRate = 1f;
+    // Individual shots
+    public float attackRate = 1f;  // mby not needed, need to break down animations and use animationblocker instead probably.
     float nextAttackTime = 0f;
+    // Salvo
+    public float salvoRate = 10;
+    private float _nextSalvoAttackTime = 0f;
+    public int TotalSalvoShots = 5;
+    [SerializeField]
+    private int _salvoShotsTaken = 0;
 
-    public GameObject projectilePrefab;
+    public GameObject projectilePrefab;      
+    // testing to see if I can have the prefabs in array
+    //public GameObject[] ArrayOfprojectiles;  //not not this way, better to change sprite in the projectile i think.
     public Transform firePoint;
     public float projectileSpeed = 10f;
     private Animator _animator;
@@ -28,9 +37,9 @@ public class BossRangedAttack : MonoBehaviour
 
     // bool that changes the ranged attack from normal to root.
     public bool rootEffect = true;   // should make two methods, one than instantiate rooting projectiles and one that instantiate normal projectiles.
+    
 
-
-    // Stop moving when shooting.. mby should move bool logics here? instead of pulling it from "SimpleBossController"   // not needed if shooting is controlled by S.B.Controller.
+    // Stop moving when shooting.. mby should move bool logics here? instead of pulling it from "SimpleBossController"
     public bool Moving;
 
     private SimpleBossController _move;
@@ -53,6 +62,7 @@ public class BossRangedAttack : MonoBehaviour
         {
             //GetComponent<SimpleBossController>().Move();
             _move.Move();
+            _salvoShotsTaken = 5;
         }
 
         // Normal shooting activation,, now the shooting is done from "SimpleBossController"
@@ -68,10 +78,54 @@ public class BossRangedAttack : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.L))
         {
-            EnemyShoot();
+            //EnemyShoot();
+            SalvoLeadUp();
+            _salvoShotsTaken = 0;
         }
     }
 
+    public void SalvoLeadUp()
+    {
+        //if (_salvoShotsTaken < TotalSalvoShots)
+        //if (Time.time >= _nextSalvoAttackTime)
+        //{
+        //    _move.StopMove();
+        //    _animator.SetTrigger("LeadUp");
+        //}
+        _move.StopMove();
+
+        _animator.SetTrigger("LeadUp");
+    }
+    public void SalvoEvent(bool Salvo)
+    {
+        if (Salvo && _salvoShotsTaken < TotalSalvoShots)
+        {
+            _animator.SetBool("Salvo", true);
+            //_salvoShotsTaken++;
+        }
+        else if (Salvo && _salvoShotsTaken >= TotalSalvoShots)
+        {
+            _animator.SetBool("Salvo", false);
+            _salvoShotsTaken = 0;
+        }
+
+    }
+    public void SalvoShoot(bool SalvoShoot)
+    {
+        if (SalvoShoot)
+        {
+            GameObject projectile = Instantiate(projectilePrefab, firePoint.position, firePoint.rotation);
+            Rigidbody2D rb = projectile.GetComponent<Rigidbody2D>();
+            rb.AddForce(firePoint.up * projectileSpeed, ForceMode2D.Impulse);
+
+            _salvoShotsTaken++;
+
+            if (_salvoShotsTaken >= TotalSalvoShots)
+            {
+                _animator.SetBool("Salvo", false);
+            }
+        }
+    }
     public void EnemyShoot()
     {
         if (Time.time >= nextAttackTime)        // change logic to shoot 3 times then w8 for long time. mby i should have a long timer and break up the animation, loop same exakt frames when spitting while shooting intead of one per animation.
@@ -87,11 +141,11 @@ public class BossRangedAttack : MonoBehaviour
             nextAttackTime = Time.time + 1f / attackRate;
 
         }
-        else if (Time.time <= nextAttackTime)
-        {
+        //else if (Time.time <= nextAttackTime)
+        //{
 
-            _move.Move();
-        }
+        //    _move.Move();
+        //}
     }
     public void RangedAttackEvent(bool AttackHit)
     {

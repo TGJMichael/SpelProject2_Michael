@@ -38,4 +38,12 @@ public class AttackEvent : MonoBehaviour
     {
         bossRangedAttack.RangedAttackEvent(true);
     }
+    public void SalvoAttackTrigger()
+    {
+        bossRangedAttack.SalvoEvent(true);
+    }
+    public void SalvoShootTrigger()
+    {
+        bossRangedAttack.SalvoShoot(true);
+    }
 }
