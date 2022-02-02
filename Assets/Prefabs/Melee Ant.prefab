@@ -122,6 +122,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyRangedAttack: {fileID: 0}
   enemyController: {fileID: 0}
+  simpleBossController: {fileID: 0}
 --- !u!114 &6672881718905664172
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -148,7 +149,7 @@ GameObject:
   - component: {fileID: 1036672201176116172}
   - component: {fileID: 1036672201176116173}
   - component: {fileID: 1036672201176116178}
-  - component: {fileID: 1036672201176116179}
+  - component: {fileID: 6935566279414842917}
   - component: {fileID: 1036672201176116174}
   - component: {fileID: 1036672201176116168}
   - component: {fileID: 1036672201176116171}
@@ -262,8 +263,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 1
   target: {fileID: 0}
---- !u!61 &1036672201176116179
-BoxCollider2D:
+--- !u!70 &6935566279414842917
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -275,19 +276,9 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
+  m_Offset: {x: 0.0058052675, y: -0.14221407}
+  m_Size: {x: 0.8723019, y: 0.7736262}
+  m_Direction: 1
 --- !u!50 &1036672201176116174
 Rigidbody2D:
   serializedVersion: 4
@@ -325,7 +316,7 @@ MonoBehaviour:
   rigibody: {fileID: 0}
   attackRange: 2
   attackDamage: 3
-  knocbackPower: 0.2
+  knockbackPower: 0.2
   knockbackDuration: 10
   attackRate: 3
   biteSounds:
@@ -351,6 +342,9 @@ MonoBehaviour:
   HearthPrefab: {fileID: 6994521561279859548, guid: 45503b909df8a2a40bc7d67f107dbf5e, type: 3}
   staminaPrefab: {fileID: 2680426077047402700, guid: 7e0907860ee81304faf12bdf1e3e1ec8, type: 3}
   randomNumber: 0
+  hurtSounds:
+  - {fileID: 8300000, guid: 0457f70311fd571498c1ae2fe3bd81f6, type: 3}
+  - {fileID: 8300000, guid: a76cc7da47d5db24ba1facbdeeac1218, type: 3}
 --- !u!114 &1036672201176116170
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -375,7 +369,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0

@@ -64,7 +64,6 @@ public class RangedAttack : MonoBehaviour
                 projectiles[i].enabled = false;
             }
         }
-
         // ammo regen
         if (currentAmmo < numOfProjectiles && _coolDownTimer < 1.5)
         {

@@ -12,6 +12,8 @@ public class HealthSystem : MonoBehaviour
 
     public HealthBar healthBar;
 
+    public GameObject deadAnim;
+
     void Start()
     {        
         currentHealth = maxHealth;
@@ -47,7 +49,10 @@ public class HealthSystem : MonoBehaviour
     void Die()
     {
         print("You died");
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        Destroy(gameObject);
-    }
+        //dead = true;
+        GameObject effect = Instantiate(deadAnim, transform.position, Quaternion.identity);    // create explosion animation on contact position
+        Destroy(effect, 5f);   // destroy animation after set time (5f) 
+        Destroy(gameObject);   // destroy projectile
+
+    }    
 }

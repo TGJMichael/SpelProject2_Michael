@@ -26,6 +26,8 @@ public class MeleeAttack : MonoBehaviour
     public float attackRate = 3f;       // For how often enemy attacks
     float nextAttackTime = 0f;
 
+    public GameObject slashEffect;
+
     void Start()
     {
         _animator = GetComponentInChildren<Animator>();
@@ -61,6 +63,9 @@ private void Attack()
         {
             // Play an attack animation
             _animator.SetTrigger("Attack");
+
+            GameObject effect = Instantiate(slashEffect, _attackPoint.position, _attackPoint.rotation);    // create slash effect
+            Destroy(effect, 10.5f);   // destroy slash after set time
 
             //SFX
             AudioClip clip = meleeSounds[UnityEngine.Random.Range(0, meleeSounds.Length)];

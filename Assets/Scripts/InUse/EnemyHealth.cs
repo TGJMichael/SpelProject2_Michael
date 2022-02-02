@@ -18,6 +18,10 @@ public class EnemyHealth : MonoBehaviour
     public GameObject staminaPrefab;
     // Random generator for item drop
     public int randomNumber;
+
+    //SFX
+    [SerializeField] AudioClip[] hurtSounds;
+
     private void Start()
     {
         currenthealth = maxHealth;
@@ -39,6 +43,10 @@ public class EnemyHealth : MonoBehaviour
         healthBar.SetHealth(currenthealth);
 
         _animator.SetTrigger("Hurt");
+
+        //SFX
+        AudioClip clip = hurtSounds[UnityEngine.Random.Range(0, hurtSounds.Length)];
+        GetComponent<AudioSource>().PlayOneShot(clip);
 
         if (currenthealth <= 0)
         {

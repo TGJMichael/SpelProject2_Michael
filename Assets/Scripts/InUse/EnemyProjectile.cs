@@ -9,6 +9,9 @@ public class EnemyProjectile : MonoBehaviour
 
     public float TimeToLive = 3f;
 
+    public float knockbackPower = 0.2f;
+    public float knockbackDuration = 10f;
+
     // for contact animation
     public GameObject hitEffect;
 
@@ -34,10 +37,13 @@ public class EnemyProjectile : MonoBehaviour
             {
                 targetHit.GetComponent<CharacterController>().Root(rootDuration);
                 targetHit.GetComponent<HealthSystem>().TakeDamage(rootDamage);
+
+                StartCoroutine(CharacterController.instance.Knockback(knockbackDuration, knockbackPower, this.transform));
             }
             else
             {
                 targetHit.GetComponent<HealthSystem>().TakeDamage(normalDamage);
+                StartCoroutine(CharacterController.instance.Knockback(knockbackDuration, knockbackPower, this.transform));
             }
             //ExplodeAndDestroy();
             //StartCoroutine(CharacterController.instance.Root(rootDuration));
