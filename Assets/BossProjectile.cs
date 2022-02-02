@@ -24,6 +24,8 @@ public class BossProjectile : MonoBehaviour
     public float knockbackPower = 0.2f;
     public float knockbackDuration = 10f;
 
+   public BossRangedAttack Salvo;
+
     private void Start()
     {
         normalDamage = FindObjectOfType<BossRangedAttack>().normalDamage;
@@ -32,6 +34,7 @@ public class BossProjectile : MonoBehaviour
         rootDuration = FindObjectOfType<BossRangedAttack>().rootDuration;
         StartCoroutine(destroyProjectile());
         m_SpriteRenderer = GetComponentInChildren<SpriteRenderer>();
+        Salvo = GameObject.FindObjectOfType(typeof(BossRangedAttack)) as BossRangedAttack;
 
         // Size and color-change.
         if (rootEffect)
@@ -67,6 +70,7 @@ public class BossProjectile : MonoBehaviour
             {
                 targetHit.GetComponent<CharacterController>().Root(rootDuration);
                 targetHit.GetComponent<HealthSystem>().TakeDamage(rootDamage);
+                Salvo.SalvoLeadUp();
             }
             else
             {

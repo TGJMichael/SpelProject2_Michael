@@ -44,8 +44,9 @@ public class BossRangedAttack : MonoBehaviour
 
     private SimpleBossController _move;
 
-    // shooting timer
-    private float _coolDownTimer;
+    // shooting timers
+    private float _coolDownTimer;   // rooting shot
+    private float _salvoTimer;
     void Start()
     {
         _animator = GetComponentInChildren<Animator>();
@@ -84,12 +85,23 @@ public class BossRangedAttack : MonoBehaviour
         {
             _coolDownTimer += 1 * Time.deltaTime;
             //_move.Move();
-            print(_coolDownTimer);
+            //print(_coolDownTimer);
             if(_coolDownTimer >=2 && _coolDownTimer < 10)
             {
                 rootEffect = true;
                 EnemyShoot();
                 _coolDownTimer = 0;
+            }
+        }
+        if (_salvoTimer < 8)
+        {
+            _salvoTimer += 1 * Time.deltaTime;
+            print(_salvoTimer);
+
+            if (_salvoTimer >= 8 && _salvoTimer < 10)
+            {
+                SalvoLeadUp();
+                _coolDownTimer = 10;
             }
         }
 
@@ -110,6 +122,7 @@ public class BossRangedAttack : MonoBehaviour
         //    _move.StopMove();
         //    _animator.SetTrigger("LeadUp");
         //}
+        _salvoTimer = 10;
         rootEffect = false;
         _move.StopMove();
         _animator.SetTrigger("LeadUp");
@@ -153,6 +166,7 @@ public class BossRangedAttack : MonoBehaviour
         {
             _move.Move();
             _coolDownTimer = 0;
+            _salvoTimer = 0;
         }
     }
     public void EnemyShoot()
