@@ -316,7 +316,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   aggroRange: 10
   rigibody: {fileID: 1846487924252692749}
-  attackRange: 2
+  attackRange: 2.5
   attackDamage: 0
   knockbackPower: 0.2
   knockbackDuration: 10

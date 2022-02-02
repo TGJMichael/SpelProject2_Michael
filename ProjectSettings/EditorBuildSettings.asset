@@ -29,8 +29,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/050_Level_MixedFightIntro.unity
     guid: 58632b7747f75654cb93d9c20eee350c
-  - enabled: 1
-    path: Assets/Scenes/060_Level.unity
+  - enabled: 0
+    path: Assets/Scenes/Removed_060_Level.unity
     guid: 1f6148453a86fe94486cf598b28b56a5
   - enabled: 1
     path: Assets/Scenes/070_Level.unity

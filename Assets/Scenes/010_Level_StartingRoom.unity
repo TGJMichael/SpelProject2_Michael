@@ -260,9 +260,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: -1638372591
+  m_SortingLayer: -1
+  m_SortingOrder: 3
   m_Sprite: {fileID: -1384767233, guid: 02186e395c3021a4391ecfca8b428a30, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -12043,10 +12043,6 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 249
       objectReference: {fileID: 0}
-    - target: {fileID: 8764917193341694367, guid: 621587a92dddf874ab122a2e5f84af68, type: 3}
-      propertyPath: m_SortingOrder
-      value: 199
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 621587a92dddf874ab122a2e5f84af68, type: 3}
 --- !u!1 &411064063
@@ -18870,6 +18866,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 479988500547970612, guid: 4959164da2bd8e54e84e039e55af468e, type: 3}
+      propertyPath: m_SortingOrder
+      value: 320
+      objectReference: {fileID: 0}
     - target: {fileID: 2584951227491024170, guid: 4959164da2bd8e54e84e039e55af468e, type: 3}
       propertyPath: healthBar
       value: 
@@ -19105,9 +19105,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: -1638372591
+  m_SortingLayer: -1
+  m_SortingOrder: 3
   m_Sprite: {fileID: 1409171643, guid: 02186e395c3021a4391ecfca8b428a30, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
