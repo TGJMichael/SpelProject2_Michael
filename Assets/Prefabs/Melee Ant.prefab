@@ -329,8 +329,9 @@ MonoBehaviour:
   knockbackDuration: 10
   attackRate: 3
   biteSounds:
-  - {fileID: 8300000, guid: f441df7a8124fc1408273dbb0cba0094, type: 3}
-  - {fileID: 8300000, guid: 1ac023427a76a6444aa5dc8844baae2d, type: 3}
+  - {fileID: 8300000, guid: d8ecc475052e2d0419c7881f171f9065, type: 3}
+  - {fileID: 8300000, guid: 5bdc8509002d9a34b8de3408ceda3fde, type: 3}
+  - {fileID: 8300000, guid: c5301fe85af37664283dcff1696ef0bd, type: 3}
 --- !u!114 &1036672201176116171
 MonoBehaviour:
   m_ObjectHideFlags: 0

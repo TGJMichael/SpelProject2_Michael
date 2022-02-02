@@ -45,6 +45,11 @@ public class CharacterController : MonoBehaviour
     // Rooted Dash
     public float rootedDashLength = 30f;
     public bool rootBreakDash = false;
+
+    //SFX
+    [SerializeField] AudioClip[] dashSounds;
+    [SerializeField] AudioClip[] hurtSounds;
+
     private void Awake()
     {
         instance = this;
@@ -161,12 +166,16 @@ public class CharacterController : MonoBehaviour
 
                 if (Input.GetKeyDown(KeyCode.Space) && (staminaSystem.currentStamina) > 9)
                 {
+                    //SFX
+                    AudioClip clip = dashSounds[UnityEngine.Random.Range(0, dashSounds.Length)];
+                    GetComponent<AudioSource>().PlayOneShot(clip);
+
                     // original dash.
                     //dashSpeed = dashLenght; 
                     //state = State.Dash;
                     //_animator.SetTrigger("Dash");
                     //GetComponent<StaminaSystem>().SpendStamina(10);
-                    
+
                     //new dash with rooted bool.
                     if (_rooted == false)   // if not rooted
                     {
@@ -268,6 +277,10 @@ public class CharacterController : MonoBehaviour
     public IEnumerator Knockback(float knockbackDuration, float knockbackPower, Transform obj)
     {
         _animator.SetTrigger("Hurt");
+        //SFX
+        AudioClip clip = hurtSounds[UnityEngine.Random.Range(0, hurtSounds.Length)];
+        GetComponent<AudioSource>().PlayOneShot(clip);
+
         float timer = 0;
         while (knockbackDuration > timer)
         {            

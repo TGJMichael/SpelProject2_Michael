@@ -569,7 +569,7 @@ CapsuleCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8087122733306787969}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
@@ -649,9 +649,15 @@ MonoBehaviour:
   attackRate: 5
   currentAmmo: 6
   numOfProjectiles: 6
-  projectiles: []
-  projectile: {fileID: 0}
-  emptyProjectile: {fileID: 0}
+  projectiles:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  projectile: {fileID: 2039699899, guid: 7c374371143cec84597c43613efb4079, type: 3}
+  emptyProjectile: {fileID: -118872146, guid: 7c374371143cec84597c43613efb4079, type: 3}
   rangeSounds:
   - {fileID: 8300000, guid: 1ac023427a76a6444aa5dc8844baae2d, type: 3}
   - {fileID: 8300000, guid: f441df7a8124fc1408273dbb0cba0094, type: 3}
@@ -674,8 +680,9 @@ MonoBehaviour:
     m_Bits: 128
   _aimTransform: {fileID: 0}
   meleeSounds:
-  - {fileID: 8300000, guid: 1ac023427a76a6444aa5dc8844baae2d, type: 3}
-  - {fileID: 8300000, guid: f441df7a8124fc1408273dbb0cba0094, type: 3}
+  - {fileID: 8300000, guid: cd659c8e37364ff40a12d2f2fa960b4d, type: 3}
+  - {fileID: 8300000, guid: 402f16c384cd19d43bbe8bf602e03c9d, type: 3}
+  - {fileID: 8300000, guid: c9196ea83defc1a469576b6792d48178, type: 3}
 --- !u!82 &8191887785281930242
 AudioSource:
   m_ObjectHideFlags: 0

@@ -8,7 +8,7 @@ public class EnemyRangedAttack : MonoBehaviour
 {
     private Transform _target;
     public float range;
-    public float knockbackPower = 10f;
+    public float knockbackPower = 0.2f;
     public float knockbackDuration = 10f;
 
     public float attackRate = 1f;
@@ -81,6 +81,7 @@ public class EnemyRangedAttack : MonoBehaviour
         GameObject projectile = Instantiate(projectilePrefab, firePoint.position, firePoint.rotation);
         Rigidbody2D rb = projectile.GetComponent<Rigidbody2D>();
         rb.AddForce(firePoint.up * projectileSpeed, ForceMode2D.Impulse);
+            StartCoroutine(CharacterController.instance.Knockback(knockbackDuration, knockbackPower, this.transform));
 
             //SFX
             AudioClip clip = spitSounds[UnityEngine.Random.Range(0, spitSounds.Length)];
