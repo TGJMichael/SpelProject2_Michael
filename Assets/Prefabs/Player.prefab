@@ -570,7 +570,7 @@ MonoBehaviour:
   rootedMovement: 1.5
   _effectAnimator: {fileID: 0}
   rootedDashLength: 30
-  rootBreakDash: 0
+  rootBreakDash: 1
   dashSounds:
   - {fileID: 8300000, guid: c968d127bae9eed4da2bd71465437ac6, type: 3}
   hurtSounds:

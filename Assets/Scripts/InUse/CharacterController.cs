@@ -195,6 +195,7 @@ public class CharacterController : MonoBehaviour
                             print("root ended normaly with dash");
                             moveSpeed = 7.5f;
                             _effectAnimator.SetBool("IsRooted", false);
+                            _rooted = false;
                         }
                         else
                         {

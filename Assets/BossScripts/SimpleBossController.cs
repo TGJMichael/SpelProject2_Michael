@@ -26,32 +26,39 @@ public class SimpleBossController : MonoBehaviour
 
     // Shooting
     public BossRangedAttack Shoot;
+
+    public GameObject turningPointObject;
+    public float turningPoint;
     void Start()
     {
-        _animator = GetComponentInChildren<Animator>();
         moveRight = true;   // is there a difference in assigning value here instead of when defining "moveRight"?
+        _animator = GetComponentInChildren<Animator>();
         _target = FindObjectOfType<CharacterController>().transform;
 
         // Shooting
         Shoot = GameObject.FindObjectOfType(typeof(BossRangedAttack)) as BossRangedAttack;
+
+        turningPoint = turningPointObject.transform.position.x;
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.K))  // toggle to stop and start Boss from moving.
+        // For testing purposes, toggle to stop and start Boss from moving.
+        if (Input.GetKeyDown(KeyCode.K))  
         {
             Moving = !Moving;
         }
+
+        // Deactivating movement animation when not moving.
         if (Moving == false)
         {
             _animator.SetBool("Moving", false);
             //Shoot.EnemyShoot();
-
         }
 
         Movement();
 
-
+        // Melee range check and activation.
         if (Vector3.Distance(transform.position, _target.transform.position) < attackRange)
         {
             MeleeAttack();
@@ -72,7 +79,7 @@ public class SimpleBossController : MonoBehaviour
         if (Moving == true)
         {
 
-            if (transform.position.x > 7f)  // 7f is how far to the right the boss moves before
+            if (transform.position.x > 7f)  // 7f is how far to the right the boss moves before switching direction.
             {
                 moveRight = false;          // bool sets to false wich will result in boss start moving to the left
                 _animator.SetFloat("Horizontal", -1);
