@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 2376977390478597785}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -8.121, y: 1.306, z: -0.07616095}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2376977391313262105}
@@ -85,6 +85,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TimeToLive: 3
+  knockbackPower: 0.2
+  knockbackDuration: 10
   hitEffect: {fileID: 9187958225818428515, guid: 7a0282e5f70dabe4eb95c513ead5a851, type: 3}
   rootEffect: 0
 --- !u!1 &2376977391313262104
