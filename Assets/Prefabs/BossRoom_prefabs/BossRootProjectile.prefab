@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 2376977390478597765}
   - component: {fileID: 2376977390478597764}
   - component: {fileID: 2376977390478597767}
-  - component: {fileID: 1111135521795292563}
+  - component: {fileID: -321612199096965812}
   m_Layer: 10
-  m_Name: EnemyProjectile
+  m_Name: BossRootProjectile
   m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -72,7 +72,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &1111135521795292563
+--- !u!114 &-321612199096965812
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -81,11 +81,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 2376977390478597785}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d54ebeba3c379a49a70fff0a5b1fae2, type: 3}
+  m_Script: {fileID: 11500000, guid: 6520bf16bd185cd49a494218b48ccb6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   TimeToLive: 3
-  hitEffect: {fileID: 9187958225818428515, guid: 7a0282e5f70dabe4eb95c513ead5a851, type: 3}
+  hitEffect: {fileID: 0}
+  webEffect: {fileID: 9187958225818428515, guid: 7a0282e5f70dabe4eb95c513ead5a851, type: 3}
+  explosionEffect: {fileID: 9187958225818428515, guid: 96adc8955ae52554aa90ed5ea9b1b52d, type: 3}
   rootEffect: 0
 --- !u!1 &2376977391313262104
 GameObject:

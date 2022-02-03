@@ -87,9 +87,6 @@ MonoBehaviour:
   attackDamage: 10
   TimeToLive: 3
   hitEffect: {fileID: 9187958225818428515, guid: 96adc8955ae52554aa90ed5ea9b1b52d, type: 3}
-  explosionSounds:
-  - {fileID: 8300000, guid: a786aa372f66fae4481e3b84860a0847, type: 3}
-  - {fileID: 8300000, guid: b6dfdf6c78a3d4c47b2ea0d1598d6ce0, type: 3}
 --- !u!1 &2376977391313262104
 GameObject:
   m_ObjectHideFlags: 0
