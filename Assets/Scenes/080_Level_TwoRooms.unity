@@ -44168,7 +44168,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2894974416448191651, guid: 5cd77090d3652db4abc9bb3d442f50a2, type: 3}
       propertyPath: killsNeeded
-      value: 19
+      value: 22
       objectReference: {fileID: 0}
     - target: {fileID: 8683370174235942753, guid: 5cd77090d3652db4abc9bb3d442f50a2, type: 3}
       propertyPath: m_SortingOrder
